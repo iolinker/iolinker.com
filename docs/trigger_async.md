@@ -33,7 +33,7 @@ Currently, the following three authentication methods are supported:
   For example:
 
   ```http
-  curl -d '{}' http://8.218.xxx.xx/v1/api/botman/test/async
+  curl -d '{}' http://8.218.xxx.xx/v1/api/iolinker/test/async
   {"response":{"uid":"2023331691312889545691136"}}
   ```
 
@@ -45,7 +45,7 @@ Currently, the following three authentication methods are supported:
 
   ```http
   // Invalid Request Method
-  curl http://8.218.xxx.xx/v1/api/botman/test/async
+  curl http://8.218.xxx.xx/v1/api/iolinker/test/async
   {"response":{"error":{"code":"requestError.invalidParams","message":"Token is required"}}}
   ```
 
@@ -64,13 +64,13 @@ Currently, the following three authentication methods are supported:
 
   ```http
   // Invalid Request Method
-  curl http://8.218.xxx.xx/v1/api/botman/test/async
+  curl http://8.218.xxx.xx/v1/api/iolinker/test/async
   {"response":{"error":{"code":"requestError.invalidParams","message":"User/Password is required"}}}
   ```
 
   ```http
   // Valid Request Method
-  curl -H'user:botman' -H'password:123456' http://8.218.xxx.xx/v1/api/botman/test/async
+  curl -H'user:iolinker' -H'password:123456' http://8.218.xxx.xx/v1/api/iolinker/test/async
   {"response":{"uid":"213995413340041216"}}
   ```
 

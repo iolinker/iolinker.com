@@ -35,7 +35,7 @@ This is represented using a JSON string format, for example:
 The request body for the POST method, typically represented as a JSON string, for example:
 
 ```json
-{"site":"botman.cc"}
+{"site":"iolinker.com"}
 ```
 
 

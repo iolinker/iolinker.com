@@ -66,8 +66,8 @@ Since multiple script executions can be selected, the output structure is in the
 
 ```
 {
-    "/botman/snippet/botman/111.py": "ok",
-    "/botman/snippet/botman/222.py": "ok222"
+    "/iolinker/snippet/iolinker/111.py": "ok",
+    "/iolinker/snippet/iolinker/222.py": "ok222"
 }
 ```
 

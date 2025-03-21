@@ -8,13 +8,13 @@ Please refer to [How to create telegram bot and get token](how_to_create_telegra
 
 
 
-## Step2: Download and run botman tool
+## Step2: Download and run iolinker tool
 
-Please refer to [How to run botman](how-to-run-botman.md)
+Please refer to [How to run iolinker](how-to-run-iolinker.md)
 
 
 
-## Step3: Config telegram token in botman
+## Step3: Config telegram token in iolinker
 
 After run batman tool, go to **[Credential]** page, you will see the page below.
 

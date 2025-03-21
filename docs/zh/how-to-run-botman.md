@@ -21,7 +21,7 @@ docker run --name botman -d PublicHost=http://localhost botmancc/botman:v0.5.1
 
 - 步骤1 : 
 
-  进入 [https://botman.cc](https://botman.cc) 官网，根据自己当前系统下载对应的可执行文件。
+  进入 [https://iolinker.com](https://iolinker.com) 官网，根据自己当前系统下载对应的可执行文件。
 
   <img src="./img/multi-platform.png" alt="image-20240919193212328" style="zoom:50%;" />
 
@@ -35,7 +35,7 @@ docker run --name botman -d PublicHost=http://localhost botmancc/botman:v0.5.1
 
 - 步骤三: 
 
-  运行可执行文件，默认使用80端口，可访问地址为http://localhost，登陆的账号：botman，默认密码：botman.cc。
+  运行可执行文件，默认使用80端口，可访问地址为http://localhost，登陆的账号：botman，默认密码：iolinker.com。
 
   建议登陆后修改密码。
 
@@ -65,7 +65,7 @@ docker run --name botman -d PublicHost=http://localhost botmancc/botman:v0.5.1
   ██████╔╝╚██████╔╝   ██║   ██║ ╚═╝ ██║██║  ██║██║ ╚████║
   ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
   
-  Complete documentation is available at https://botman.cc
+  Complete documentation is available at https://iolinker.com
   
   Usage:
     Botman [flags]

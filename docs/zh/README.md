@@ -49,5 +49,5 @@ docker run --name botman botmancc/botman:v0.5.1
 ```
 
 ::: slot footer
-Copyright © 2024 [BotMan] Email：botman.cc@outlook.com
+Copyright © 2024 [BotMan] Email：iolinker.com@outlook.com
 :::

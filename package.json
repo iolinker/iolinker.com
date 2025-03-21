@@ -15,7 +15,7 @@
     "vue-template-compiler": "^2.7.16",
     "vuepress-plugin-mygitalk": "^1.0.5"
   },
-  "name": "BotMan Workflow",
+  "name": "IOLinker Workflow",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",

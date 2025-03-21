@@ -33,8 +33,8 @@ Currently, the following three authentication methods are supported:
   For example:
 
   ```http
-  curl -d '{}' http://8.218.xxx.xx/v1/api/botman/test/sync
-  {"response":{"code":0,"data":"botman.cc","msg":"","uid":"2023331691312889545691136"}}
+  curl -d '{}' http://8.218.xxx.xx/v1/api/iolinker/test/sync
+  {"response":{"code":0,"data":"iolinker.com","msg":"","uid":"2023331691312889545691136"}}
   ```
 
 - Token Authentication
@@ -45,7 +45,7 @@ Currently, the following three authentication methods are supported:
 
   ```http
   // Invalid Request Method
-  curl http://8.218.xxx.xx/v1/api/botman/test/sync
+  curl http://8.218.xxx.xx/v1/api/iolinker/test/sync
   {"response":{"error":{"code":"requestError.invalidParams","message":"Token is required"}}}
   ```
 
@@ -64,13 +64,13 @@ Currently, the following three authentication methods are supported:
 
   ```http
   // Invalid Request Method
-  curl http://8.218.xxx.xx/v1/api/botman/test/sync
+  curl http://8.218.xxx.xx/v1/api/iolinker/test/sync
   {"response":{"error":{"code":"requestError.invalidParams","message":"User/Password is required"}}}
   ```
 
   ```http
   // Valid Request Method
-  curl -H'user:botman' -H'password:123456' http://8.218.xxx.xx/v1/api/botman/test/sync
+  curl -H'user:iolinker' -H'password:123456' http://8.218.xxx.xx/v1/api/iolinker/test/sync
   {"response":{"data":{"code":0,"msg":"ok"},"code":0,"msg":"","uid":"213995413340041216"}}
   ```
 

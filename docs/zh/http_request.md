@@ -29,7 +29,7 @@
 POST方法的请求体，一般用JSON字符串表示，例如：
 
 ```json
-{"site":"botman.cc"}
+{"site":"iolinker.com"}
 ```
 
 ### 超时

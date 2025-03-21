@@ -50,7 +50,7 @@ If it is not set by default, any user's message to the telegram robot will trigg
 
 If you only want the robot's command response to be used only by yourself, you can select your own account from the drop-down list.
 
-Remark: Please remember to associate your userid and admin account on telegram: [How to get telegram userid and associate it to admin account](how_to_get_telegram_userid_by_botman.md)
+Remark: Please remember to associate your userid and admin account on telegram: [How to get telegram userid and associate it to admin account](how_to_get_telegram_userid_by_iolinker.md)
 
 <img src="./img/bot-13.png" alt="image-20230819094246908" style="zoom:50%;" />
 

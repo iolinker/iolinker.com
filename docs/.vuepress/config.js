@@ -7,12 +7,12 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'BotMan Workflow',
+      title: 'IOLinker Workflow',
       description: 'The most powerful personal workflow tool',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'BotMan 工作流',
+      title: 'IOLinker 工作流',
       description: '功能最强的个人工作流工具',
     },
   },
@@ -34,7 +34,7 @@ module.exports = {
     ],
   plugins: {
     'sitemap': {
-      hostname: 'https://botman.com'
+      hostname: 'https://iolinker.com'
     },
   },
   themeConfig: {
@@ -49,7 +49,7 @@ module.exports = {
                 // collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                    ['how-to-run-botman', 'How To Run Botman'],
+                    ['how-to-run-iolinker', 'How To Run IOLinker'],
                 ]
               },
               {
@@ -125,7 +125,7 @@ module.exports = {
                 title: '快速上手',   // 必要的
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                    ['/zh/how-to-run-botman', '如何运行BotMan'],
+                    ['/zh/how-to-run-iolinker', '如何运行IOLinker'],
                 ]
               },
               {
@@ -197,8 +197,8 @@ module.exports = {
     //    {
     //       text: '📄 Doc',
     //       items: [
-    //           {text: 'Chinese', link: '/zh/how-to-run-botman'},
-    //           {text: 'English', link: '/how-to-run-botman'},
+    //           {text: 'Chinese', link: '/zh/how-to-run-iolinker'},
+    //           {text: 'English', link: '/how-to-run-iolinker'},
     //       ]
     //   },
     // ],

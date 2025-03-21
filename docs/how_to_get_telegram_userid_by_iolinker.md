@@ -1,4 +1,4 @@
-## 1. Search [botman.cc] in search tab in telegram messenger
+## 1. Search [iolinker.com] in search tab in telegram messenger
 
 ![image-20230819093805026](./img/how_to_get_telegram_userid_by_botman_2.png)
 

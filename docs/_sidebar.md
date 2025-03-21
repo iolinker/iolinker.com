@@ -1,6 +1,6 @@
 * [Index](/)
 * Get Started
-	* [How to run botman workflow](how-to-run-botman.md)
+	* [How to run iolinker workflow](how-to-run-iolinker.md)
 	* [1 minute create powerful telegram bot](1-minute-telegram-bot.md)
 * Trigger App
 	* [Start](trigger_start.md)
