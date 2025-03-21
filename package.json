@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@maginapp/vuepress-plugin-katex": "^1.0.11",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-sitemap": "^2.3.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "clean": "rm -rf docs/.vuepress/dist"
+  },
+  "dependencies": {
+    "vue-template-compiler": "^2.7.16",
+    "vuepress-plugin-mygitalk": "^1.0.5"
+  },
+  "name": "BotMan Workflow",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "",
+  "license": "ISC"
+}
