@@ -61,7 +61,7 @@ module.exports = {
                     ['trigger_crontab.md', 'Crontab'],
                     ['trigger_async.md','Async API'],
                     ['trigger_sync.md','Sync API'],
-                    // ['trigger_form.md','Form Trigger'],
+                    ['trigger_form.md','Form Trigger'],
                     ['trigger_telegram.md', 'Telegram Bot Trigger']
                 ]
               },
@@ -134,11 +134,13 @@ module.exports = {
                 children: [
                     ['/zh/trigger_start.md', '手动任务'],
                     ['/zh/trigger_crontab.md', '周期任务'],
+                    ['/zh/trigger_form.md', '表单触发器'],
                     ['/zh/trigger_async.md','异步 API'],
                     ['/zh/trigger_sync.md','同步 API'],
                     ['/zh/trigger_weixin_wxwork_kefu.md','微信客服触发器'],
                     ['/zh/trigger_weixin_official_account.md','微信公众号触发器'],
-                    ['/zh/trigger_telegram.md', 'Telegram Bot Trigger']
+                    ['/zh/trigger_telegram.md', 'Telegram Bot Trigger'],
+                    ['/zh/trigger_error.md', '错误触发器']
                 ]
               },
               {
@@ -154,7 +156,8 @@ module.exports = {
                     ['/zh/sub_workflow.md', '子工作流执行'],
                     ['/zh/throw_exception.md', '抛出异常'],
                     ['/zh/read_write_local_variable.md', '读写本地变量'],
-                    ['/zh/stop.md', '停止'],
+                    ['/zh/form_task.md', '表单任务'],
+                    ['/zh/stop.md', '停止执行'],
                     ['/zh/callback.md', '回调'],
                     ['/zh/output.md', '设置流程输出'],
                 ]

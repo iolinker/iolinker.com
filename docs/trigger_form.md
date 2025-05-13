@@ -1,12 +1,8 @@
-## Indroduction
+## Form Trigger
 
 This trigger app supports visual design of forms, and triggers workflow execution through form submission operations.
 
-
-
 <iframe width="800" height="600" src="https://www.youtube.com/embed/rc-CeafECOA" frameborder="0" allowfullscreen></iframe>
-
-
 
 ## How To Use
 
@@ -18,19 +14,13 @@ Click the [save] button on right side.
 
 ![image-20230815222628266](./img/form-trigger-1.png)
 
-
-
 ### 2.Drag the [Form Trigger] into canvas and jump to form visual editor
 
 ![image-20230815223005776](./img/form-editor-2.png)
 
-
-
 Click the [Edit Form] button, jump to the form editor below.
 
 ![image-20230815223240825](./img/form-trigger-3.png)
-
-
 
 After designing the form, click **[Save Draft]** , after that, you can preview the form by click **[Preview]** button.
 
@@ -43,8 +33,6 @@ The following is the preview effect demo of the form.
 ### 3.Save the workflow
 
 After the form is designed and saved, return to the process editing interface to continue designing the process after the form is submitted.
-
-
 
 Go back to **[Workflow List]** page, you will see the form workflow just created, and you can click the form link to jump to the form submission page.
 
@@ -64,13 +52,9 @@ You can see the form submission history on the **[DONE]** tab page of page **[Us
 
 ![image-20230815224522586](./img/form-editor-8.png)
 
-
-
 See the form trigger app output.
 
 <img src="./img/form-trigger-4.png" alt="image-20230816222459183" style="zoom:50%;" />
-
-
 
 ![image-20230815224800884](./img/form-editor-9.png)
 
