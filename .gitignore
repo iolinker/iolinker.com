@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+dist/
+.github
+docs/dist.tgz
