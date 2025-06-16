@@ -1,10 +1,10 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: BotMan 工作流
+heroText: IOLinker 工作流
 tagline: 功能最强的个人工作流工具
 actionText: 开始 →
-actionLink: /zh/how-to-run-botman
+actionLink: /zh/how-to-run-iolinker
 features:
 - title: 🤖 简单易用
   details: 低代码理念，支持通过拖拉拽的方式设计工作流。
@@ -28,7 +28,7 @@ features:
 ![](/variable-expression.png)
 
 ## 🌟 检索增强生成（RAG）
-![](/local_knowledge.png)
+![](/local-knowledge.png)
 
 ## 🗂️ 文件管理
 ![](/file-management.png)

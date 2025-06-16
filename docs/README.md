@@ -28,7 +28,7 @@ features:
 ![](/variable-expression.png)
 
 ## 🌟 Retrieval-augmented generation(RAG)
-![](/local_knowledge.png)
+![](/local-knowledge.png)
 
 ## 🗂️ File Management
 ![](/file-management.png)

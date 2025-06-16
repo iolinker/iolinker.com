@@ -104,7 +104,7 @@ module.exports = {
                 ]
               },
               {
-                title: 'Telegram',   // 必要的
+                title: 'Bot',   // 必要的
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['send_telegram_message.md', 'Send Telegram Message'],
