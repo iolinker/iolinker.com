@@ -13,6 +13,13 @@ features:
 - title: ⚒️ Rich Functions
   details: A variety of trigger modes and rich logic components, and supports flexible expansion of various common programming languages
 ---
+<iframe 
+    width="1280" 
+    height="720" 
+    src="https://www.youtube.com/embed/dnXGOMr3RJ4"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+    </iframe>
 
 
 ## 🌟 Rich Triggers
@@ -44,7 +51,7 @@ features:
 - [Synology NAS](https://iolinker-download-hk.oss-cn-hongkong.aliyuncs.com/iolinker-standalone-linux-arm-v0.5.1.tar.gz)
 - [Docker]
 ```
-docker run --name iolinker iolinkercc/iolinker:v0.5.1
+docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
 
 ```
 

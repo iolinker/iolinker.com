@@ -2,7 +2,7 @@
 # Docker容器运行
 
 ```
-docker run --name botman -d PublicHost=http://localhost botmancc/botman:v0.5.1
+docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
 ```
 
 
