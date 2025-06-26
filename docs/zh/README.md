@@ -13,6 +13,13 @@ features:
 - title: ⚒️ 丰富的功能
   details: 多种多样的触发模式以及丰富的逻辑组件，并且支持各种常见编程语言灵活扩展。
 ---
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/yeeWO2zKVgA"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 
 ## 🌟 丰富的触发器
@@ -37,14 +44,15 @@ features:
 ![](/data-analysis-worldmap.png)
 
 ## 🌟 多平台支持
-- [Mac Apple](https://botman-download-hk.oss-cn-hongkong.aliyuncs.com/botman-standalone-darwin-arm64-v0.5.1.tar.gz)
-- [Mac Intel](https://botman-download-hk.oss-cn-hongkong.aliyuncs.com/botman-standalone-darwin-amd64-v0.5.1.tar.gz)
-- [Linux AMD64](https://botman-download-hk.oss-cn-hongkong.aliyuncs.com/botman-standalone-linux-amd64-v0.5.1.tar.gz)
-- [Raspberry PI 4B](https://botman-download-hk.oss-cn-hongkong.aliyuncs.com/botman-standalone-linux-arm-v0.5.1.tar.gz)
-- [Synology NAS](https://botman-download-hk.oss-cn-hongkong.aliyuncs.com/botman-standalone-linux-arm-v0.5.1.tar.gz)
+- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-darwin-arm64-v0.7.0.tar.gz)
+- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-darwin-amd64-v0.7.0.tar.gz)
+- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-linux-amd64-v0.7.0.tar.gz)
+- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-linux-amd64-v0.7.0.tar.gz)
+- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-linux-armv7-v0.7.0.tar.gz)
+- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-linux-armv7-v0.7.0.tar.gz)
 - [Docker]
 ```
-docker run --name botman botmancc/botman:v0.5.1
+docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
 
 ```
 
