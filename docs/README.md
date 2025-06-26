@@ -14,12 +14,12 @@ features:
   details: A variety of trigger modes and rich logic components, and supports flexible expansion of various common programming languages
 ---
 <iframe 
-    width="1280" 
-    height="720" 
-    src="https://www.youtube.com/embed/dnXGOMr3RJ4"  frameborder="0" 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/yeeWO2zKVgA"  frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
-    </iframe>
+</iframe>
 
 
 ## 🌟 Rich Triggers
