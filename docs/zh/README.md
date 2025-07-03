@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: IOLinker 工作流
-tagline: 功能最强的个人工作流工具
+heroText: IOLinker AI 工作流
+tagline: 功能最强的个人AI工作流工具
 actionText: 开始 →
 actionLink: /zh/how-to-run-iolinker
 features:

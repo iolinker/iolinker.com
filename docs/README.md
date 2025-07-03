@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: IOLinker Workflow
-tagline: The most powerful personal workflow tool
+heroText: IOLinker AI Workflow
+tagline: The most powerful personal AI workflow tool
 actionText: Start →
 actionLink: /how-to-run-iolinker
 features:
