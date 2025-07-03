@@ -6,7 +6,7 @@
 
 ## 入参
 
-<img src="/Users/shuwoom/Desktop/botman-index/docs/zh/img/multi-script.png" alt="image-20240918212612002" style="zoom:50%;" />
+<img src="./img/multi-script.png" alt="image-20240918212612002" style="zoom:50%;" />
 
 ### 语言
 

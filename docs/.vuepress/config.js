@@ -59,9 +59,9 @@ module.exports = {
                 children: [
                     ['trigger_start.md', 'Start'],
                     ['trigger_crontab.md', 'Crontab'],
+                    ['trigger_form.md','Form Trigger'],
                     ['trigger_async.md','Async API'],
                     ['trigger_sync.md','Sync API'],
-                    ['trigger_form.md','Form Trigger'],
                     ['trigger_telegram.md', 'Telegram Bot Trigger'],
                     ['trigger_error.md', 'Error Trigger']
                 ]
@@ -81,10 +81,11 @@ module.exports = {
                     ['sub_workflow.md', 'Sub Workflow'],
                     ['throw_exception.md', 'Throw Exception'],
                     ['read_write_local_variable.md', 'Local Variable'],
+                    ['form_task.md', 'Form Task'],
                     ['stop.md', 'Stop'],
                     ['callback.md', 'Callback'],
                     ['output.md', 'Output'],
-                    ['form_task.md', 'Form Task'],
+                    
                 ]
               },
               {
@@ -100,6 +101,7 @@ module.exports = {
                 sidebarDepth: 0, 
                 children: [
                     ['write_file.md', 'Write File'],
+                    ['json_to_csv.md', 'JSON To CSV'],
                     ['database.md', 'Database'],
                 ]
               },
@@ -115,7 +117,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['script.md', 'Code Execution'],
-                    ['multi-script.md', 'Multi Script Execution'],
+                    // ['multi-script.md', 'Multi Script Execution'],
                 ]
               },
             ],
@@ -139,8 +141,8 @@ module.exports = {
                     ['/zh/trigger_form.md', '表单触发器'],
                     ['/zh/trigger_async.md','异步 API'],
                     ['/zh/trigger_sync.md','同步 API'],
-                    ['/zh/trigger_weixin_wxwork_kefu.md','微信客服触发器'],
-                    ['/zh/trigger_weixin_official_account.md','微信公众号触发器'],
+                    // ['/zh/trigger_weixin_wxwork_kefu.md','微信客服触发器'],
+                    // ['/zh/trigger_weixin_official_account.md','微信公众号触发器'],
                     ['/zh/trigger_telegram.md', 'Telegram Bot Trigger'],
                     ['/zh/trigger_error.md', '错误触发器']
                 ]
@@ -196,7 +198,17 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['/zh/script.md', '代码执行'],
-                    ['/zh/multi-script.md', '多脚本运行'],
+                    // ['/zh/multi-script.md', '多脚本运行'],
+                ]
+              },
+              {
+                title: '大模型',   // 必要的
+                sidebarDepth: 0,    // 可选的, 默认值是 1
+                children: [
+                    ['/zh/llm_ollama.md', 'Ollama'],
+                    ['/zh/llm_qwen.md', '通义千问'],
+                    ['/zh/llm_kimi.md', 'Moonshot'],
+                    // ['/zh/multi-script.md', '多脚本运行'],
                 ]
               },
             ],

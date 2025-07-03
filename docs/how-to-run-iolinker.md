@@ -22,14 +22,14 @@ The current binary executable file supports direct execution on the following sy
 
   Enter the [https://iolinker.com](https://iolinker.com) official website and download the corresponding executable file according to your current system.
 
-  <img src="./img/multi-platform.png" alt="image-20241007145352615" style="zoom:80%;" />
+  <img src="./img/multi-platform.png" alt="image-20250702094427975" style="zoom:50%;" />
 
 - Step 2: 
 
   Unzip it to the target folder.
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.5.1.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx-v0.7.0.tar.gz
   ```
 
 - Step 3: 
@@ -55,41 +55,40 @@ The current binary executable file supports direct execution on the following sy
   ```
 
   ```
-  ./iolinker -h
-
-██╗ ██████╗ ██╗     ██╗███╗   ██╗██╗  ██╗███████╗██████╗ 
-██║██╔═══██╗██║     ██║████╗  ██║██║ ██╔╝██╔════╝██╔══██╗
-██║██║   ██║██║     ██║██╔██╗ ██║█████╔╝ █████╗  ██████╔╝
-██║██║   ██║██║     ██║██║╚██╗██║██╔═██╗ ██╔══╝  ██╔══██╗
-██║╚██████╔╝███████╗██║██║ ╚████║██║  ██╗███████╗██║  ██║
-╚═╝ ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+  ❯ ./iolinker -h
   
-  Complete documentation is available at https://iolinker.com
   
-  Usage:
-    iolinker [flags]
+  ██╗ ██████╗ ██╗     ██╗███╗   ██╗██╗  ██╗███████╗██████╗ 
+  ██║██╔═══██╗██║     ██║████╗  ██║██║ ██╔╝██╔════╝██╔══██╗
+  ██║██║   ██║██║     ██║██╔██╗ ██║█████╔╝ █████╗  ██████╔╝
+  ██║██║   ██║██║     ██║██║╚██╗██║██╔═██╗ ██╔══╝  ██╔══██╗
+  ██║╚██████╔╝███████╗██║██║ ╚████║██║  ██╗███████╗██║  ██║
+  ╚═╝ ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
   
+  More documentation is available at https://iolinker.com
+  Usage: IOLinker
   Flags:
-    -h, --help                   help for iolinker
-    -d, --public_domain string   Set server's address. Usage: ./iolinker -d http://localhost:8080
-    
-  ```
-
-
+    -h, --help    help for IOLinker
+    -p, --port    Set server port. Usage: ./iolinker -p 8080
+    -d, --public_domain   Set server's address. Usage: ./iolinker -d http://localhost:8080
+  
 
 
 
 # Performance and Requirements
 
-- **High Concurrency**: Using synchronous/asynchronous API workflows (fast workflow mode) on a single machine, the **QPS can reach over 1500**.
+- **High Concurrency**: On a single machine, the QPS of asynchronous API workflows can reach over 5,000, and the QPS of synchronous API workflows can reach over 100.
 
 - **High Capacity**: The Crontab workflow supports over **100,000** concurrent active workflows.
 
 - **Low Resource Consumption**: Low hardware requirements; the system can run on a machine with 1 core and 1GB of memory or more.
 
 
+
+Async API Workflow:
+
 ```
-ab -n 2000 -c 10 http://localhost/v1/api/iolinker/test/index
+❯ ab -n 2000 -c 10 http://localhost/v1/api/egb2xeplq1/test/async
 This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -112,38 +111,99 @@ Server Software:
 Server Hostname:        localhost
 Server Port:            80
 
-Document Path:          /v1/api/iolinker/test/index
-Document Length:        21 bytes
+Document Path:          /v1/api/egb2xeplq1/test/async
+Document Length:        42 bytes
 
 Concurrency Level:      10
-Time taken for tests:   1.290 seconds
+Time taken for tests:   0.308 seconds
 Complete requests:      2000
 Failed requests:        0
-Total transferred:      438000 bytes
-HTML transferred:       42000 bytes
-Requests per second:    1550.46 [#/sec] (mean)
-Time per request:       6.450 [ms] (mean)
-Time per request:       0.645 [ms] (mean, across all concurrent requests)
-Transfer rate:          331.59 [Kbytes/sec] received
+Total transferred:      330000 bytes
+HTML transferred:       84000 bytes
+Requests per second:    6484.68 [#/sec] (mean)
+Time per request:       1.542 [ms] (mean)
+Time per request:       0.154 [ms] (mean, across all concurrent requests)
+Transfer rate:          1044.90 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.4      0      19
-Processing:     2    6   3.4      6      38
-Waiting:        2    6   3.4      6      38
-Total:          3    6   3.5      6      39
+Connect:        0    0   0.0      0       0
+Processing:     0    1   0.9      1      13
+Waiting:        0    1   0.9      1      13
+Total:          0    2   0.9      1      14
+WARNING: The median and mean for the total time are not within a normal deviation
+        These results are probably not that reliable.
 
 Percentage of the requests served within a certain time (ms)
-  50%      6
-  66%      6
-  75%      7
-  80%      7
-  90%      8
-  95%      9
-  98%     13
-  99%     31
- 100%     39 (longest request)
+  50%      1
+  66%      1
+  75%      2
+  80%      2
+  90%      2
+  95%      3
+  98%      4
+  99%      4
+ 100%     14 (longest request)
 ```
 
 
+
+Sync API Workflow:
+
+```
+❯ ab -n 2000 -c 10 http://localhost/v1/api/egb2xeplq1/test/index
+This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /v1/api/egb2xeplq1/test/index
+Document Length:        21 bytes
+
+Concurrency Level:      10
+Time taken for tests:   15.296 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      288000 bytes
+HTML transferred:       42000 bytes
+Requests per second:    130.76 [#/sec] (mean)
+Time per request:       76.478 [ms] (mean)
+Time per request:       7.648 [ms] (mean, across all concurrent requests)
+Transfer rate:          18.39 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:     1   76  77.3     43     387
+Waiting:        1   76  77.3     43     387
+Total:          1   76  77.3     43     387
+
+Percentage of the requests served within a certain time (ms)
+  50%     43
+  66%    109
+  75%    115
+  80%    124
+  90%    195
+  95%    226
+  98%    321
+  99%    333
+ 100%    387 (longest request)
+```
 
