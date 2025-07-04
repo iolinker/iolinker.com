@@ -7,13 +7,13 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'IOLinker Workflow',
-      description: 'The most powerful personal workflow tool',
+      title: 'IOLinker AI Workflow',
+      description: 'The most powerful personal AI workflow tool',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'IOLinker 工作流',
-      description: '功能最强的个人工作流工具',
+      title: 'IOLinker AI工作流',
+      description: '功能最强的个人AI工作流工具',
     },
   },
   base: '/',

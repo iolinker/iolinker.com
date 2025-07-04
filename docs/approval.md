@@ -4,21 +4,21 @@ Supports both single-signature and co-signature approval methods. Approval can b
 
 A green output indicates approval, red indicates disapproval, and a gray output indicates a timeout.
 
-<img src="./img/approval.png" alt="image-20241007192034258" style="zoom:50%;" />
+<img src="./img/approval.png" alt="image-20250704092703706" style="zoom:50%;" />
 
 
 
 Personal pending approval data can be viewed under **User Tasks** in the **Approval** section, with support for one-click batch operations.
 
-<img src="./img/approval_list.png" alt="image-20241007192151868" style="zoom:67%;" />
+<img src="./img/apprval_user_list.png" alt="image-20250703200210855" style="zoom:50%;" />
 
 
 
 By clicking on the approval details, you can view the complete content and actions of the approval.
 
-<img src="./img/approval_detail.png" alt="image-20241007192506118" style="zoom:50%;" />
+<img src="./img/approval_detail.png" alt="image-20250704092802071" style="zoom:50%;" />
 
-<img src="./img/done_approval_list.png" alt="image-20241007192643450" style="zoom:50%;" />
+<img src="./img/done_approval_list.png" alt="image-20250704092851826" style="zoom:50%;" />
 
 
 
@@ -50,7 +50,7 @@ Approval content.
 
 Approval members. This section will display a list of accounts, supporting fuzzy search. If Telegram approval is enabled, you need to configure the users' Telegram IDs in the user list; otherwise, messages cannot be sent to Telegram users.
 
-<img src="./img/approval_input_member.png" alt="image-20241007192940177" style="zoom:50%;" />
+<img src="./img/apprval_user_list.png" alt="image-20250703200210855" style="zoom:50%;" />
 
 
 
