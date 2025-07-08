@@ -6,7 +6,7 @@ Supports executing Python, JavaScript, PHP, Golang, LUA, and Shell scripts using
 
 ## Input
 
-<img src="./img/code_execution_input.png" alt="image-20241013101030591" style="zoom:50%;" />
+<img src="./img/script-input.png" alt="image-20250708095106564" style="zoom:50%;" />
 
 ### Language
 
@@ -41,9 +41,11 @@ Code snippets will be displayed under the corresponding programming language lis
 For the selected code files, two types of operations are supported:
 
 - **Copy**  
+  
   This operation will create a copy of the currently selected code, allowing modifications to this code without affecting the original referenced code.
-
+  
 - **Reference**  
+  
   This operation references the selected code, which can only be opened for editing and modification in the **Code Snippet** section.
 
 
@@ -57,6 +59,20 @@ In the code editor under **Code Snippet**, you can write code and debug it simul
 ### Code
 
 The code that is currently to be executed.
+
+
+
+### Params
+
+Here you can pass parameters to the script through sys.argv (python script) or $argv (php script). Of course, you can also use variable expressions to reference previous output as input to the script.
+
+<img src="./img/script-input-params.png" alt="image-20250708122132064" style="zoom:50%;" />
+
+
+
+<img src="./img/script-input-params-output.png" alt="image-20250708122613297" style="zoom:50%;" />
+
+
 
 
 

@@ -62,6 +62,18 @@
 
 
 
+### 参数
+
+这里可以通过sys.argv（python脚本）或者$argv（php脚本）方式给脚本通义传递参数，当然这里也可以使用变量表达式引用前面的输出作为脚本的输入。
+
+<img src="./img/script-input-params.png" alt="image-20250708122416347" style="zoom:50%;" />
+
+
+
+<img src="./img/script-input-params-output.png" alt="image-20250708122515917" style="zoom:50%;" />
+
+
+
 ### 超时
 
 设置脚本执行的超时时间，超过该时间，系统会强制终止，并输出错误信息：
