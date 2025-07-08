@@ -8,7 +8,7 @@ The created workflows can be found under the **【Workflow List】** or **【API
 
 Note: The API can only be used normally after it is enabled; otherwise, an error message will indicate that the interface is not enabled.
 
-<img src="./img/api_list.png" alt="image-20241007153215034" style="zoom:80%;" />
+<img src="./img/api-list.png" alt="image-20250708090057871" style="zoom:50%;" />
 
 
 

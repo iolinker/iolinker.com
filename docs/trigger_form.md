@@ -1,63 +1,86 @@
 ## Form Trigger
 
-This trigger app supports visual design of forms, and triggers workflow execution through form submission operations.
+The workflow execution is triggered by submitting the form.
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/rc-CeafECOA" frameborder="0" allowfullscreen></iframe>
+<img src="./img/form-trigger-menu.png" alt="image-20250708091142522" style="zoom:50%;" />
 
-## How To Use
+### Steps
 
-### 1. Save workflow first!
+#### 1. Create Form
 
-Before designing the form, you need to save the workflow first (this is mainly to obtain the workflow id to associate with the generated form url).
+<img src="./img/create-form-menu.png" alt="image-20250708091116182" style="zoom:50%;" />
 
-Click the [save] button on right side.
+#### 2. Design And Save Form
 
-![image-20230815222628266](./img/form-trigger-1.png)
+<img src="./img/save-form.png" alt="image-20250708091218025" style="zoom:50%;" />
 
-### 2.Drag the [Form Trigger] into canvas and jump to form visual editor
+The saved form can be viewed in the [Form] menu option on the left:
 
-![image-20230815223005776](./img/form-editor-2.png)
+<img src="./img/form_list.png" alt="image-20250507202549564" style="zoom:50%;" />
 
-Click the [Edit Form] button, jump to the form editor below.
+#### 3. Create Workflow And Connect Form
 
-![image-20230815223240825](./img/form-trigger-3.png)
+Use [Form Trigger] and select the previously created form in the form drop-down list. You will see that the API option will generate a form submission address. This address is uniquely bound to the workflow. You can submit the form by opening the address to trigger the workflow execution.
 
-After designing the form, click **[Save Draft]** , after that, you can preview the form by click **[Preview]** button.
+<img src="./img/create-form-workflow.png" alt="image-20250708091749925" style="zoom:50%;" />
 
-<img src="./img/form-editor-4.png" alt="image-20230815223453073" style="zoom:33%;" />
+#### 4. Submit Form
 
-The following is the preview effect demo of the form.
+You can see the form submission address in [Workflow] and click it to enter the form submission address.
 
-<img src="./img/form-editor-5.png" alt="image-20230815223618382" style="zoom: 33%;" />
+<img src="./img/form-workflow-list.png" alt="image-20250708091845111" style="zoom:50%;" />
 
-### 3.Save the workflow
+点击【Submit】提交按钮，后就可以在执行记录看到一条工作流执行记录。
 
-After the form is designed and saved, return to the process editing interface to continue designing the process after the form is submitted.
+<img src="./img/form-submit-url.png" alt="image-20250708091929115" style="zoom:50%;" />
 
-Go back to **[Workflow List]** page, you will see the form workflow just created, and you can click the form link to jump to the form submission page.
+#### 5. View form submission records
 
-![image-20230815224035129](./img/form-editor-6.png)
+Form submission record (workflow execution record):
 
-### 4. Submit form
+<img src="./img/form_execution_list.png" alt="image-20250708092027205" style="zoom:50%;" />
 
-> Form Submission Page
+Click View Details to see the data submitted by the form:
 
-![image-20230815224325578](./img/form-editor-7.png)
+<img src="./img/form-execution-detail.png" alt="image-20250708092128528" style="zoom:50%;" />
 
-Every time the form is submitted, the workflow will be triggered to create and execute an execution instance.
 
-### 5. Form submission history
 
-You can see the form submission history on the **[DONE]** tab page of page **[User Task > Form]** or page **[Execution]**.
+## Input
 
-![image-20230815224522586](./img/form-editor-8.png)
+### Form
 
-See the form trigger app output.
+Here you can drop down and select the form you want to associate.
 
-<img src="./img/form-trigger-4.png" alt="image-20230816222459183" style="zoom:50%;" />
+### Members
 
-![image-20230815224800884](./img/form-editor-9.png)
+Set the members who are allowed to fill in the form. If not set, all members in the project space can submit the form.
 
-You can click the submittion url to see the detailed content.
+<img src="./img/form_trigger_input.png" alt="image-20250708092212001" style="zoom:50%;" />
 
-![image-20230815225117875](./img/form-editor-10.png)
+## Output
+
+As shown below, the output will show the data submitted by the submitter at the time, as well as the values of each option in the form (under submitData).
+
+```
+[
+  {
+    "createAt": "2025-05-07 20:31:29",
+    "members": "",
+    "name": "form demo",
+    "submitList": [
+      {
+        "opId": 43,
+        "status": 1,
+        "submitAt": "2025-05-07 20:31:29",
+        "submitData": {
+          "mobile": "15111111111"
+        },
+        "user": "iolinker"
+      }
+    ]
+  }
+]
+```
+
+<img src="./img/form-execution-detail.png" alt="image-20250708092128528" style="zoom:50%;" />

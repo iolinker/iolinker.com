@@ -8,7 +8,7 @@
 
 注意：API只有启用后才能正常使用，否则会提示报错接口未启用。
 
-![image-20240813190036216](./img/sync_api_list.png)
+<img src="./img/api-list.png" alt="image-20250708085935766" style="zoom:50%;" />
 
 
 
