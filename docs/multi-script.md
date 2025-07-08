@@ -100,14 +100,14 @@ Since multiple script executions can be selected, the output structure is in the
       "cost": 5038,
       "endAt": "2025-07-08 08:41:18.755",
       "error": "",
-      "output": "['/iolinker/snippet/xqnnyrdgdv/111.py', 'aaa', 'bbb']",
+      "output": "['/iolinker/snippet/xqnnyrdgdv/111.py', '111', '222']",
       "startAt": "2025-07-08 08:41:13.717"
     },
     "./snippet/xqnnyrdgdv/2222.py": {
       "cost": 3036,
       "endAt": "2025-07-08 08:41:16.753",
       "error": "",
-      "output": "['/iolinker/snippet/xqnnyrdgdv/2222.py', 'aaa', 'bbb']",
+      "output": "['/iolinker/snippet/xqnnyrdgdv/2222.py', '111', '222']",
       "startAt": "2025-07-08 08:41:13.717"
     }
   }
