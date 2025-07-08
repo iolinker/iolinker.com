@@ -36,7 +36,7 @@ Code snippets will be displayed under the corresponding programming language lis
 
 <img src="./img/script-input-parameter-snippet.png" alt="image-20241013101319964" style="zoom:50%;" />
 
-<img src="./img/code-snippet.png" alt="image-20241013101443996" style="zoom:50%;" />
+<img src="./img/code-snippet.png" alt="image-20250708093514842" style="zoom:50%;" />
 
 For the selected code files, two types of operations are supported:
 
@@ -50,7 +50,7 @@ For the selected code files, two types of operations are supported:
 
 In the code editor under **Code Snippet**, you can write code and debug it simultaneously:
 
-<img src="./img/code_debug.png" alt="image-20241013101731923" style="zoom:50%;" />
+<img src="./img/code-snippet-debug.png" alt="image-20250708093829770" style="zoom:50%;" />
 
 
 
@@ -75,6 +75,47 @@ Set the timeout for script execution. If the execution exceeds this time, the sy
     "CreateAt": "xxx"
 }
 ```
+
+
+
+## Error Handler
+
+By default, if an exception occurs during code execution, the default strategy is to throw an exception, and then the entire workflow will report an error and stop running.
+
+<img src="./img/code-error-handler-throw.png" alt="image-20250708094418310" style="zoom:50%;" />
+
+
+
+
+
+There are currently several strategies:
+
+- Retry
+- Throw Exception
+- Ignore
+- Catch
+
+### Retry
+
+The retry strategy can set the number of retries and their intervals when an exception occurs.
+
+<img src="./img/error-handler-retry.png" alt="image-20250708094544277" style="zoom:50%;" />
+
+### Throw Exception
+
+The default strategy when an exception is thrown directly causes the workflow execution to be abnormal and stop.
+
+### Ignore
+
+If you use the ignore strategy, when an exception occurs, the system will not throw the error, but ignore it and continue to execute.
+
+### Catch
+
+You can set a branch to respond to this exception to handle it. As shown in the figure below, you can capture the exception by connecting from the red origin on the right to other nodes.
+
+<img src="./img/error-handler-catch.png" alt="image-20250708094714837" style="zoom:50%;" />
+
+
 
 
 

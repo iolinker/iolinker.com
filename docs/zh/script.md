@@ -54,7 +54,7 @@
 
 在【代码文件】的代码编辑器下，还可以一边写代码、一边调试运行：
 
-<img src="./img/code-snippet-debug.png" alt="image-20240918211840984" style="zoom:50%;" />
+<img src="./img/code-snippet-debug.png" alt="image-20250708093919601" style="zoom:50%;" />
 
 ### 代码
 
@@ -84,7 +84,7 @@
 
 默认情况下，代码执行过程中发生异常，默认采取的策略是抛出异常，然后整个工作流报错停止运行。
 
-<img src="/Users/shuwoom/Desktop/botman-index/docs/zh/img/code_error_handler.png.png.png" alt="image-20241013103757197" style="zoom:50%;" />
+<img src="./img/code_error_handler.png" alt="image-20241013103757197" style="zoom:50%;" />
 
 
 
@@ -101,7 +101,7 @@
 
 重试策略可以设置发生异常时重试的次数及其间隔。
 
-<img src="/Users/shuwoom/Desktop/botman-index/docs/zh/img/code_error_retry.png" alt="image-20241013103843230" style="zoom:50%;" />
+<img src="./img/code_error_retry.png" alt="image-20241013103843230" style="zoom:50%;" />
 
 ### 抛异常
 
@@ -115,7 +115,7 @@
 
 可以设置响应这个异常的分支来进行处理。如下图，从右边红色的原点连接到其他节点，即可实现对异常的捕获。
 
-<img src="/Users/shuwoom/Desktop/botman-index/docs/zh/img/code_error_catch.png" alt="image-20241013104217795" style="zoom:50%;" />
+<img src="./img/code_error_catch.png" alt="image-20241013104217795" style="zoom:50%;" />
 
 
 

@@ -198,7 +198,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['/zh/script.md', '代码执行'],
-                    // ['/zh/multi-script.md', '多脚本运行'],
+                    ['/zh/multi-script.md', '多脚本运行'],
                 ]
               },
               {
