@@ -117,7 +117,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['script.md', 'Code Execution'],
-                    // ['multi-script.md', 'Multi Script Execution'],
+                    ['multi-script.md', 'Multi Script Execution'],
                 ]
               },
             ],
@@ -208,7 +208,7 @@ module.exports = {
                     ['/zh/llm_ollama.md', 'Ollama'],
                     ['/zh/llm_qwen.md', '通义千问'],
                     ['/zh/llm_kimi.md', 'Moonshot'],
-                    // ['/zh/multi-script.md', '多脚本运行'],
+                    ['/zh/multi-script.md', '多脚本运行'],
                 ]
               },
             ],

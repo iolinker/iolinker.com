@@ -24,9 +24,9 @@ Note: The local native virtual machine depends on the current machine environmen
 
 ### Snippet
 
-Code snippets will be displayed under the corresponding programming language list in **File Management** -> **Code Files**.
+Code snippets will be displayed under the corresponding programming language list in **File Management** -> **Code Snippet**.
 
-<img src="./img/code-snippet.png" alt="image-20241013101443996" style="zoom:50%;" />
+<img src="./img/code-snippet-list.png" alt="image-20250708081538262" style="zoom:50%;" />
 
 
 
@@ -34,7 +34,9 @@ Code snippets will be displayed under the corresponding programming language lis
 
 - Parallel Execution
 
-  The selected scripts run simultaneously, which can improve execution efficiency.
+  The selected scripts run simultaneously, which can improve execution efficiency. You can set the number of scripts to run at runtime. The default value is 0, which means all scripts are executed simultaneously.
+
+  <img src="./img/multi-script-paralle-mode.png" alt="image-20250708081622623" style="zoom:50%;" />
 
 - Sequential Execution
 
@@ -47,28 +49,59 @@ Code snippets will be displayed under the corresponding programming language lis
 Set the script execution timeout. If the execution exceeds this time, the system will forcibly terminate the script and output an error message.
 
 ```json
-{
-    "WorkflowId": 0,
-    "WorkflowName": "Unknown",
-    "ExecutionUid": "227174016812625920",
-    "ErrorAppName": "Code Execution",
-    "ErrorAppInstId": "oj2ku2mtzs",
-    "Error": "execute command timeout",
-    "CreateAt": "xxx"
-}
+[
+  {
+    "./snippet/xqnnyrdgdv/111.py": {
+      "cost": 1004,
+      "endAt": "2025-07-08 08:14:57.643",
+      "error": "execute command timeout",
+      "output": null,
+      "startAt": "2025-07-08 08:14:56.639"
+    },
+    "./snippet/xqnnyrdgdv/2222.py": {
+      "cost": 1004,
+      "endAt": "2025-07-08 08:14:56.639",
+      "error": "execute command timeout",
+      "output": null,
+      "startAt": "2025-07-08 08:14:55.635"
+    }
+  }
+]
 ```
 
+### Error Handler
 
+By default, the App will throw an exception when an error occurs, and then stop the subsequent App from running. Here, even if only one script is abnormal, the entire App will report an error. If you want to ignore the error and continue running, you can choose to ignore it in the exception handling operation.
+
+<img src="./img/mult-script-error-handler-throw.png" alt="image-20250708081853136" style="zoom:50%;" />
+
+Ignore the error and continue running:
+
+<img src="./img/multi-script-error-handler-ignore.png" alt="image-20250708082052079" style="zoom:50%;" />
 
 ## Output
 
 Since multiple script executions can be selected, the output structure is in the form of Key-Value pairs as follows:
 
 ```
-{
-    "/iolinker/snippet/iolinker/111.py": "ok",
-    "/iolinker/snippet/iolinker/222.py": "ok222"
-}
+[
+  {
+    "./snippet/xqnnyrdgdv/111.py": {
+      "cost": 5059,
+      "endAt": "2025-07-08 08:09:41.847",
+      "error": "",
+      "output": "hello world 111",
+      "startAt": "2025-07-08 08:09:36.788"
+    },
+    "./snippet/xqnnyrdgdv/2222.py": {
+      "cost": 3058,
+      "endAt": "2025-07-08 08:09:39.846",
+      "error": "",
+      "output": "hello world 2222",
+      "startAt": "2025-07-08 08:09:36.788"
+    }
+  }
+]
 ```
 
 
