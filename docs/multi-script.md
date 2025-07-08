@@ -6,7 +6,7 @@ It supports running multiple scripts either concurrently in parallel or sequenti
 
 ## Input
 
-<img src="./img/multi-script-execution.png" alt="image-20241013162033333" style="zoom:50%;" />
+<img src="./img/multi-script-input.png" alt="image-20250708084311005" style="zoom:50%;" />
 
 ### Language
 
@@ -27,6 +27,16 @@ Note: The local native virtual machine depends on the current machine environmen
 Code snippets will be displayed under the corresponding programming language list in **File Management** -> **Code Snippet**.
 
 <img src="./img/code-snippet-list.png" alt="image-20250708081538262" style="zoom:50%;" />
+
+
+
+### Params
+
+Here you can pass parameters to the script through sys.argv (python script) or $argv (php script). Of course, you can also use variable expressions to reference previous output as input to the script.
+
+<img src="./img/multi-script-input-params.png" alt="image-20250708084952211" style="zoom:50%;" />
+
+<img src="./img/code-snippet-demo.png" alt="image-20250708084654015" style="zoom:50%;" />
 
 
 
@@ -87,18 +97,18 @@ Since multiple script executions can be selected, the output structure is in the
 [
   {
     "./snippet/xqnnyrdgdv/111.py": {
-      "cost": 5059,
-      "endAt": "2025-07-08 08:09:41.847",
+      "cost": 5038,
+      "endAt": "2025-07-08 08:41:18.755",
       "error": "",
-      "output": "hello world 111",
-      "startAt": "2025-07-08 08:09:36.788"
+      "output": "['/iolinker/snippet/xqnnyrdgdv/111.py', 'aaa', 'bbb']",
+      "startAt": "2025-07-08 08:41:13.717"
     },
     "./snippet/xqnnyrdgdv/2222.py": {
-      "cost": 3058,
-      "endAt": "2025-07-08 08:09:39.846",
+      "cost": 3036,
+      "endAt": "2025-07-08 08:41:16.753",
       "error": "",
-      "output": "hello world 2222",
-      "startAt": "2025-07-08 08:09:36.788"
+      "output": "['/iolinker/snippet/xqnnyrdgdv/2222.py', 'aaa', 'bbb']",
+      "startAt": "2025-07-08 08:41:13.717"
     }
   }
 ]

@@ -6,7 +6,7 @@
 
 ## 入参
 
-<img src="./img/multi-script.png" alt="image-20240918212612002" style="zoom:50%;" />
+<img src="./img/multi-script-input.png" alt="image-20250708083810155" style="zoom:50%;" />
 
 ### 语言
 
@@ -29,6 +29,14 @@
 <img src="./img/code-snippet.png" alt="image-20250708080624775" style="zoom:50%;" />
 
 
+
+### 参数
+
+这里可以通过sys.argv（python脚本）或者$argv（php脚本）方式给脚本通义传递参数，当然这里也可以使用变量表达式引用前面的输出作为脚本的输入。
+
+<img src="./img/multi-script-input-params.png" alt="image-20250708084022858" style="zoom:50%;" />
+
+<img src="./img/code-snippet-demo.png" alt="image-20250708085046750" style="zoom:50%;" />
 
 ### 运行模式
 
@@ -89,18 +97,18 @@
 [
   {
     "./snippet/xqnnyrdgdv/111.py": {
-      "cost": 5059,
-      "endAt": "2025-07-08 08:09:41.847",
+      "cost": 5038,
+      "endAt": "2025-07-08 08:41:18.755",
       "error": "",
-      "output": "hello world 111",
-      "startAt": "2025-07-08 08:09:36.788"
+      "output": "['/iolinker/snippet/xqnnyrdgdv/111.py', 'aaa', 'bbb']",
+      "startAt": "2025-07-08 08:41:13.717"
     },
     "./snippet/xqnnyrdgdv/2222.py": {
-      "cost": 3058,
-      "endAt": "2025-07-08 08:09:39.846",
+      "cost": 3036,
+      "endAt": "2025-07-08 08:41:16.753",
       "error": "",
-      "output": "hello world 2222",
-      "startAt": "2025-07-08 08:09:36.788"
+      "output": "['/iolinker/snippet/xqnnyrdgdv/2222.py', 'aaa', 'bbb']",
+      "startAt": "2025-07-08 08:41:13.717"
     }
   }
 ]
