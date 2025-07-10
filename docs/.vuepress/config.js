@@ -103,6 +103,7 @@ module.exports = {
                     ['write_file.md', 'Write File'],
                     ['json_to_csv.md', 'JSON To CSV'],
                     ['database.md', 'Database'],
+                    ['rag.md', 'RAG Knowledge'],
                 ]
               },
               {
@@ -182,6 +183,7 @@ module.exports = {
                     ['/zh/write_file.md', '文件写入'],
                     ['/zh/json_to_csv.md', 'JSON转CSV文件'],
                     ['/zh/database.md', '数据库操作'],
+                    ['/zh/rag.md', 'RAG知识检索'],
                 ]
               },
               {
@@ -209,7 +211,6 @@ module.exports = {
                     ['/zh/llm_ollama.md', 'Ollama'],
                     ['/zh/llm_qwen.md', '通义千问'],
                     ['/zh/llm_kimi.md', 'Moonshot'],
-                    ['/zh/multi-script.md', '多脚本运行'],
                 ]
               },
             ],

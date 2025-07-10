@@ -39,15 +39,15 @@ docker run -p 6333:6333 qdrant/qdrant
 
 ## 创建知识库
 
-这里我们用`https://ollama.com/blog/llama3`的网页内容作为txt文档导入到向量数据库中。
+这里我们从网上找到一个deepseek介绍内容作为txt文档导入到向量数据库中。
 
 点击【编辑】按钮会下拉显示【添加知识库】按钮。
 
-<img src="./img/add_knowledge_menu.png" alt="image-20240926130415863" style="zoom:33%;" />
+<img src="./img/add-knowledge-menu.png" alt="image-20250710191802594" style="zoom:50%;" />
 
 如下是添加知识库的界面：
 
-<img src="./img/add_knowledge.png" alt="image-20240926130603988" style="zoom:80%;" />
+<img src="./img/add-knowledge.png" alt="image-20250710191838544" style="zoom:50%;" />
 
 前面安装了ollama后，需要下载对应的模型到本地，下载成功后可以下拉显示出来：
 
@@ -57,11 +57,11 @@ docker run -p 6333:6333 qdrant/qdrant
 
 文档越大，则向量化处理时间会比较久。处理成功后，可以在左侧的【文件管理】下【知识库】
 
-<img src="./img/knowledge_list.png" alt="image-20240926130810491" style="zoom:67%;" />
+<img src="./img/knowledge-list.png" alt="image-20250710192012901" style="zoom:50%;" />
 
 点击名称，可以跳转到qdrant管理页面，查看向量化后的数据：
 
-<img src="./img/qdrant_demo.png" alt="image-20240926131348472" style="zoom:67%;" />
+<img src="./img/qdrant-demo.png" alt="image-20250710192050046" style="zoom:50%;" />
 
 ## 知识检索
 
@@ -71,13 +71,13 @@ docker run -p 6333:6333 qdrant/qdrant
 
 ### 输入
 
-<img src="./img/rag_input_parameter.png" alt="image-20240926184710754" style="zoom:50%;" />
+<img src="./img/rag-input-parameter.png" alt="image-20250710192219224" style="zoom:50%;" />
 
 #### 知识库
 
 会显示前面上传的文档知识库。
 
-<img src="./img/knowledge_list.png" alt="image-20240926130810491" style="zoom:67%;" />
+<img src="./img/knowledge-list.png" alt="image-20250710192012901" style="zoom:50%;" />
 
 #### 输入
 
@@ -108,25 +108,29 @@ docker run -p 6333:6333 qdrant/qdrant
 - answer。如果勾选了LLM总结，则大模型会对返回的docs文档片段进行分析总结输出结果。
 - docs。返回TopK个最相关的文档片段。
 
-例如下面是对llama3.txt文档的总结。
+<img src="./img/rag-output.png" alt="image-20250710192327726" style="zoom:50%;" />
+
+例如下面是对deekseep.txt文档的总结。
 
 ```json
-{
-    "answer": "Based on the context provided, here is a summary of the main points:\n\n* Llama 3 is an upcoming language model from Meta that will be released in multiple models with new capabilities.\n* The model will have 400B parameters, which is double the size of Llama 2.\n* The dataset used to train Llama 3 is seven times larger than Llama 2.\n* The context length of Llama 3 is 8K, which is twice the length of Llama 2.\n* Llama 3 encodes language more efficiently using a larger token vocabulary with 128K tokens.\n* The initial release of Llama 3 includes two sizes: 8B and 70B parameters.\n\nIn conclusion, Llama 3 is an improved version of the Llama 2 language model with increased capabilities, larger dataset, and more efficient encoding.",
+[
+  {
+    "answer": "<think>\n嗯，我现在需要帮用户总结关于“今天天气怎么样”的回答。首先，我得看看用户提供的上下文里有没有相关信息。用户给了一个查询消息，里面只有“{question}”和一些提示信息，没有具体的天气数据或者相关网页结果。\n\n接下来，我要分析用户的需求。他们可能想知道今天的天气情况，但根据提供的搜索结果，似乎没有相关的数据或链接。所以，我应该明确告诉用户我没有找到相关信息，并建议他们查看实时天气预报网站获取准确信息。\n\n另外，用户提到如果不知道答案，不要编造，所以我不能随便猜天气情况。必须诚实地说出自己无法提供帮助的原因。同时，要保持回答简洁明了，让用户明白下一步该怎么做。\n\n最后，整理一下语言，确保口语化自然，不使用任何markdown格式，这样用户看起来更亲切。\n</think>\n\n很抱歉，我无法提供今天的天气信息。如果您需要实时天气预报，请访问可靠的天气网站或应用获取准确数据[citation:1]。",
     "docs": [
-        {
-            "pageContent": "© 2024 Ollama Blog Docs GitHub Discord X (Twitter) Meetups",
-            "score": 201.07309
-        },
-        {
-            "pageContent": "llm.complete(\"Why is the sky blue?\") What’s next Meta plans to release a 400B parameter Llama 3 model and many more. Over the coming months, they will release multiple models with new capabilities including multimodality, the ability to converse in multiple languages, a much longer context window, and stronger overall capabilities.",
-            "score": 190.61374
-        },
-        {
-            "pageContent": "Trained on a dataset seven times larger than Llama 2 Double the context length of 8K from Llama 2 Encodes language much more efficiently using a larger token vocabulary with 128K tokens Less than 1⁄3 of the false “refusals” when compared to Llama 2 Two sizes: 8B and 70B parameters The initial release of Llama 3 includes two sizes:",
-            "score": 189.52582
-        }
+      {
+        "pageContent": "# 用户消息为： {question}''' ```",
+        "score": 329.39832
+      },
+      {
+        "pageContent": "- 你需要根据用户要求和回答内容选择合适、美观的回答格式，确保可读性强。 - 你的回答应该综合多个相关网页来回答，不能重复引用一个网页。 - 除非用户要求，否则你回答的语言需要和用户提问的语言保持一致。",
+        "score": 317.82227
+      },
+      {
+        "pageContent": "For Chinese query, we use the prompt: ``` search_answer_zh_template = \\ '''# 以下内容是基于用户发送的消息的搜索结果: {search_results} 在我给你的搜索结果中，每个结果都是[webpage X begin]...[webpage X end]格式的，X代表每篇文章的数字索引。请在适当的情况下在句子末尾引用上下文。请按照引用编号[citation:X]的格式在答案中对应部分引用上下文。如果一句话源自多个上下文，请列出所有相关的引用编号，例如[citation:3][citation:5]，切记不要将引用集中在最后返回引用编号，而是在答案对应部分列出。 在回答时，请注意以下几点： - 今天是{cur_date}。 - 并非搜索结果的所有内容都与用户的问题密切相关，你需要结合问题，对搜索结果进行甄别、筛选。",
+        "score": 279.62772
+      }
     ]
-}
+  }
+]
 ```
 
