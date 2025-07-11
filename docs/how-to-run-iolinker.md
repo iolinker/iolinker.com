@@ -1,7 +1,7 @@
 # Docker
 
 ```
-docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
+docker run --name iolinker -p 80:80 -e domain=localhost iolinker/iolinker:v0.7.1
 ```
 
 
@@ -22,14 +22,14 @@ The current binary executable file supports direct execution on the following sy
 
   Enter the [https://iolinker.com](https://iolinker.com) official website and download the corresponding executable file according to your current system.
 
-  <img src="./img/multi-platform.png" alt="image-20250702094427975" style="zoom:50%;" />
+  <img src="./img/multi-platform.png" alt="image-20250711085353446" style="zoom:50%;" />
 
 - Step 2: 
 
   Unzip it to the target folder.
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.7.0.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx-v0.7.1.tar.gz
   ```
 
 - Step 3: 
@@ -48,10 +48,10 @@ The current binary executable file supports direct execution on the following sy
 
   If you want to deploy for public access, you can specify the public access address using the -d parameter.
 
-  For example, the following command specifies the public access address as: [http://test.com](http://test.com).
+  For example, the following command specifies the public access address as: [test.com](test.com).
 
   ```
-  ./iolinker -d http://test.com
+  ./iolinker -d test.com
   ```
 
   ```
@@ -68,9 +68,12 @@ The current binary executable file supports direct execution on the following sy
   More documentation is available at https://iolinker.com
   Usage: IOLinker
   Flags:
+    -d, --domain  Set visit domain, default is localhost. Usage: ./iolinker -d localhost
+    -e, --enable https    Enable https, default is false. Usage: ./iolinker -e true
     -h, --help    help for IOLinker
-    -p, --port    Set server port. Usage: ./iolinker -p 8080
-    -d, --public_domain   Set server's address. Usage: ./iolinker -d http://localhost:8080
+    -c, --https cert file Set https cert file location. Usage: ./iolinker -c ./sercer.crt
+    -k, --https key file  Set https key file location. Usage: ./iolinker -k ./sercer.key
+    -p, --listen port     Set server listen port, default is 80. Usage: ./iolinker -p 80
   
 
 

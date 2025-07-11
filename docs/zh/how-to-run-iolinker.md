@@ -2,7 +2,7 @@
 # Docker容器运行
 
 ```
-docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
+docker run --name iolinker -p 80:80 -e domain=localhost iolinker/iolinker:v0.7.1
 ```
 
 
@@ -23,14 +23,14 @@ docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/ioli
 
   进入 [https://iolinker.com](https://iolinker.com) 官网，根据自己当前系统下载对应的可执行文件。
 
-  <img src="./img/multi-platform.png" alt="image-20250702092600559" style="zoom:50%;" />
+  <img src="./img/multi-platform.png" alt="image-20250711085448703" style="zoom:50%;" />
 
 - 步骤2: 
 
   解压到指定的文件夹下。
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.7.0.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx-v0.7.1.tar.gz
   ```
 
 - 步骤三: 
@@ -49,10 +49,10 @@ docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/ioli
 
   如果部署在公网访问，可以通过-d参数指定公网访问的地址。
   
-  例如下面，表示指定公网访问地址为:[http://test.com](http://test.com)。
+  例如下面，表示指定公网访问地址为:[test.com](test.com)。
   
   ```
-  ./iolinker -d http://test.com
+  ./iolinker -d test.com
   ```
   
   ```
@@ -69,9 +69,12 @@ docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/ioli
   More documentation is available at https://iolinker.com
   Usage: IOLinker
   Flags:
+    -d, --domain  Set visit domain, default is localhost. Usage: ./iolinker -d localhost
+    -e, --enable https    Enable https, default is false. Usage: ./iolinker -e true
     -h, --help    help for IOLinker
-    -p, --port    Set server port. Usage: ./iolinker -p 8080
-    -d, --public_domain   Set server's address. Usage: ./iolinker -d http://localhost:8080
+    -c, --https cert file Set https cert file location. Usage: ./iolinker -c ./sercer.crt
+    -k, --https key file  Set https key file location. Usage: ./iolinker -k ./sercer.key
+    -p, --listen port     Set server listen port, default is 80. Usage: ./iolinker -p 80
   
   ```
 
