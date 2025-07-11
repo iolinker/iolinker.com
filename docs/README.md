@@ -52,7 +52,7 @@ features:
 - [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v0.7.0/iolinker-standalone-linux-armv7-v0.7.0.tar.gz)
 - [Docker]
 ```
-docker run --name iolinker -p 80:80 -e PublicHost=http://localhost iolinker/iolinker:v0.7.0
+docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:v0.7.1
 
 ```
 
