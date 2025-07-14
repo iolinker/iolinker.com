@@ -30,7 +30,7 @@ You can see the form submission address in [Workflow] and click it to enter the 
 
 <img src="./img/form-workflow-list.png" alt="image-20250708091845111" style="zoom:50%;" />
 
-点击【Submit】提交按钮，后就可以在执行记录看到一条工作流执行记录。
+Click the [Submit] button, and you can see a workflow execution record in the execution record.
 
 <img src="./img/form-submit-url.png" alt="image-20250708091929115" style="zoom:50%;" />
 
