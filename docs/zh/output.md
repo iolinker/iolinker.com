@@ -3,7 +3,7 @@
 搭配【同步API】一起使用，可以设置这个同步API的输出结果，即这个流程的输出结果。如下图，设置了一个Json输出，当请求同步API取得结果后，会把设置的Json输出作为API的输出结果返回。
 
 ```json
->> curl http://localhost/v1/api/botman/test/index
+>> curl http://localhost/v1/api/iolinker/test/index
 >> {"code":0,"msg":"ok"}
 ```
 
