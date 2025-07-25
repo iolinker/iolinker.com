@@ -1,10 +1,10 @@
 {
     "download": {
-        "darwin/arm64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.2/iolinker-standalone-darwin-arm64-v0.7.2.tar.gz",
-        "darwin/amd64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.2/iolinker-standalone-darwin-amd64-v0.7.2.tar.gz",
-        "linux/arm64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.2/iolinker-standalone-linux-arm64-v0.7.2.tar.gz",
-        "linux/amd64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.2/iolinker-standalone-linux-amd64-v0.7.2.tar.gz",
-        "linux/arm7": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.2/iolinker-standalone-linux-arm7-v0.7.2.tar.gz"
+        "darwin/arm64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-darwin-arm64-v0.7.3.tar.gz",
+        "darwin/amd64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-darwin-amd64-v0.7.3.tar.gz",
+        "linux/arm64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-arm64-v0.7.3.tar.gz",
+        "linux/amd64": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-amd64-v0.7.3.tar.gz",
+        "linux/arm7": "https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-arm7-v0.7.3.tar.gz"
     },
-    "latest_version": "v0.7.2"
+    "latest_version": "v0.7.3"
 }
