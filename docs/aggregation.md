@@ -5,6 +5,14 @@ Wait for the specified preceding parallel branches to finish running before cont
 <img src="./img/parallel_aggregation.png" alt="image-20241007191244700" style="zoom:50%;" />
 
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/yeeWO2zKVgA"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
 
 ## Input
 

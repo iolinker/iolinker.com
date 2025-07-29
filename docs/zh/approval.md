@@ -16,6 +16,14 @@
 
 <img src="./img/done_approval_list.png" alt="image-20250704093402172" style="zoom:50%;" />
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/vjKWLpJLr7c"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
 
 
 ## 入参

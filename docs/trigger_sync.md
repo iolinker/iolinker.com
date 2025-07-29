@@ -10,7 +10,13 @@ Note: The API can only be used normally after it is enabled; otherwise, an error
 
 <img src="./img/api-list.png" alt="image-20250708090057871" style="zoom:50%;" />
 
-
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/7pSI-umxiSs"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 ## Input
 

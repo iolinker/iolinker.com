@@ -4,6 +4,16 @@ Supports inputting SQL statements to perform operations such as adding, deleting
 
 <img src="./img/database_menu.png" alt="image-20241013095858540" style="zoom:50%;" />
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/qCZ743igGO8"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+
+
 ## Input
 
 <img src="./img/database_input.png" alt="image-20241013095924146" style="zoom:50%;" />

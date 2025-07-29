@@ -6,9 +6,15 @@ You can write text data to a local file.
 
 Successfully written files can be viewed under **File Management** in the **Local File** section, where they can also be edited and updated.
 
-<img src="./img/write_file.png" alt="image-20241013095242366" style="zoom:67%;" />
+<img src="/Users/shuwoom/Desktop/iolinker.com/docs/img/write_file.png" alt="image-20250729212126138" style="zoom:50%;" />
 
-
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/irENExYvvJM"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 ## Input
 
@@ -24,7 +30,13 @@ The name of the saved file, for example: `test.txt`.
 
 Currently, UTF-8 encoding format is supported.
 
-
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/qaK4fCVEfmg"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 ### Operations
 

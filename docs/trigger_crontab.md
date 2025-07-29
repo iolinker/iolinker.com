@@ -6,7 +6,18 @@ Workflows can be set to run periodically, supporting intervals such as minutes, 
 
 The created workflows can be found under the **【Workflow List】** or **【Crontab List】** in the **【Workflow】** menu.
 
-<img src="./img/crontab_list.png" alt="image-20241007150923768" style="zoom:80%;" />
+<img src="./img/crontab-list.png" alt="image-20250729205047635" style="zoom:50%;" />
+
+
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/7i9KbcuhgQs"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+
 
 ## Input
 

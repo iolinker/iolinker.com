@@ -29,7 +29,7 @@ The current binary executable file supports direct execution on the following sy
   Unzip it to the target folder.
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.7.1.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx-v0.7.3.tar.gz
   ```
 
 - Step 3: 

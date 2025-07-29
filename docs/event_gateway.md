@@ -4,7 +4,13 @@ Select the branch with the shortest path (the one that finishes execution first)
 
 <img src="./img/event_gateway.png" alt="image-20241007193730060" style="zoom:50%;" />
 
-
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/KzndyA9TIwI"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 ## Input
 

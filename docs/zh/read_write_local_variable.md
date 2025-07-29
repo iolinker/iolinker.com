@@ -12,6 +12,14 @@
 
 <img src="./img/read_write_local_variable_app.png" alt="image-20240826094940428" style="zoom:50%;" />
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/6B67QKpXXGE"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
 
 
 ## 输入

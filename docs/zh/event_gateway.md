@@ -4,6 +4,16 @@
 
 <img src="./img/event_gateway.png" alt="image-20240823125819648" style="zoom:50%;" />
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/KzndyA9TIwI"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+
+
 ## 入参
 
 无

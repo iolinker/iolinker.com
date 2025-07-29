@@ -4,6 +4,14 @@ Supports executing Python, JavaScript, PHP, Golang, LUA, and Shell scripts using
 
 <img src="./img/code_execution_menu.png" alt="image-20241013101001378" style="zoom:50%;" />
 
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/LxraU4m-7i0"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
 ## Input
 
 <img src="./img/script-input.png" alt="image-20250708095106564" style="zoom:50%;" />
@@ -13,7 +21,13 @@ Supports executing Python, JavaScript, PHP, Golang, LUA, and Shell scripts using
 > Local Native Virtual Machine
 
 - Python3
-- JavaScript
+- <iframe 
+      width="800" 
+      height="600" 
+      src="https://www.youtube.com/embed/0eBUO_7ptG4"  frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
 - PHP
 - LUA
 - SHELL

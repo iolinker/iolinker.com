@@ -32,7 +32,7 @@ getUpdates是主动拉，适合内网且无域名环境。webhook是被动接受
 
 <img src="./img/create_telegram_credential.png" alt="image-20240814130751687" style="zoom:50%;" />
 
-- [getUpdates模式](https://core.telegram.org/bots/api#getupdates)。主动拉Telegram提供的getUpdate接口来获取发送给机器人的消息以及事件数据，这种方式不需要像WebHook那样提供域名并暴露在公网上，在内网也可以接受Telegram机器人的回调消息。。如下是该模式的流程原理：
+- [getUpdates模式](https://core.telegram.org/bots/api#getupdates)。主动拉Telegram提供的getUpdate接口来获取发送给机器人的消息以及事件数据，这种方式不需要像WebHook那样提供域名并暴露在公网上，在内网也可以接受Telegram机器人的回调消息。如下是该模式的流程原理：
 
   <img src="./img/telegram-message-getupdate.png" alt="image-20240921093244770" style="zoom:67%;" />
 
