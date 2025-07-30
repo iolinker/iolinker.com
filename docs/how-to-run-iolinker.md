@@ -1,7 +1,7 @@
 # Docker
 
 ```
-docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:v0.7.1
+docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest
 ```
 
 
@@ -29,7 +29,7 @@ The current binary executable file supports direct execution on the following sy
   Unzip it to the target folder.
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.7.3.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx.tar.gz
   ```
 
 - Step 3: 

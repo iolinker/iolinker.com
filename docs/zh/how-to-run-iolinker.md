@@ -2,7 +2,7 @@
 # Docker容器运行
 
 ```
-docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:v0.7.1
+docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest
 ```
 
 
@@ -30,7 +30,7 @@ docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:v0.7.1
   解压到指定的文件夹下。
 
   ```
-  tar -xvf iolinker-standalone-xxx-xxx-v0.7.3.tar.gz
+  tar -xvf iolinker-standalone-xxx-xxx.tar.gz
   ```
 
 - 步骤三: 
