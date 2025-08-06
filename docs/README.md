@@ -48,6 +48,7 @@ features:
 - [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-darwin-amd64-v0.7.3.tar.gz)
 - [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-amd64-v0.7.3.tar.gz)
 - [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-amd64-v0.7.3.tar.gz)
+- [Windows X86](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-windows-amd64-v0.7.3.tar.gz)
 - [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-armv7-v0.7.3.tar.gz)
 - [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v0.7.3/iolinker-standalone-linux-armv7-v0.7.3.tar.gz)
 - [Docker]
