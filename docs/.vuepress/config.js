@@ -128,10 +128,17 @@ module.exports = {
             sidebar:  [
               {
                 title: '快速上手',   // 必要的
-                sidebarDepth: 0,    // 可选的, 默认值是 1
+                sidebarDepth: 3,    // 可选的, 默认值是 1
                 children: [
                     ['/zh/how-to-run-iolinker', '如何运行IOLinker'],
                 ]
+              },
+              {
+                title: '案例介绍',   // 必要的
+                sidebarDepth: 3,    // 可选的, 默认值是 1
+                children: [
+                    ['/zh/blog/how-to-create-telegram-bot-in-one-minute', '快速实现一个复杂的Telegram交互机器人'],
+                ],
               },
               {
                 title: '触发器',   // 必要的
