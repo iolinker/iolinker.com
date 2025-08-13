@@ -1,4 +1,12 @@
-# 不会写Python代码也可以实现复杂的Telegram交互机器人吗?
+---
+title: 1分钟零代码快速实现一个Telegram Bot指令交互机器人
+description: 区别于传统用python、go、javascript方式实现Telegram bot机器人，本文介绍怎么通过IOLinker工作流工具不写一行代码也可以实现Telegram Bot指令交互机器人。
+meta:
+  - name: keywords
+    content: telegram零代码开发, 工作流自动化, python telegram bot, python telegram bot开发, python调用Telegram API, python发送telegram, python telegram library,  javascript telegram bot开发, go telegram bot开发, 工作流, 低代码
+---
+
+# 1分钟快速实现一个Telegram Bot指令交互机器人
 
 下面这篇文章会告诉你怎样用一种低代码编排的方式来实现一个复杂的Telegram交互机器人，即时不懂编程的人也可以快速实现一个自己的机器人，而且是可以用指令交互的机器人！！！
 
@@ -32,7 +40,7 @@
 - 需要自己本地存储处理上次同步过的消息，避免重复响应消息
 - 仅适合消息量较小的业务场景
 
-<img src="../img/telegram-message-getupdate.png" alt="image-20240921093244770" style="zoom:67%;" />
+<img src="../img/telegram-message-getupdate.png" alt="getUpdate方式拉消息原理图" style="zoom:67%;" title="通过telegram getUpdate方式拉消息"/>
 
 ### （2）webhook模式
 
@@ -49,7 +57,7 @@
 - 需要一个带HTTPS证书的域名
 - 需要手动向Telegram平台的BotFather注册这个回调接口
 
-<img src="../img/telegram-message-webhook.png" alt="image-20240921093335626" style="zoom:67%;" />
+<img src="../img/telegram-message-webhook.png" alt="webhook方式拉消息原理图" title="通过telegram webhook方式拉消息" style="zoom:67%;" />
 
 
 
@@ -63,13 +71,13 @@
 
 开源Telegram Python库：https://github.com/python-telegram-bot/python-telegram-bot
 
-<img src="./img/python-telegram-bot-site-1.png" alt="image-20250729220127247" style="zoom:50%;" />
+<img src="./img/python-telegram-bot-site-1.png" alt="https://github.com/python-telegram-bot/python-telegram-bot仓库介绍" title="https://github.com/python-telegram-bot/python-telegram-bot仓库介绍" style="zoom:50%;" />
 
-<img src="./img/python-telegram-bot-site-2.png" alt="image-20250729220148029" style="zoom:50%;" />
+<img src="./img/python-telegram-bot-site-2.png" alt="https://github.com/python-telegram-bot/python-telegram-bot仓库介绍" title="https://github.com/python-telegram-bot/python-telegram-bot仓库介绍" style="zoom:50%;" />
 
 Telegram官网机器人API（非常多！！）：
 
-<img src="./img/telegram-bot-api.png" alt="image-20250729220612720" style="zoom:50%;" />
+<img src="./img/telegram-bot-api.png" alt="telegram Bot官网API截图" title="telegram Bot官网API截图" style="zoom:50%;" />
 
 当然，这种麻烦的实现方式不在我们的考虑范围内，下面看另一个方法。
 
@@ -85,17 +93,17 @@ Telegram官网机器人API（非常多！！）：
 
 这里相信大部分人应该都有，就不详细展开，主要是取官方的BotFather申请。
 
-<img src="../img/create_telegram_bot_from_botfather.png" alt="image-20240814131554449" style="zoom:50%;" />
+<img src="../img/create_telegram_bot_from_botfather.png" alt="如何通过BotFather申请Telegram机器人" title="如何通过BotFather申请Telegram机器人"  style="zoom:50%;" />
 
 创建完凭据后，进入IOLinker的凭据管理页面，录入前面创建的Telegram凭据：
 
-<img src="./img/create-telegram-credential.png" alt="image-20250806083427672" style="zoom:50%;" />
+<img src="./img/create-telegram-credential.png" alt="在IOLinker创建Telegram凭据" title="在IOLinker创建Telegram凭据" style="zoom:50%;" />
 
 #### (3) 创建并配置Telegram机器人触发器
 
 点击【编辑】菜单栏下的【添加流程】按钮：
 
-<img src="./img/create-workflow-menu.png" alt="image-20250806083732701" style="zoom:50%;" />
+<img src="./img/create-workflow-menu.png" alt="创建工作流按钮" title="创建工作流按钮" style="zoom:50%;" />
 
 
 在左侧【触发器】分类下，选择【Telegram触发器】，双击并按照下图配置。
@@ -107,19 +115,19 @@ Telegram官网机器人API（非常多！！）：
 - 命令行参数：参考文档：[命令行参数使用](https://iolinker.com/zh/trigger_telegram.html#%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0)
 - 调试数据：这里主要是模仿Telegram机器人触发器执行后的输出结果，可以在不实际运行机器人时模拟数据输出
 
-<img src="./img/set-tg-bot-trigger.png" alt="image-20250806083811994" style="zoom:50%;" />
+<img src="./img/set-tg-bot-trigger.png" alt="设置Telegram Bot触发器配置页面" title="设置Telegram Bot触发器配置页面" style="zoom:50%;" />
 
 到这里，如果我们直接保存，并启用，实际上是可以运行了，只不过这里只是捕获用户的输入没有给用户实际反馈，实际如下：
 
-<img src="./img/tg-bot-start-cmd.png" alt="image-20250806084758350" style="zoom:50%;" />
+<img src="./img/tg-bot-start-cmd.png" alt="telegram 机器人/start命令" title="telegram 机器人/start命令" style="zoom:50%;" />
 
 在Telegram机器人输入`/start`指令后，我们可以在工作流列表中看到工作流响应执行的记录。
 
-<img src="./img/tg-bot-execution-list.png" alt="image-20250806084745716" style="zoom:50%;" />
+<img src="./img/tg-bot-execution-list.png" alt="telegram bot执行记录列表" title="telegram bot执行记录列表" style="zoom:50%;" />
 
 点击执行记录，可以看到详细的响应数据。
 
-<img src="./img/telegram-bot-trigger-detail.png" alt="image-20250806084836168" style="zoom:50%;" />
+<img src="./img/telegram-bot-trigger-detail.png" alt="telegram bot执行详情" title="telegram bot执行详情" style="zoom:50%;" />
 
 #### (4) 添加Telegram Bot审批交互功能
 
@@ -135,17 +143,17 @@ Telegram官网机器人API（非常多！！）：
 - Yes Label：设置审批通过的标签名称
 - No Label：设置审批驳回的标签名称
 
-<img src="./img/set-telegram-id.png" alt="image-20250806085516973" style="zoom:50%;" />
+<img src="./img/set-telegram-id.png" alt="如何设置Telegram ID账号" title="如何设置Telegram ID账号"  style="zoom:50%;" />
 
 如下图，设置了审批APP后，可以设置同意（绿色圆点）和驳回（红色圆点）的后续响应分支，例如执行其他python代码之类的。也可以使用Telegram发送消息。
 
-<img src="./img/set-tg-approval-bot-setting.png" alt="image-20250806090407924" style="zoom:50%;" />
+<img src="./img/set-tg-approval-bot-setting.png" alt="设置Telegram审批的同意、驳回和超时分支" title="设置Telegram审批的同意、驳回和超时分支"  style="zoom:50%;" />
 
 #### (5) 保存并启用
 
 保存后，可以再【流程管理】下的【机器人列表】看到创建的机器人信息，也可以在【工作流列表】看到。
 
-<img src="./img/telegram-bot-list.png" alt="image-20250806085853156" style="zoom:50%;" />
+<img src="./img/telegram-bot-list.png" alt="telegram bot列表" title="telegram bot列表" style="zoom:50%;" />
 
 #### (6) 测试机器人
 
@@ -153,10 +161,10 @@ Telegram官网机器人API（非常多！！）：
 
 点击【Yes】或【No】按钮，执行后续同意或驳回分支的流程。
 
-<img src="./img/tg-bot-start-cmd-v2.png" alt="image-20250806090726412" style="zoom:50%;" />
+<img src="./img/tg-bot-start-cmd-v2.png" alt="触发telegram bot /start命令响应" title="触发telegram bot /start命令响应" style="zoom:50%;" />
 
 我们回到【执行记录】可以看到工作流的响应记录，这里可以看到工作流根据机器人的交互选择了对应的分支流程执行。
 
 整个过程熟练的话，可以不到一分钟完成，相比过去写代码速度回高效很多！！
 
-<img src="./img/tg-bot-execution-detail-v2.png" alt="image-20250806090906574" style="zoom:50%;" />
+<img src="./img/tg-bot-execution-detail-v2.png" alt="telegram bot执行详情" title="telegram bot执行详情"  style="zoom:50%;" />

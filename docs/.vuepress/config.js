@@ -8,12 +8,16 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'IOLinker AI Workflow',
-      description: 'The most powerful personal AI workflow tool',
+      description: 'Lightweight AI workflow development platform featuring 6 trigger methods (manual/API/Telegram/scheduled/error), enterprise capabilities including concurrency control, dynamic approval workflows, and sub-process invocation. Supports Python/JS/PHP/Shell script debugging with built-in form tasks and variable APIs, plus specialized Telegram bot development tools.',
     },
     '/zh/': {
       lang: 'zh-CN',
       title: 'IOLinker AI工作流',
-      description: '功能最强的个人AI工作流工具',
+      description: '轻量级AI工作流开发平台，提供手动/API/Telegram/定时任务/错误6种触发方式，具备并发控制、动态审批网关、子工作流调用等企业级功能，支持Python/JS/PHP/Shell脚本调试，内置表单任务和变量读写API，并且专门支持Telegram机器人开发。',
+      head: [
+        ['meta', { name: 'keywords', content: 'AI效率工具,生产力工具,工作流自动化,AI工作流,低代码,Telegram机器人开发,Python开发,JavaScript开发,定时任务,API编排'}],
+        ['meta', { name: 'author', content: 'iolinker@outlook.com' }],
+      ]
     },
   },
   base: '/',
