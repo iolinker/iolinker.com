@@ -1,3 +1,11 @@
+---
+title: Send Telegram Message
+description: Send text, Markdown, images, files, and GIFs through Telegram bots.
+meta:
+  - name: keywords
+    content: Telegram Bot Message Push, Telegram Development, Telegram Bot Notification, Telegram Bot Webhook, Telegram Bot API, Telegram Bot Development, Golang Telegram Bot, Python Telegram Bot, Low-code, AI Workflow, Process Engine
+---
+
 ## Send Telegram Message
 
 Supports sending messages in various formats, including text, images, files, and GIFs.

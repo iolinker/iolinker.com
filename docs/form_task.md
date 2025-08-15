@@ -1,6 +1,14 @@
+---
+title: Form Task
+description: In the workflow system, forms are designed based on the form engine. After associating with a workflow, a unique form submission URL is generated. Users trigger the workflow's progression and continued execution by filling out and submitting the form.
+meta:
+  - name: keywords
+    content: Process Form, Form Engine, Form Flow, Workflow Form, Workflow Form, Form, Low-code, AI Workflow, Process Engine
+---
+
 ## Form Task
 
-Generate a unique form task URL for each form-filling member, and submitting the form can trigger the workflow to proceed.
+In the workflow system, forms are designed using the form engine. When associated with a workflow, a unique form submission URL is automatically generated. Users can trigger workflow progression and execution by completing and submitting these forms.
 
 <img src="./img/form_task_menu.png" alt="image-20250513200021670" style="zoom:50%;" />
 

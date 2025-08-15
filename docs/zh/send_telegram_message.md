@@ -1,6 +1,14 @@
+---
+title: 发送Telegram消息
+description: 通过Telegram机器人发送文本、Markdown、图片、文件、Gif等消息。
+meta:
+  - name: keywords
+    content: Telegram机器人消息推送,  Telegram开发, Telegram机器人通知, Telegram机器人webhook, Telegram机器人API, Telegram机器人开发, Golang Telegram机器人, Python Telegram机器人, 低代码, AI工作流, 流程引擎
+---
+
 ## 发送Telegram消息
 
-支持发送文本、图片、文件、Gif等消息。
+通过Telegram机器人发送文本、Markdown、图片、文件、Gif等消息。
 
 <img src="./img/send-telegram-msg-menu.png" alt="image-20240921095728984" style="zoom:50%;" />
 

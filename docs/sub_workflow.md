@@ -1,3 +1,11 @@
+---
+title: Subworkflow Execution
+description: How to invoke sub-workflows synchronously or asynchronously and configure loop iterations.
+meta:
+  - name: keywords
+    content: Sub-Process Node, Workflow Execution, Low-code, AI Workflow, Process Engine
+---
+
 ## Subworkflow Execution
 
 Subworkflows can be called for execution in either synchronous or asynchronous modes. The synchronous mode waits for the subworkflow to finish before continuing execution, while the asynchronous mode calls the subworkflow and proceeds without waiting for its completion.

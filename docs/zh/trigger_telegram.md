@@ -1,6 +1,14 @@
-## Telegram触发器
+---
+title: Telegram机器人触发器
+description: 如何通过可视化编排的方式，实现在Telegram Bot机器人上实现指令触发功能，输入指令后会触发工作流执行。
+meta:
+  - name: keywords
+    content: Telegram机器人开发, Telegram API调用, Python Telegram, Golang Telegram, Telegram Github, Telegram Bot机器人, 低代码, AI工作流, 流程引擎
+---
 
-可对在Telegram机器人上，用户发送的消息进行响应。
+## Telegram机器人触发器
+
+通过可视化编排的方式，实现在Telegram Bot机器人上实现指令触发功能，输入指令后会触发工作流执行，从而实现指令功能交互，即使不会Python开发也可以快速开发实现一个指令机器人。
 
 <img src="./img/telegram-trigger-menu.png" alt="image-20240921095511786" style="zoom:50%;" />
 
@@ -39,8 +47,6 @@ getUpdates是主动拉，适合内网且无域名环境。webhook是被动接受
 - [webhook模式](https://core.telegram.org/bots/api#setwebhook)。提供一个回调地址（需要https的域名）给Telegram，Telegram会把机器人收到的消息和事件数据推送到这个回调接口，这种方式实时性会更高，但是相对低会要求用户把系统暴露到公网上，且需要提供一个带HTTPS证书的域名。如下是该模式的流程原理：
 
   <img src="./img/telegram-message-webhook.png" alt="image-20240921093335626" style="zoom:67%;" />
-
-
 
 
 

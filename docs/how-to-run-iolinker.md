@@ -1,3 +1,11 @@
+---
+title: How to run IOLinker
+description: Introduction to IOLinker's containerized operation and binary file execution methods, along with an overview of IOLinker's performance.
+meta:
+  - name: keywords
+    content: IOLinker, Docker Containerized Operation, Binary File Execution, High Performance, Raspberry Pi 4B, Synology NAS, Low-code, AI Workflow, Process Engine
+---
+
 # Docker
 
 ```

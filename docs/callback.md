@@ -1,6 +1,14 @@
-## Callback Interface
+---
+title: Callback
+description: The callback mechanism allows workflows to pause and wait for external services to invoke the generated callback interface, which then triggers the workflow to resume execution.
+meta:
+  - name: keywords
+    content: Webhook, Workflow, Callback Endpoint, Callback Interface, Callback, Low-code, AI Workflow, Process Engine
+---
 
-The **Callback Interface** application generates a unique URL address. The application will wait for the interface to be called before continuing execution; otherwise, it remains in a sleep state.
+## Callback 
+
+The **Callback** application generates a unique URL address. The application will wait for the interface to be called before continuing execution; otherwise, it remains in a sleep state.
 
 This callback address can accept parameters via POST and display the output in the TriggerData.
 

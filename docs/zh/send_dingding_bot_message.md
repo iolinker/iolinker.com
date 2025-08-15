@@ -1,6 +1,14 @@
+---
+title: 发送钉钉机器人消息
+description: 介绍通过钉钉机器人发送文本、Markdown消息。
+meta:
+  - name: keywords
+    content: 钉钉机器人消息推送, 钉钉开发, 钉钉机器人通知, 钉钉机器人开发, 钉钉机器人API, 钉钉机器人webhook, Golang钉钉机器人, Python钉钉机器人, 低代码, AI工作流, 流程引擎
+---
+
 ## 发送钉钉机器人消息
 
-支持发送文本等消息。
+通过钉钉机器人发送文本、Markdown消息。
 
 <img src="./img/send_dingding_bot_msg_menu.png" alt="image-20250611094539988" style="zoom:50%;" />
 

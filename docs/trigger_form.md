@@ -1,3 +1,11 @@
+---
+title: Form Trigger
+description: In the workflow system, forms are designed based on the form engine. After associating with a workflow, a unique form submission URL is generated. Users trigger the workflow's progression and continued execution by filling out and submitting the form.
+meta:
+  - name: keywords
+    content: Process Form, Form Engine, Form Flow, Workflow Form, Workflow Form, Form, Low-code, AI Workflow, Process Engine
+---
+
 ## Form Trigger
 
 The workflow execution is triggered by submitting the form.

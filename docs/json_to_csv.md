@@ -1,3 +1,11 @@
+---
+title: JSON To CSV
+description: Can convert JSON data (arrays) into CSV files.
+meta:
+  - name: keywords
+    content: JSON to CSV, JSON to Excel, Low-code, AI Workflow, Process Engine
+---
+
 ## JSON To CSV
 
 You can convert Json data (array) into a csv file.

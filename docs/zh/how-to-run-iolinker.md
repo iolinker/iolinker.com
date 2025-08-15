@@ -1,3 +1,10 @@
+---
+title: 如何运行IOLinker
+description: 介绍IOLinker的容器化运行、二进制文件运行方式，并介绍IOLinker的性能
+meta:
+  - name: keywords
+    content: IOLInker, Docker容器化运行, 二进制文件运行, 高性能, 树莓派4B, 群辉NAS, 低代码, AI工作流, 流程引擎
+---
 
 # Docker容器运行
 

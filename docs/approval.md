@@ -1,6 +1,14 @@
+---
+title: Approval
+description: The system supports both single-approver (OR-signature) and multi-approver (AND-signature) authorization modes. Approvals can be processed either through web interfaces or via Telegram bots.
+meta:
+  - name: keywords
+    content: Workflow Approval, Telegram Bot Approval, Telegram Bot Button Interaction, Telegram Bot Button Response, Web-based Approval, Approval Flow Engine, Approval Flow Framework, Low-code, AI Workflow, Process Engine
+---
+
 ## Approval
 
-Supports both single-signature and co-signature approval methods. Approval can be conducted on the web page as well as on Telegram. You can also set a timeout period and its corresponding response branches.
+The system supports single-approver (OR-approval) and multi-approver (AND-approval) modes, with approval available via both web interfaces and Telegram bots. It allows configuration of timeout periods and timeout branches, as well as setting subsequent execution branches for both approved and rejected scenarios. For Telegram Bot operations, this feature enables interactive bot functionality through button callback responses, significantly simplifying Telegram Bot development.
 
 A green output indicates approval, red indicates disapproval, and a gray output indicates a timeout.
 

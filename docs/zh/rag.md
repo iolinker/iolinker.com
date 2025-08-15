@@ -1,3 +1,11 @@
+---
+title: RAG
+description: 本文介绍如何基于Ollama(开源deepseek、千问、gpt等开源模型)和Qdrant搭建本地RAG知识库，并在工作流中集成调用。
+meta:
+  - name: keywords
+    content: rag本地部署, rag本地知识库部署, Deepseek, 知识库检索, 工作流, 大模型接入知识库, 大模型本地部署, Qdrant向量数据库
+---
+
 RAG（Retrieval-Augmented Generation）是一种混合方法，它结合了检索式和生成式的策略。RAG旨在提高模型在生成回答时的准确性和可靠性。它通过在大型知识库中检索相关信息，并使用生成式模型（如Transformer）来生成合适的回答。这种方法允许模型在生成回答时充分利用外部知识，从而提高了回答的质量和准确性。
 
 

@@ -1,3 +1,11 @@
+---
+title: Conditional Judgment
+description: Conditional branching in workflows, also known as decision logic, implements IF-ELSE functionality that enables workflows to automatically select different execution paths based on specified conditions. This feature supports dynamic decision-making using variable expressions.
+meta:
+  - name: keywords
+    content: Conditional Judgment, IF-ELSE, Branch Logic, Exclusive Gateway, Low-code, AI Workflow, Process Engine
+---
+
 ## Conditional Judgment
 
 Determine the output as true or false based on the input and select the corresponding branch for execution. Supports the use of "and" and "or" to combine conditions, and allows for the use of variable expressions to make dynamic decisions at runtime.

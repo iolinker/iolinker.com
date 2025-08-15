@@ -1,3 +1,11 @@
+---
+title: Delay
+description: The workflow pauses after executing the current node, delays for a specified duration, and then proceeds to execute subsequent nodes.
+meta:
+  - name: keywords
+    content: Delayed Wait, Delayed Execution, Wait for Execution, Delay for Specified Duration, Suspend and Wait, Low-code, AI Workflow, Process Engine
+---
+
 ## Delay
 
 You can set a delay for a specified amount of time (in seconds) before continuing execution.

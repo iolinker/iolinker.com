@@ -1,4 +1,12 @@
-## Database
+---
+title: Database CRUD
+description: The workflow supports CRUD operations (select, update, delete, insert SQL statements) for MySQL, PostgreSQL, and SQL Server databases.
+meta:
+  - name: keywords
+    content: MySQL, PostgreSQL, SQL Server,  Database operations, Database CRUD,  MySQL CRUD, MySQL SELECT, MySQL UPDATE, MySQL INSERT, MySQL DELETE,  MySQL database, MySQL SQL commands,  Workflow development, Low-code development
+---
+
+## Database CRUD
 
 Supports inputting SQL statements to perform operations such as adding, deleting, modifying, and querying data in the database.
 

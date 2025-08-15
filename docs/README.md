@@ -5,13 +5,21 @@ heroText: IOLinker AI Workflow
 tagline: The most powerful personal AI workflow tool
 actionText: Start →
 actionLink: /how-to-run-iolinker
+
+# 新增SEO配置
+meta:
+  - name: description
+    content: "IOLinker is an AI workflow platform for developers, delivering 1500+ QPS performance with dual-mode automation (visual orchestration + code extensions) and multi-language support including Python/JS/Shell."
+  - name: keywords
+    content: "AI workflow, no-code development, developer tools, automation scripts, workflow engine, Telegram bot development, AI agent platform"
+
 features:
-- title: 🤖 Easy To Use
-  details: Low-code concept supports drag-and-drop design of workflow
+- title: 🤖 Dual-Mode Development
+  details: Visual drag-and-drop builder + Python/JS/PHP code extensions for full-spectrum automation - from business teams to engineers.
 - title: ⚡ High Performance
   details: The API workflow on a single machine can support more than 1,500 QPS
-- title: ⚒️ Rich Functions
-  details: A variety of trigger modes and rich logic components, and supports flexible expansion of various common programming languages
+- title: ⚒️ Developer-Centric
+  details: Native support for event triggers, parallel task orchestration, local file processing, and Python/JS SDK extensions.
 ---
 <iframe 
     width="800" 

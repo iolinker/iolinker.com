@@ -1,6 +1,14 @@
+---
+title: 发送飞书机器人消息
+description: 介绍通过飞书机器人发送文本消息。
+meta:
+  - name: keywords
+    content: 飞书机器人消息推送, 飞书开发, 飞书机器人通知, 飞书机器人webhook, 飞书机器人API, 飞书机器人开发, Golang飞书机器人, Python飞书机器人, 低代码, AI工作流, 流程引擎
+---
+
 ## 发送飞书机器人消息
 
-支持发送文本等消息。
+通过飞书机器人发送文本消息。
 
 <img src="./img/send_feishu_bot_msg_menu.png" alt="image-20250611092255212" style="zoom:50%;" />
 

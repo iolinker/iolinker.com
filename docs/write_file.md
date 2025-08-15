@@ -1,6 +1,14 @@
+---
+title: Write File
+description: How to write text data to a local file.
+meta:
+  - name: keywords
+    content: File Writing, Python File Writing, Low-code, AI Workflow, Process Engine
+---
+
 ## Write File
 
-You can write text data to a local file.
+Text data can be written to local files and viewed/maintained under the platform's [File Management] section.
 
 <img src="./img/write_file_menu.png" alt="image-20241013095115813" style="zoom:50%;" />
 

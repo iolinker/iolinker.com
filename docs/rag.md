@@ -1,3 +1,11 @@
+---
+title: RAG
+description: This article explains how to build a local RAG (Retrieval-Augmented Generation) knowledge base using Ollama (open-source models like DeepSeek, Qwen, GPT, etc.) and Qdrant, and integrate it into workflows for calling.
+meta:
+  - name: keywords
+    content: RAG Local Deployment, RAG Local Knowledge Base Deployment, DeepSeek, Knowledge Base Retrieval, Workflow, Large Model Integration with Knowledge Base, Large Model Local Deployment, Qdrant Vector Database
+---
+
 RAG (Retrieval-Augmented Generation) is a hybrid approach that combines retrieval-based and generative strategies. RAG aims to enhance the accuracy and reliability of a model when generating responses. It achieves this by retrieving relevant information from a large knowledge base and using a generative model (such as a Transformer) to produce appropriate answers. This method enables the model to leverage external knowledge during response generation, thereby improving the quality and precision of the answers.
 
 

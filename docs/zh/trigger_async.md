@@ -1,6 +1,14 @@
+---
+title: 异步API触发器
+description: 如何创建一个异步执行任务的API，通过调用该API触发工作流执行。
+meta:
+  - name: keywords
+    content: 异步API, 异步任务, 异步运行, 耗时任务后台运行, 异步任务开发, Python异步执行函数, Python异步执行, Python异步编程, 低代码, AI工作流, 流程引擎
+---
+
 ## 异步API触发器
 
-生成一个HTTP服务的API接口，调用该接口会以异步方式触发工作流运行，不等待工作流运行结束，直接返回执行实例的ID。
+生成一个HTTP服务的API接口，调用该接口会以异步方式触发工作流运行，适合处理耗时任务，不等待工作流运行结束，直接返回执行实例的ID。
 
 <img src="./img/trigger_async_api.png" alt="image-20240921173600619" style="zoom:50%;" />
 

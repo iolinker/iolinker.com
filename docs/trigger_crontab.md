@@ -1,3 +1,12 @@
+---
+title: Crontab Trigger
+description: How to create scheduled tasks that trigger workflow execution monthly, weekly, daily, or hourly.
+meta:
+  - name: keywords
+    content: Scheduled Tasks, Periodic Tasks, Scheduling Tools, Crontab Scheduled Tasks, Cron Scheduled Tasks, Linux Scheduled Tasks, Windows Scheduled Tasks, Linux Crontab, Low-code, AI Workflow, Process Engine
+---
+
+
 ## Crontab Trigger
 
 Workflows can be set to run periodically, supporting intervals such as minutes, hours, days, weeks, and months. The syntax is the same as the crontab format in Linux systems.

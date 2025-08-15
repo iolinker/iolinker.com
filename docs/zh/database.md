@@ -1,3 +1,11 @@
+---
+title: 数据库操作
+description: 工作流中支持MySQL、Postgres、SQLServer数据库的增删改查操作，即select、update、delete、insert SQL语句执行。
+meta:
+  - name: keywords
+    content: MySQL, Postgres, SQLServer, 数据库操作, 数据库增删改查, MySQL增删改查, MySQL Select, MySQL Update, MySQL Insert, MySQL Delete, MySQL Database, 工作流开发, 低代码开发
+---
+
 ## 数据库操作
 
 支持输入SQL语句实现对数据库的增删改查等操作。

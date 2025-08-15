@@ -1,6 +1,14 @@
+---
+title: 同步API触发器
+description: 如何通过编排方式创建一个同步API，调用该API会触发工作流运行，并阻塞知道返回输出结果。
+meta:
+  - name: keywords
+    content: 同步API, API可视化编排, API网关, API开发, 低代码, AI工作流, 流程引擎
+---
+
 ## 同步API触发器
 
-生成一个HTTP服务的API接口，调用该接口会触发工作流运行，等待工作流运行结束，并返回输出结果。
+Create an HTTP service API interface through visual orchestration that supports parallel execution, convergence, loops, and other operations within workflows. Calling this interface triggers workflow execution, waits for the workflow to complete, and returns output results.
 
 <img src="./img/trigger_sync_api.png" alt="image-20240921173918895" style="zoom:50%;" />
 

@@ -1,6 +1,14 @@
+---
+title: 文件写入
+description: 如何向本地文件写入文本数据。
+meta:
+  - name: keywords
+    content: 文件写入, Python文件写入, 低代码, AI工作流, 流程引擎
+---
+
 ## 文件写入
 
-可向本地文件写入文本数据。
+可向本地文件写入文本数据，并在平台的【文件管理】下查看和维护。
 
 <img src="./img/write-file.png" alt="image-20240918174219847" style="zoom:50%;" />
 

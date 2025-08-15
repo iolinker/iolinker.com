@@ -1,3 +1,11 @@
+---
+title: Read/Write Local Environment Variables
+description: This section explains how to set local variables within workflows for temporary data read/write operations.
+meta:
+  - name: keywords
+    content: Local Variables, Variable Read/Write, Process Variables, Low-code, AI Workflow, Process Engine
+---
+
 ## Read and Write Local Environment Variables
 
 Each workflow can maintain its own local variables during execution to store temporary data. When designing a workflow, there is a **Local Variables** menu in the toolbar. By clicking on it, you can add local variables that the workflow can read and write. Currently, it supports two types: strings and numbers.

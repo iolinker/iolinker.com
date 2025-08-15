@@ -1,3 +1,11 @@
+---
+title: 代码执行
+description: 工作流中支持原生Python/Js/PHP/Shell编程语言开发，也支持Js虚拟机运行代码，并且提供本地代码文件维护管理和引用执行，支持设置异常处理机制，可以捕获和响应异常。
+meta:
+  - name: keywords
+    content: python开发, JS开发, PHP开发, SHELL开发, 代码片段管理, snippet collection, 工作流开发, 低代码开发
+---
+
 ## 代码执行
 
 支持使用本地原生虚拟机（例如本地环境的Python）或系统内置的虚拟机（不依赖本地环境）执行Python、Javascript、PHP、Golang、LUA和Shell脚本。

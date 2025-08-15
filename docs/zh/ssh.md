@@ -1,3 +1,11 @@
+---
+title: SSH远程执行
+description: 介绍如何SSH远程登录机器，并执行Shell命令。
+meta:
+  - name: keywords
+    content: SSH远程控制, 远程代码执行, SSH远程执行命令, SSH远程开发, SSH执行多条命令, 低代码, AI工作流, 流程引擎
+---
+
 ## SSH远程执行
 
 SSH远程登录机器，并执行Shell命令。

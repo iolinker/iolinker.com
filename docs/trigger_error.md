@@ -1,3 +1,11 @@
+---
+title: Error Trigger
+description: How to implement exception removal handling, capture exceptions, and configure exception responses.
+meta:
+  - name: keywords
+    content: Exception Handling, Error Handling, Exception Capture, Error Capture, Exception Handling Mechanism, Global Exception, Error Response, Exception Response, Low-code, AI Workflow, Process Engine
+---
+
 ## Error Trigger
 
 <img src="./img/error_trigger_menu.png" alt="image-20250513192811512" style="zoom:50%;" />

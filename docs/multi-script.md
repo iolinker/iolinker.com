@@ -1,3 +1,11 @@
+---
+title: Multi Script Execution
+description: Supports selecting multiple Python/JS/PHP scripts to run in parallel or sequentially.
+meta:
+  - name: keywords
+    content: Python Development, JS Development, PHP Development, Shell Development, Code Snippet Management, Snippet Collection, Parallel Execution, Sequential Execution, Parallel Script Execution, Sequential Script Execution, Workflow Development, Low-code Development
+---
+
 ## Multi Script Execution
 
 It supports running multiple scripts either concurrently in parallel or sequentially one after another.

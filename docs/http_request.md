@@ -1,3 +1,11 @@
+---
+title: HTTP Call
+description: Supports sending POST or GET requests to call external API services.
+meta:
+  - name: keywords
+    content: HTTP Call, API Request, External Call, Send HTTP Request, Low-code, AI Workflow, Process Engine
+---
+
 ## HTTP Call
 
 Supports sending POST or GET requests.

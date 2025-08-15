@@ -1,3 +1,11 @@
+---
+title: Sync API Trigger
+description: How to create a synchronous API through orchestration, where calling this API triggers workflow execution and blocks until output results are returned.
+meta:
+  - name: keywords
+    content: Synchronous API, API Visual Orchestration, API Gateway, API Development, Low-code, AI Workflow, Process Engine
+---
+
 ## Sync API Trigger
 
 Generate an HTTP service API interface that, when called, will trigger the workflow to run, wait for the workflow to finish, and return the output results.

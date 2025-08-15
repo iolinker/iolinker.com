@@ -5,13 +5,21 @@ heroText: IOLinker AI 工作流
 tagline: 功能最强的个人AI工作流工具
 actionText: 开始 →
 actionLink: /zh/how-to-run-iolinker
+
+# 新增SEO配置
+meta:
+  - name: description
+    content: "IOLinker 是面向开发者的AI工作流工具，支持1500+ QPS的高性能自动化，提供可视化编排与代码扩展双模式，兼容Python/JS/Shell等多语言环境。"
+  - name: keywords
+    content: "AI工作流,无代码开发,开发者工具,自动化脚本,工作流引擎,Telegram机器人开发,AI开发,AI Agent开发"
+
 features:
-- title: 🤖 简单易用
-  details: 低代码理念，支持通过拖拉拽的方式设计工作流。
+- title: 🤖 双模开发
+  details: 可视化拖拽编排 + Python/JS/PHP等代码扩展，满足从业务人员到开发者的全场景需求。
 - title: ⚡ 高性能
-  details: 单机上API工作流可支持高达1500以上的QPS。
-- title: ⚒️ 丰富的功能
-  details: 多种多样的触发模式以及丰富的逻辑组件，并且支持各种常见编程语言灵活扩展。
+  details: 单节点1500+ QPS处理能力。
+- title: ⚒️ 开发者友好
+  details: 原生支持常用的事件触发方式、并行汇聚等逻辑控制、本地文件数据处理、原生Python/JS编程扩展等。
 ---
 <iframe 
     width="800" 

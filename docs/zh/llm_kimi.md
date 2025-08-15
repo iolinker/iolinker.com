@@ -1,3 +1,11 @@
+---
+title: Moonshot AI
+description: 支持调用Kimi AI大模型接口，集成AI大模型能力。
+meta:
+  - name: keywords
+    content: Kimi AI, AI大模型, Moonshot AI调用, Kimi接口调用, 低代码, AI工作流, 流程引擎
+---
+
 ## Moonshot AI
 
 通过[Moonshot](https://platform.moonshot.cn/console/api-keys)平台的API，调用大模型接口，该平台有一定的免费Token额度可以使用。

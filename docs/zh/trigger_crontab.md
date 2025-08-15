@@ -1,3 +1,11 @@
+---
+title: 周期任务触发器
+description: 如何创建一个定时任务，每月、每周、每天、每小时触发工作流执行。
+meta:
+  - name: keywords
+    content: 定时任务, 周期任务, 定时工具, Crontab定时任务, Cron定时任务, Linux定时任务, Windows定时任务, Linux Crontab, 低代码, AI工作流, 流程引擎
+---
+
 ## 周期任务触发器
 
 可设置周期性运行的工作流，支持分钟、小时、天、周和月，语法格式跟Linux系统的crontab一样。

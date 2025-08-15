@@ -1,3 +1,11 @@
+---
+title: 通义千问AI
+description: 支持调用通义千问 AI大模型接口，集成AI大模型能力。
+meta:
+  - name: keywords
+    content: 通义千问API, 通义千问开源, AI大模型, QWen AI调用, QWen接口调用, 低代码, AI工作流, 流程引擎
+---
+
 ## 通义千问AI
 
 通过[阿里云百炼](https://bailian.console.aliyun.com/?tab=home#/home)平台的API，调用通义千问大模型接口，该平台有一定的免费Token额度可以使用。

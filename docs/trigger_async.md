@@ -1,3 +1,11 @@
+---
+title: Async API Trigger
+description: How to create an asynchronous task execution API that triggers workflow execution when called.
+meta:
+  - name: keywords
+    content: Asynchronous API, Asynchronous Tasks, Asynchronous Execution, Background Execution of Time-Consuming Tasks, Asynchronous Task Development, Python Asynchronous Function Execution, Python Async Execution, Python Asynchronous Programming, Low-code, AI Workflow, Process Engine
+---
+
 ## Async API Trigger
 
 Generate an HTTP service API interface that triggers a workflow to run asynchronously when called, returning the execution instance ID immediately without waiting for the workflow to finish.

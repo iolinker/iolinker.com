@@ -1,3 +1,11 @@
+---
+title: 错误触发器
+description: 如何进行移除处理、捕获异常，对异常进行响应设置。
+meta:
+  - name: keywords
+    content: 异常处理, 错误处理, 异常捕获, 错误捕获, 异常处理机制, 全局异常, 错误响应, 异常响应, 低代码, AI工作流, 流程引擎
+---
+
 ## 错误触发器
 
 <img src="./img/error_trigger_menu.png" alt="image-20250513192811512" style="zoom:50%;" />

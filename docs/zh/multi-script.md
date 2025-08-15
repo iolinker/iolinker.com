@@ -1,6 +1,14 @@
+---
+title: 多脚本运行
+description: 支持选择多个Python/Js/PHP等脚本以并行或穿行的方式运行。
+meta:
+  - name: keywords
+    content: python开发, JS开发, PHP开发, SHELL开发, 代码片段管理, snippet collection, 并行执行, 串行执行, 并行脚本执行, 串行脚本执行, 工作流开发, 低代码开发
+---
+
 ## 多脚本运行
 
-可实现多个脚本并发同时运行或串行依次运行。
+支持选择多个Python/Js/PHP等脚本以并行或穿行的方式运行，这些脚本可以在代码片段本地管理维护。
 
 <img src="./img/multi-script-menu.png" alt="image-20240918212330692" style="zoom:50%;" />
 

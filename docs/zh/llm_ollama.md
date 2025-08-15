@@ -1,3 +1,11 @@
+---
+title: Ollama
+description: 支持调用Ollama开源AI大模型接口，集成AI大模型能力。
+meta:
+  - name: keywords
+    content: Ollama调用, Ollama框架, Ollama开发, Ollama Python, Ollama本地部署调用, 低代码, AI工作流, 流程引擎
+---
+
 ## Ollama
 
 Ollama是一个轻量级、可扩展的框架，专为在本地机器上构建和运行大型语言模型而设计。它提供了类似OpenAI的API接口和聊天界面，使得部署和使用最新版本的GPT模型变得异常简单。

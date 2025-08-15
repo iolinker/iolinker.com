@@ -1,6 +1,14 @@
+---
+title: Telegram Bot Trigger
+description: How to implement command-triggered functionality in Telegram Bots through visual orchestration, where input commands trigger workflow execution.
+meta:
+  - name: keywords
+    content: Telegram Bot Development, Telegram API Calls, Python Telegram, Golang Telegram, Telegram GitHub, Telegram Bot, Low-code, AI Workflow, Process Engine
+---
+
 ## Telegram Bot Trigger
 
-You can respond to messages sent by users on the Telegram bot.
+Implement command-triggered functionality in Telegram Bots through visual orchestration, where input commands activate workflow execution, enabling interactive command features. This approach allows rapid development of command-driven bots without requiring Python coding expertise.
 
 <img src="./img/trigger_telegram_bot_menu.png" alt="image-20241007155103399" style="zoom:50%;" />
 

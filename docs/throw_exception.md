@@ -1,3 +1,11 @@
+---
+title: Throw Exception
+description: How to throw exceptions in workflows.
+meta:
+  - name: keywords
+    content: Exception Handling, Error Handling, Throw Exception, Throw Error, Low-code, AI Workflow, Process Engine
+---
+
 ## Throw Exception
 
 Exceptions can be thrown, causing the workflow to stop running due to an error.

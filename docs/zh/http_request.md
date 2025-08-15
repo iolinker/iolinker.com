@@ -1,6 +1,14 @@
+---
+title: HTTP调用
+description: 支持发送POST或GET请求，调用外部API服务。
+meta:
+  - name: keywords
+    content: HTTP调用, API请求, 外部调用, 发送HTTP请求, 低代码, AI工作流, 流程引擎
+---
+
 ## HTTP调用
 
-支持发送POST或GET请求。
+支持发送POST或GET请求，调用外部API服务。
 
 <img src="./img/api_request.png" alt="image-20240918163547732" style="zoom: 50%;" />
 
