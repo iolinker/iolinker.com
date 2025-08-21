@@ -10,7 +10,7 @@ meta:
 
 支持输入SQL语句实现对数据库的增删改查等操作。
 
-<img src="./img/database.png" alt="image-20240918203330573" style="zoom:50%;" />
+<img src="./img/database.png" alt="database" title="数据库" style="zoom:50%;" />
 
 
 
@@ -26,7 +26,7 @@ meta:
 
 ## 入参
 
-<img src="./img/database-input-parameter.png" alt="image-20240918202038067" style="zoom:50%;" />
+<img src="./img/database-input-parameter.png" alt="database input parameter" title="数据库参数配置" style="zoom:50%;" />
 
 ### 凭据
 
@@ -38,7 +38,7 @@ meta:
 - 密码：数据库密码。
 - 编码：数据库读写编码格式，默认utf8。
 
-<img src="./img/database-input-cred.png" alt="image-20240918202327327" style="zoom:50%;" />
+<img src="./img/database-input-cred.png" alt="database input cred" title="数据库凭据" style="zoom:50%;" />
 
 
 

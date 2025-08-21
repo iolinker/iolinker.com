@@ -19,7 +19,7 @@ meta:
 
 
 
-<img src="./img/callback.png" alt="image-20240826131156015" style="zoom:50%;" />
+<img src="./img/callback.png" alt="callback"  title="回调接口" style="zoom:50%;" />
 
 如果重复提交，会提示错误，确保每个回调接口只能被调用一次。
 

@@ -12,7 +12,7 @@ RAG（Retrieval-Augmented Generation）是一种混合方法，它结合了检�
 
 如下图是RAG的完整实现流程。
 
-<img src="./img/rag.png" alt="img" style="zoom:50%;" />
+<img src="./img/rag.png" alt="rag" title="rag本地部署" style="zoom:50%;" />
 
 - 首先是将文本存储到向量数据库中，将文档向量化
 - 然后通过向量数据库的相似索引和用户输入的查询语句，找出最相似的几个关联片段
@@ -24,7 +24,7 @@ RAG（Retrieval-Augmented Generation）是一种混合方法，它结合了检�
 
 由于我们做的是本地的RAG搭建，全程不调用商用的大模型API，所以LLM大模型用的是开源的ollama，官网地址：[https://ollama.com/](https://ollama.com/)。
 
-<img src="./img/ollama.png" alt="image-20240926124024858" style="zoom:33%;" />
+<img src="./img/ollama.png" alt="ollama" title="ollama本地部署" style="zoom:33%;" />
 
 ollama项目可以实现跨平台部署，支持macOS、Linux和Windows，而且部署非常简单。部署的方式可以直接登录官网查看，这里就不另外介绍。
 注意：LLM对机器配置要求比较高。
@@ -41,7 +41,7 @@ docker run -p 6333:6333 qdrant/qdrant
 
 部署成功之后，可以通过访问：http://localhost:6333/dashboard#/console
 
-<img src="./img/qdrant.png" alt="image-20240926125544828" style="zoom:50%;" />
+<img src="./img/qdrant.png" alt="qdrant" title="qdrant本地部署" style="zoom:50%;" />
 
 
 
@@ -51,41 +51,41 @@ docker run -p 6333:6333 qdrant/qdrant
 
 点击【编辑】按钮会下拉显示【添加知识库】按钮。
 
-<img src="./img/add-knowledge-menu.png" alt="image-20250710191802594" style="zoom:50%;" />
+<img src="./img/add-knowledge-menu.png" alt="add-knowledge-menu" title="创建知识库" style="zoom:50%;" />
 
 如下是添加知识库的界面：
 
-<img src="./img/add-knowledge.png" alt="image-20250710191838544" style="zoom:50%;" />
+<img src="./img/add-knowledge.png" alt="add-knowledge" title="创建知识库" style="zoom:50%;" />
 
 前面安装了ollama后，需要下载对应的模型到本地，下载成功后可以下拉显示出来：
 
-<img src="./img/ollama-model-list.png" alt="image-20240926130041161" style="zoom:67%;" />
+<img src="./img/ollama-model-list.png" alt="ollama-model-list" title="ollama模型列表" style="zoom:67%;" />
 
 
 
 文档越大，则向量化处理时间会比较久。处理成功后，可以在左侧的【文件管理】下【知识库】
 
-<img src="./img/knowledge-list.png" alt="image-20250710192012901" style="zoom:50%;" />
+<img src="./img/knowledge-list.png" alt="knowledge-list" title="知识库列表" style="zoom:50%;" />
 
 点击名称，可以跳转到qdrant管理页面，查看向量化后的数据：
 
-<img src="./img/qdrant-demo.png" alt="image-20250710192050046" style="zoom:50%;" />
+<img src="./img/qdrant-demo.png" alt="qdrant-demo" title="qdrant demo" style="zoom:50%;" />
 
 ## 知识检索
 
 
 
-<img src="./img/rag_menu.png" alt="image-20240926183809788" style="zoom:50%;" />
+<img src="./img/rag_menu.png" alt="rag_menu" title="rag菜单" style="zoom:50%;" />
 
 ### 输入
 
-<img src="./img/rag-input-parameter.png" alt="image-20250710192219224" style="zoom:50%;" />
+<img src="./img/rag-input-parameter.png" alt="rag-input-parameter" title="rag配置" style="zoom:50%;" />
 
 #### 知识库
 
 会显示前面上传的文档知识库。
 
-<img src="./img/knowledge-list.png" alt="image-20250710192012901" style="zoom:50%;" />
+<img src="./img/knowledge-list.png" alt="knowledge-list" title="知识库列表" style="zoom:50%;" />
 
 #### 输入
 
@@ -116,7 +116,7 @@ docker run -p 6333:6333 qdrant/qdrant
 - answer。如果勾选了LLM总结，则大模型会对返回的docs文档片段进行分析总结输出结果。
 - docs。返回TopK个最相关的文档片段。
 
-<img src="./img/rag-output.png" alt="image-20250710192327726" style="zoom:50%;" />
+<img src="./img/rag-output.png" alt="rag-output" title="rag输出" style="zoom:50%;" />
 
 例如下面是对deekseep.txt文档的总结。
 

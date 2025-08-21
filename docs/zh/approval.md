@@ -12,17 +12,17 @@ meta:
 
 节点绿色输出表示审批同意，红色表示不同意，中间灰色表示超时。
 
-<img src="./img/approval.png" alt="image-20250704093217457" style="zoom:50%;" />
+<img src="./img/approval.png" alt="approval" title="审批配置" style="zoom:50%;" />
 
 个人待审批的数据可以在【用户任务】下的【审批】查看，支持一键批量操作。
 
-<img src="./img/approval_user_list.png" alt="image-20250703200109692" style="zoom:50%;" />
+<img src="./img/approval_user_list.png" alt="approval user list" title="审批用户列表"  style="zoom:50%;" />
 
 点击审批详情，可以看到审批的完整内容和操作。
 
-<img src="./img/approval_detail.png" alt="image-20250704093305175" style="zoom:50%;" />
+<img src="./img/approval_detail.png" alt="approval detail" title="审批详情" style="zoom:50%;" />
 
-<img src="./img/done_approval_list.png" alt="image-20250704093402172" style="zoom:50%;" />
+<img src="./img/done_approval_list.png" alt="done approval list" title="已完成审批列表"  style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -40,7 +40,7 @@ meta:
 
 默认Web包含必选，Telegram可选，勾选Telegram则需要配置关联的机器人凭据（Token），需要到凭据那里创建。
 
-<img src="./img/approval_input_channel.png" alt="image-20240822092432334" style="zoom:50%;" />
+<img src="./img/approval_input_channel.png" alt="approval input channel" title="审批方式" style="zoom:50%;" />
 
 ### 名称
 
@@ -58,7 +58,7 @@ meta:
 
 审批成员，这里会显示账号列表下的用户，支持模糊搜索。如果启用了Telegram审批，则需要再用户列表哪里配置用户的TelegramID，否则无法发消息给Telegram用户。
 
-<img src="./img/approval_user_list.png" alt="image-20250703200109692" style="zoom:50%;" />
+<img src="./img/approval_user_list.png" alt="approval user list" title="审批成员" style="zoom:50%;" />
 
 ### 类型
 
@@ -75,7 +75,7 @@ meta:
 
 用户可以在这里设置超时的响应动作。
 
-<img src="./img/approval_input_timeout.png" alt="image-20241007193219195" style="zoom:50%;" />
+<img src="./img/approval_input_timeout.png" alt="approval input timeout" title="审批超时" style="zoom:50%;" />
 
 ## 出参
 

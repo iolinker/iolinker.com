@@ -12,13 +12,13 @@ Ollama是一个轻量级、可扩展的框架，专为在本地机器上构建�
 
 
 
-<img src="./img/ollama_menu.png" alt="image-20240926190029651" style="zoom:50%;" />
+<img src="./img/ollama_menu.png" alt="ollama icon" title="ollama" style="zoom:50%;" />
 
 
 
 ## 输入
 
-<img src="./img/ollama_input_parameter.png" alt="image-20240926185946070" style="zoom:50%;" />
+<img src="./img/ollama_input_parameter.png" alt="ollama_input_parameter" title="ollama配置" style="zoom:50%;" />
 
 ### Base URL
 

@@ -10,13 +10,13 @@ meta:
 
 通过钉钉机器人发送文本、Markdown消息。
 
-<img src="./img/send_dingding_bot_msg_menu.png" alt="image-20250611094539988" style="zoom:50%;" />
+<img src="./img/send_dingding_bot_msg_menu.png" alt="send_dingding_bot_msg_menu" title="发送钉钉消息按钮" style="zoom:50%;" />
 
 
 
 ## 入参
 
-<img src="./img/send_dingding_bot_msg_input.png" alt="image-20250611094632758" style="zoom:50%;" />
+<img src="./img/send_dingding_bot_msg_input.png" alt="send_dingding_bot_msg_input" title="发送钉钉消息配置" style="zoom:50%;" />
 
 ### 凭据
 
@@ -24,7 +24,7 @@ meta:
 
 首先需要到钉钉客户端软件创建好自定义机器人，详细参考： [创建自定义机器人](https://open.dingtalk.com/document/orgapp/custom-bot-creation-and-installation) 
 
-<img src="/Users/shuwoom/Desktop/iolinker.com/docs/zh/img/dingding_bot_cred.png" alt="image-20250611094425889" style="zoom:50%;" />
+<img src="./img/dingding_bot_cred.png" alt="dingding_bot_cred" title="钉钉凭据选择" style="zoom:50%;" />
 
 
 
@@ -32,7 +32,7 @@ meta:
 
 ### 提醒
 
-<img src="./img/send_feishu_bot_msg_mentioned_input.png" alt="image-20250611092828699" style="zoom:50%;" />
+<img src="./img/send_feishu_bot_msg_mentioned_input.png" alt="send_feishu_bot_msg_mentioned_input" title="钉钉消息提醒" style="zoom:50%;" />
 
 
 

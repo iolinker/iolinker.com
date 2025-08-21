@@ -10,11 +10,11 @@ meta:
 
 支持发送POST或GET请求，调用外部API服务。
 
-<img src="./img/api_request.png" alt="image-20240918163547732" style="zoom: 50%;" />
+<img src="./img/api_request.png" alt="api_request" title="api请求" style="zoom: 50%;" />
 
 ## 入参
 
-<img src="./img/api_request_input_parameter.png" alt="image-20240918164544927" style="zoom: 50%;" />
+<img src="./img/api_request_input_parameter.png" alt="api_request_input_parameter" title="api请求配置" style="zoom: 50%;" />
 
 ### 地址
 

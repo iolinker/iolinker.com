@@ -10,7 +10,7 @@ meta:
 
 可设置延时一定时间后再继续执行（秒）。
 
-<img src="./img/delay.png" alt="image-20240822091816506" style="zoom:50%;" />
+<img src="./img/delay.png" alt="delay" title="延时执行" style="zoom:50%;" />
 
 <iframe 
     width="800" 

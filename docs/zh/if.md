@@ -10,7 +10,7 @@ meta:
 
 工作流中的条件判断，也称为分支逻辑，就是IF-ELSE逻辑，允许工作流根据特定条件自动选择不同的执行路径。根据输入判断输出是真或假，并选择对应分支执行。支持搭配使用且和或组合条件，并且可使用变量表达式在运行时动态决策。
 
-<img src="./img/if_condition.png" alt="image-20240821095550022" style="zoom:50%;" />
+<img src="./img/if_condition.png" alt="if_condition" title="条件判断" style="zoom:50%;" />
 
 ## 入参
 
@@ -32,7 +32,7 @@ meta:
 
 当前支持布尔值、日期和时间、数字、字符串四种类型的数值类型对比。
 
-<img src="./img/if_input_paramter_type.png" alt="image-20240821130445673" style="zoom:50%;" />
+<img src="./img/if_input_paramter_type.png" alt="if_input_paramter_type" title="条件数值类型" style="zoom:50%;" />
 
 值1和值2可以时常量，也可以时变量表达式（在运行时动态获取当前值）
 
@@ -40,7 +40,7 @@ meta:
 
 判断值1是否为真或假（值2这里无用）
 
-<img src="./img/if_input_boolean.png" alt="image-20240822090429863" style="zoom:50%;" />
+<img src="./img/if_input_boolean.png" alt="if_input_boolean" title="布尔值" style="zoom:50%;" />
 
 
 
@@ -48,7 +48,7 @@ meta:
 
 比较值1和值2两者日期之间的关系，可以对比yyyy-mm-dd hh:mm:ss这样的字符串格式，也可以对比unix秒时间戳格式
 
-<img src="./img/if_input_date_time.png" alt="image-20240822090601409" style="zoom:50%;" />
+<img src="./img/if_input_date_time.png" alt="if_input_date_time" title="日期和时间" style="zoom:50%;" />
 
 #### 数字
 
@@ -61,7 +61,7 @@ meta:
 - 等于
 - 不等于
 
-<img src="./img/if_input_number.png" alt="image-20240822090757567" style="zoom:50%;" />
+<img src="./img/if_input_number.png" alt="if_input_number" title="数字" style="zoom:50%;" />
 
 
 
@@ -78,7 +78,7 @@ meta:
 - 相等
 - 不相等
 
-<img src="./img/if_input_string.png" alt="image-20240822090900729" style="zoom:50%;" />
+<img src="./img/if_input_string.png" alt="if_input_string" title="字符串" style="zoom:50%;" />
 
 ## 出参
 
@@ -86,4 +86,4 @@ meta:
 [true/false]
 ```
 
-<img src="./img/if_output.png" alt="image-20241007183817574" style="zoom:50%;" />
+<img src="./img/if_output.png" alt="if_output" title="出参" style="zoom:50%;" />

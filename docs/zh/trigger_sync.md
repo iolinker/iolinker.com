@@ -10,13 +10,13 @@ meta:
 
 Create an HTTP service API interface through visual orchestration that supports parallel execution, convergence, loops, and other operations within workflows. Calling this interface triggers workflow execution, waits for the workflow to complete, and returns output results.
 
-<img src="./img/trigger_sync_api.png" alt="image-20240921173918895" style="zoom:50%;" />
+<img src="./img/trigger_sync_api.png" alt="trigger_sync_api" title="同步API触发器" style="zoom:50%;" />
 
 创建的工作流可以在【流程管理】下的【工作流列表】或【API列表】找到。
 
 注意：API只有启用后才能正常使用，否则会提示报错接口未启用。
 
-<img src="./img/api-list.png" alt="image-20250708085935766" style="zoom:50%;" />
+<img src="./img/api-list.png" alt="api-list" title="同步API列表" style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -28,7 +28,7 @@ Create an HTTP service API interface through visual orchestration that supports 
 
 ## 入参
 
-<img src="./img/sync_api_input_parameter.png" alt="image-20240813093255104" style="zoom:50%;" />
+<img src="./img/sync_api_input_parameter.png" alt="sync_api_input_parameter" title="同步API触发器配置" style="zoom:50%;" />
 
 
 
@@ -36,7 +36,7 @@ Create an HTTP service API interface through visual orchestration that supports 
 
 目前支持一下三种鉴权方式：
 
-<img src="./img/sync_api_input_login_verification.png" alt="image-20240813093449198" style="zoom:50%;" />
+<img src="./img/sync_api_input_login_verification.png" alt="sync_api_input_login_verification" title="同步API鉴权" style="zoom:50%;" />
 
 - 没有鉴权
 

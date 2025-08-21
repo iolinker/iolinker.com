@@ -10,7 +10,7 @@ meta:
 
 不执行任何操作，一般用于调试。
 
-<img src="./img/do_nothing_menu.png" alt="image-20250708183422146" style="zoom:50%;" />
+<img src="./img/do_nothing_menu.png" alt="do nothing menu" title="空操作按钮" style="zoom:50%;" />
 
 
 

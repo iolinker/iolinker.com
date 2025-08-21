@@ -2,13 +2,13 @@
 
 支持发送文本等消息。
 
-<img src="./img/send_wechat_work_bot_msg_menu.png" alt="image-20250612193253262" style="zoom:50%;" />
+<img src="./img/send_wechat_work_bot_msg_menu.png" alt="send_wechat_work_bot_msg_menu" title="发送企微消息" style="zoom:50%;" />
 
 
 
 ## 入参
 
-<img src="./img/send_wechat_work_bot_msg_input.png" alt="image-20250612194340140" style="zoom:50%;" />
+<img src="./img/send_wechat_work_bot_msg_input.png" alt="send_wechat_work_bot_msg_input" title="发送企微消息配置" style="zoom:50%;" />
 
 ### 凭据
 
@@ -16,7 +16,7 @@
 
 首先需要到企微客户端软件创建好群机器人，详细参考： [创建群机器人](https://developer.work.weixin.qq.com/document/path/99110) 
 
-<img src="./img/create_wechat_work_bot_cred.png" alt="image-20250612193438864" style="zoom:50%;" />
+<img src="./img/create_wechat_work_bot_cred.png" alt="create_wechat_work_bot_cred" title="企微机器人凭据" style="zoom:50%;" />
 
 
 
@@ -28,7 +28,7 @@
 
 
 
-<img src="./img/send_wechat_work_bot_input_chatid.png" alt="image-20250612194148757" style="zoom:50%;" />
+<img src="./img/send_wechat_work_bot_input_chatid.png" alt="send_wechat_work_bot_input_chatid" title="设置企微chatid" style="zoom:50%;" />
 
 
 

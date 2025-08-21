@@ -12,13 +12,13 @@ meta:
 
 
 
-<img src="./img/moonshot-ai-menu.png" alt="image-20250703131737834" style="zoom:50%;" />
+<img src="./img/moonshot-ai-menu.png" alt="moonshot-ai-menu" title="kimi" style="zoom:50%;" />
 
 
 
 ## 输入
 
-<img src="./img/moonshot-input-parameter.png" alt="image-20250703132159738" style="zoom:50%;" />
+<img src="./img/moonshot-input-parameter.png" alt="moonshot-input-paramete" title="kimi配置" style="zoom:50%;" />
 
 ### API Key
 
@@ -26,15 +26,15 @@ meta:
 
 - API Key。[Moonshot](https://platform.moonshot.cn/console/api-keys)平台生成的API Key。
 
-<img src="./img/moonshot-input-cred.png" alt="image-20250703131504364" style="zoom:50%;" />
+<img src="./img/moonshot-input-cred.png" alt="moonshot-input-cred" title="kimi凭据配置" style="zoom:50%;" />
 
-<img src="./img/moonshot-platform.png" alt="image-20250703131543926" style="zoom:50%;" />
+<img src="./img/moonshot-platform.png" alt="imoonshot-platform" title="kimi平台" style="zoom:50%;" />
 
 ### 模型
 
 当前支持的模型，可以参考官方[文档](https://platform.moonshot.cn/docs/introduction#%E5%85%B6%E4%BB%96%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E9%87%8D%E8%A6%81%E4%BA%8B%E9%A1%B9)。
 
-<img src="./img/moonshot-input-model.png" alt="image-20250703131910123" style="zoom:50%;" />
+<img src="./img/moonshot-input-model.png" alt="moonshot-input-model" title="kimi大模型" style="zoom:50%;" />
 
 
 
@@ -50,7 +50,7 @@ meta:
 
 ## 输出
 
-<img src="./img/moonshot-output.png" alt="image-20250703132234113" style="zoom:50%;" />
+<img src="./img/moonshot-output.png" alt="moonshot-output" title="kimi输出" style="zoom:50%;" />
 
 
 

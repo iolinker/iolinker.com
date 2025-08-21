@@ -14,21 +14,21 @@
 
 地址：https://work.weixin.qq.com/wework_admin/frame#/app/servicer
 
-<img src="./img/weixin_kefu_1.png" alt="image-20240922120110625" style="zoom:67%;" />
+<img src="./img/weixin_kefu_1.png" alt="weixin_kefu_1" title="微信客服接口关联自建的应用" style="zoom:67%;" />
 
 点击【通过API管理会话消息】下的【企业内部开发】。备注：我们是自建应用的方式。
 
-<img src="./img/weixin_kefu_2.png" alt="image-20240922120224303" style="zoom:67%;" />
+<img src="./img/weixin_kefu_2.png" alt="weixin_kefu_2" title="微信客服自建应用" style="zoom:67%;" />
 
 进入后，会看到如下页面，点击【前往配置】跳转到配置自建应用的页面。
 
-<img src="./img/weixin_kefu_4.png" alt="image-20240922120357448" style="zoom:67%;" />
+<img src="./img/weixin_kefu_4.png" alt="weixin_kefu_4" title="配置自建应用页面" style="zoom:67%;" />
 
 
 
 点击设置，关联创建的自建应用：
 
-<img src="./img/weixin_kefu_5.png" alt="image-20240922120514119" style="zoom:67%;" />
+<img src="./img/weixin_kefu_5.png" alt="weixin_kefu_5" title="关联自建应用" style="zoom:67%;" />
 
 
 
@@ -36,7 +36,7 @@
 
 由于企微平台的要求，自建应用默认至少要关联一个客服账号，所以我们需要在这里创建一个默认客服账号先。
 
-<img src="./img/weixin_kefu_6.png" alt="image-20240922121555344" style="zoom:67%;" />
+<img src="./img/weixin_kefu_6.png" alt="weixin_kefu_6" title="创建默认客服账号" style="zoom:67%;" />
 
 
 
@@ -44,13 +44,13 @@
 
 前面关联了应用以及创建默认客服账号后，接下来，需要把应用关联到这个默认客服账号，后续就可以正常调用微信客服的API。
 
-<img src="./img/weixin_kefu_7.png" alt="image-20240922121154580" style="zoom:67%;" />
+<img src="./img/weixin_kefu_7.png" alt="image-20240922121154580" title="配置客服账号" style="zoom:67%;" />
 
 应用关联默认客服账号。
 
-<img src="./img/weixin_kefu_8.png" alt="image-20240922121808706" style="zoom:67%;" />
+<img src="./img/weixin_kefu_8.png" alt="image-20240922121808706" title="应用关联默认客服账号" style="zoom:67%;" />
 
-前面在企微上创建的客服账号，也可以在BotMan工具上查看。
+前面在企微上创建的客服账号，也可以在IOLinker工具上查看。
 
 
 

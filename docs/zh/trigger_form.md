@@ -10,7 +10,7 @@ meta:
 
 通过提交表单触发工作流执行。
 
-<img src="./img/trigger_form_menu.png" style="zoom: 67%;" />
+<img src="./img/trigger_form_menu.png" title="表单触发器menu" style="zoom: 67%;" />
 
 <iframe 
     width="800" 
@@ -24,41 +24,41 @@ meta:
 
 #### 1. 创建表单
 
-<img src="./img/create_form.png" alt="image-20250507202219256" style="zoom:50%;" />
+<img src="./img/create_form.png" alt="create_form" title="创建表单步骤" style="zoom:50%;" />
 
 #### 2. 设计并保存表单
 
-<img src="./img/save_form.png" alt="image-20250507202421548" style="zoom:50%;" />
+<img src="./img/save_form.png" alt="save_form" title="保存表单步骤" style="zoom:50%;" />
 
 保存后的表单，可以在左侧的【表单】菜单选项查看到：
 
-<img src="./img/form_list.png" alt="image-20250507202549564" style="zoom:50%;" />
+<img src="./img/form_list.png" alt="form_list" title="表单列表" style="zoom:50%;" />
 
 #### 3. 创建工作流并关联表单
 
 使用【表单触发器】并在表单下拉列表中选择前面创建好的表单，这时候会看到API选项会生成一个跟表单提交地址，该地址跟工作流唯一绑定，打开该地址就可以提交表单，触发工作流执行。
 
-![image-20250507202646564](./img/create_form_workflow.png)
+<img src="./img/create_form_workflow.png" alt="create_form_workflow" title="创建工作流并关联表单" style="zoom:50%;" />
 
 #### 4. 提交表单
 
 在【工作流】可以看到表单提交地址，点击即进入表单提交地址。
 
-<img src="./img/form_workflow_list.png" alt="image-20250507202936412" style="zoom:50%;" />
+<img src="./img/form_workflow_list.png" alt="form_workflow_list" title="提交表单" style="zoom:50%;" />
 
 点击【Submit】提交按钮，后就可以在执行记录看到一条工作流执行记录。
 
-<img src="./img/form_submit_url.png" alt="image-20250507203036643" style="zoom:50%;" />
+<img src="./img/form_submit_url.png" alt="form_submit_url" title="提交表单url" style="zoom:50%;" />
 
 #### 5. 查看表单提交记录
 
 表单提交记录(工作流执行记录)：
 
-<img src="./img/form_execution_list.png" alt="image-20250507203156394" style="zoom:50%;" />
+<img src="./img/form_execution_list.png" alt="form_execution_list" title="查看表单提交记录" style="zoom:50%;" />
 
 点击查看详情，可以看到表单提交的数据：
 
-<img src="./img/form_execution_detail.png" alt="image-20250507203302380" style="zoom:50%;" />
+<img src="./img/form_execution_detail.png" alt="form_execution_detail" title="查看表单详情" style="zoom:50%;" />
 
 
 
@@ -72,7 +72,7 @@ meta:
 
 设置允许填写表单的成员，若不设置表示项目空间内的所有成员都可以提交表单。
 
-<img src="./img/form_trigger_input.png" alt="image-20250509125026536" style="zoom:50%;" />
+<img src="./img/form_trigger_input.png" alt="form_trigger_input" title="表单成员设置" style="zoom:50%;" />
 
 ## 出参
 
@@ -99,4 +99,4 @@ meta:
 ]
 ```
 
-<img src="./img/form_trigger_output.png" alt="image-20250509125951393" style="zoom:50%;" />
+<img src="./img/form_trigger_output.png" alt="form_trigger_output" title="表单输出" style="zoom:50%;" />

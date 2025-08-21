@@ -10,13 +10,13 @@ meta:
 
 生成一个HTTP服务的API接口，调用该接口会以异步方式触发工作流运行，适合处理耗时任务，不等待工作流运行结束，直接返回执行实例的ID。
 
-<img src="./img/trigger_async_api.png" alt="image-20240921173600619" style="zoom:50%;" />
+<img src="./img/trigger_async_api.png" alt="trigger_async_api" title="异步API触发器" style="zoom:50%;" />
 
 创建的工作流可以在【流程管理】下的【工作流列表】或【API列表】找到。
 
 注意：API只有启用后才能正常使用，否则会提示报错接口未启用。
 
-<img src="./img/api-list.png" alt="image-20250708085935766" style="zoom:50%;" />
+<img src="./img/api-list.png" alt="api-list" title="api列表" style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -28,7 +28,7 @@ meta:
 
 ## 入参
 
-<img src="./img/async_api_input_parameter.png" alt="image-20240813190151862" style="zoom:50%;" />
+<img src="./img/async_api_input_parameter.png" alt="async_api_input_parameter" title="异步API触发器配置" style="zoom:50%;" />
 
 
 
@@ -36,7 +36,7 @@ meta:
 
 目前支持一下三种鉴权方式：
 
-<img src="./img/sync_api_input_login_verification.png" alt="image-20240813093449198" style="zoom:50%;" />
+<img src="./img/sync_api_input_login_verification.png" alt="sync_api_input_login_verification" title="异步API触发器鉴权" style="zoom:50%;" />
 
 - 没有鉴权
 

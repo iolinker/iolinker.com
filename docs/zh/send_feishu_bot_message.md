@@ -10,13 +10,13 @@ meta:
 
 通过飞书机器人发送文本消息。
 
-<img src="./img/send_feishu_bot_msg_menu.png" alt="image-20250611092255212" style="zoom:50%;" />
+<img src="./img/send_feishu_bot_msg_menu.png" alt="send_feishu_bot_msg_menu" title="发送飞书消息按钮" style="zoom:50%;" />
 
 
 
 ## 入参
 
-<img src="./img/send_feishu_bot_msg_input.png" alt="image-20250611092801639" style="zoom:50%;" />
+<img src="./img/send_feishu_bot_msg_input.png" alt="send_feishu_bot_msg_input" title="发送飞书消息配置" style="zoom:50%;" />
 
 ### 凭据
 
@@ -24,13 +24,13 @@ meta:
 
 首先需要到飞书客户端软件创建好自定义机器人，详细参考： [自定义机器人使用指南](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot) 
 
-<img src="./img/feishu_bot_cred.png" alt="image-20250611093722973" style="zoom:50%;" />
+<img src="./img/feishu_bot_cred.png" alt="feishu_bot_cred" title="飞书webhook凭据" style="zoom:50%;" />
 
 
 
 ### 提醒
 
-<img src="./img/send_feishu_bot_msg_mentioned_input.png" alt="image-20250611092828699" style="zoom:50%;" />
+<img src="./img/send_feishu_bot_msg_mentioned_input.png" alt="send_feishu_bot_msg_mentioned_input" title="飞书消息提醒" style="zoom:50%;" />
 
 
 

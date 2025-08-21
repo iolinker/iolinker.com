@@ -10,7 +10,7 @@ meta:
 
 可抛出异常，导致工作流出错误停止运行。
 
-<img src="./img/throw_exception.png" alt="image-20240828094306164" style="zoom:50%;" />
+<img src="./img/throw_exception.png" alt="throw_exception" title="抛出异常" style="zoom:50%;" />
 
 
 
@@ -32,4 +32,4 @@ meta:
 
 无。错误信息会在【错误】板块输出。
 
-<img src="./img/throw_exception_output.png" alt="image-20240828095235522" style="zoom:50%;" />
+<img src="./img/throw_exception_output.png" alt="throw_exception_output" title="抛出异常输出" style="zoom:50%;" />

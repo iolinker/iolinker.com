@@ -17,7 +17,7 @@ meta:
 
 
 
-<img src="./img/output.png" alt="image-20241013092554498" style="zoom:67%;" />
+<img src="./img/output.png" alt="output" title="输出设置" style="zoom:67%;" />
 
 
 

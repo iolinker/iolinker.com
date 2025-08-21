@@ -10,13 +10,13 @@ meta:
 
 可设置周期性运行的工作流，支持分钟、小时、天、周和月，语法格式跟Linux系统的crontab一样。
 
-<img src="./img/trigger_crontab.png" alt="image-20240921173846118" style="zoom:50%;" />
+<img src="./img/trigger_crontab.png" alt="trigger_crontab" title="周期任务触发器" style="zoom:50%;" />
 
 创建的工作流可以在【流程管理】下的【工作流列表】或【Crontab列表】找到：
 
 
 
-<img src="./img/crontab_list.png" alt="image-20250729211823677" style="zoom:50%;" />
+<img src="./img/crontab_list.png" alt="crontab_list" title="周期任务列表" style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -28,7 +28,7 @@ meta:
 
 ## 入参
 
-<img src="./img/trigger_crontab_input.png" alt="image-20240812130645230" style="zoom:50%;" />
+<img src="./img/trigger_crontab_input.png" alt="trigger_crontab_input" title="周期任务触发器配置" style="zoom:50%;" />
 
 ### 周期表达式
 

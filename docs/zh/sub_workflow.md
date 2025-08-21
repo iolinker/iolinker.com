@@ -10,7 +10,7 @@ meta:
 
 可同步或异步方式调用子工作流执行，同步方式会等待子工作流运行结束后才继续往下执行，异步方式调用子工作流后不等待结束继续往下执行。
 
-<img src="./img/sub_workflow.png" alt="image-20240823131649215" style="zoom:50%;" />
+<img src="./img/sub_workflow.png" alt="sub_workflow" title="子工作流执行" style="zoom:50%;" />
 
 
 
@@ -39,7 +39,7 @@ meta:
 
 子工作流执行还支持设置子流程执行的最大循环次数。
 
-<img src="./img/sub_workflow_loop_setting.png" alt="image-20240826094029740" style="zoom:50%;" />
+<img src="./img/sub_workflow_loop_setting.png" alt="sub_workflow_loop_setting" title="子工作流执行循环配置" style="zoom:50%;" />
 
 
 

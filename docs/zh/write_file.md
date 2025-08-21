@@ -10,11 +10,11 @@ meta:
 
 可向本地文件写入文本数据，并在平台的【文件管理】下查看和维护。
 
-<img src="./img/write-file.png" alt="image-20240918174219847" style="zoom:50%;" />
+<img src="./img/write-file.png" alt="write-file" title="文件写入" style="zoom:50%;" />
 
 写入成功的文件可以在【文件管理】下的【本地文件】查看到，并且可以在这里进行编辑和更新。
 
-<img src="./img/local-file.png" alt="image-20250729212038614" style="zoom:50%;" />
+<img src="./img/local-file.png" alt="local-file" title="本地文件管理" style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -26,7 +26,7 @@ meta:
 
 ## 入参
 
-<img src="./img/write-file-input-parameter.png" alt="image-20240918174556552" style="zoom:50%;" />
+<img src="./img/write-file-input-parameter.png" alt="write-file-input-parameter" title="文件写入配置" style="zoom:50%;" />
 
 ### 文件名
 

@@ -10,7 +10,7 @@ meta:
 
 通过Telegram机器人发送文本、Markdown、图片、文件、Gif等消息。
 
-<img src="./img/send-telegram-msg-menu.png" alt="image-20240921095728984" style="zoom:50%;" />
+<img src="./img/send-telegram-msg-menu.png" alt="send-telegram-msg-menu" title="tg消息发送menu" style="zoom:50%;" />
 
 <iframe 
     width="800" 
@@ -26,7 +26,7 @@ meta:
 
 ## 入参
 
-<img src="./img/send-telegram-msg-input-parameter.png" alt="image-20240921100109045" style="zoom:50%;" />
+<img src="./img/send-telegram-msg-input-parameter.png" alt="send-telegram-msg-input-parameter" title="tg消息发送配置" style="zoom:50%;" />
 
 ### 凭据
 
@@ -40,7 +40,7 @@ meta:
 
 地址：[@userinfobot](https://telegram.me/userinfobot)
 
-<img src="./img/send-telegram-msg-get-chatid.png" alt="image-20240921100823129" style="zoom: 33%;" />
+<img src="./img/send-telegram-msg-get-chatid.png" alt="send-telegram-msg-get-chatid" title="设置chatid" style="zoom: 33%;" />
 
 
 
@@ -72,7 +72,7 @@ meta:
 
 如果需要发送按钮类型的消息，可以在这里添加按钮。创建的按钮也可以关联后续的分支流程，如下图所示。
 
-<img src="./img/send-telegram-msg-inline-keyboard.png" alt="image-20240921100349830" style="zoom: 50%;" />
+<img src="./img/send-telegram-msg-inline-keyboard.png" alt="end-telegram-msg-inline-keyboard" title="tg发送inline keyboard消息" style="zoom: 50%;" />
 
 
 
