@@ -91,13 +91,23 @@ Telegram官网机器人API（非常多！！）：
 
 #### (2) 创建Telegram凭据
 
-这里相信大部分人应该都有，就不详细展开，主要是取官方的BotFather申请。
+这里相信大部分人应该都有，就不详细展开，主要是去官方的BotFather申请。
 
-<img src="../img/create_telegram_bot_from_botfather.png" alt="如何通过BotFather申请Telegram机器人" title="如何通过BotFather申请Telegram机器人"  style="zoom:50%;" />
+<img src="./img/create_telegram_bot_from_botfather.png" alt="如何通过BotFather申请Telegram机器人" title="如何通过BotFather申请Telegram机器人" style="zoom:50%;" />
 
 创建完凭据后，进入IOLinker的凭据管理页面，录入前面创建的Telegram凭据：
 
 <img src="./img/create-telegram-credential.png" alt="在IOLinker创建Telegram凭据" title="在IOLinker创建Telegram凭据" style="zoom:50%;" />
+
+- 这里设置该凭据未默认凭据，这个我们跟机器人聊天时，系统会默认定位到是哪个Telegram凭据
+
+- 启用内置预设命令，启用后，默认就可以使用`/start`、`/man`和`/list`三个自定义命令，没写一行代码就可以轻松实现指令功能。如果要修改描述，可以到创建凭据的页面进行修改。
+
+  <img src="./img/tg-bot-start-cmd.png" alt="tg-bot-start-cmd" alt="telegram 机器人/start命令" title="telegram 机器人/start命令" style="zoom:50%;" />
+
+  自定义命令列表：
+
+  <img src="./img/builtin-cmd-list.png" alt="builtin-cmd-list" title="内置的自定义命令" style="zoom:50%;" />
 
 #### (3) 创建并配置Telegram机器人触发器
 
@@ -112,14 +122,15 @@ Telegram官网机器人API（非常多！！）：
 - 授权成员：默认不填即支持响应所有人的输入
 - 触发范围：选择命令输入触发。备注：默认是任意输入触发，即不管输入什么字符串都会响应
 - 命令：这里我们使用每个机器人默认都带的/start命令
+- 命令介绍：这里设置后可以在Bot的预设命令列表显示
 - 命令行参数：参考文档：[命令行参数使用](https://iolinker.com/zh/trigger_telegram.html#%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0)
 - 调试数据：这里主要是模仿Telegram机器人触发器执行后的输出结果，可以在不实际运行机器人时模拟数据输出
 
-<img src="./img/set-tg-bot-trigger.png" alt="设置Telegram Bot触发器配置页面" title="设置Telegram Bot触发器配置页面" style="zoom:50%;" />
+<img src="./img/set-tg-bot-trigger.png"  alt="设置Telegram Bot触发器配置页面" title="设置Telegram Bot触发器配置页面" style="zoom:50%;" />
 
 到这里，如果我们直接保存，并启用，实际上是可以运行了，只不过这里只是捕获用户的输入没有给用户实际反馈，实际如下：
 
-<img src="./img/tg-bot-start-cmd.png" alt="telegram 机器人/start命令" title="telegram 机器人/start命令" style="zoom:50%;" />
+xxx
 
 在Telegram机器人输入`/start`指令后，我们可以在工作流列表中看到工作流响应执行的记录。
 
