@@ -61,9 +61,7 @@ meta:
 
 
 
-## 三、实现方式
-
-### 1、Telegram Python库
+## 三、Python库实现
 
 相信下面这个库，很多用python实现Telegram机器人的开发者应该见过或者使用过。这个开源Python库封装了很多Telegram的官方API，大大降低了调用Telegram接口的难度。但是还是无法避免需要写大量的代码，特别是要想实现有复杂交互能力的Telegram机器人，还涉及到各种编程技术以及涉及到本地数据的存储维护等问题。
 
@@ -83,13 +81,13 @@ Telegram官网机器人API（非常多！！）：
 
 
 
-### 2、使用IOLinker 编排工具
+## 四、IOLinker 编排工具实现
 
-#### (1) 下载iolinker并启动
+### (1) 下载iolinker并启动
 
 参考官网文章：[如何运行Iolinker](https://iolinker.com/zh/how-to-run-iolinker.html) 
 
-#### (2) 创建Telegram凭据
+### (2) 创建Telegram凭据
 
 这里相信大部分人应该都有，就不详细展开，主要是去官方的BotFather申请。
 
@@ -103,13 +101,13 @@ Telegram官网机器人API（非常多！！）：
 
 - 启用内置预设命令，启用后，默认就可以使用`/start`、`/man`和`/list`三个自定义命令，没写一行代码就可以轻松实现指令功能。如果要修改描述，可以到创建凭据的页面进行修改。
 
-  <img src="./img/tg-bot-start-cmd.png" alt="tg-bot-start-cmd" alt="telegram 机器人/start命令" title="telegram 机器人/start命令" style="zoom:50%;" />
+  <img src="./img/tg-bot-start-cmd.png" alt="tg-bot-start-cmd" title="telegram 机器人/start命令" style="zoom:50%;" />
 
   自定义命令列表：
 
   <img src="./img/builtin-cmd-list.png" alt="builtin-cmd-list" title="内置的自定义命令" style="zoom:50%;" />
 
-#### (3) 创建并配置Telegram机器人触发器
+### (3) 创建并配置Telegram机器人触发器
 
 点击【编辑】菜单栏下的【添加流程】按钮：
 
@@ -128,19 +126,29 @@ Telegram官网机器人API（非常多！！）：
 
 <img src="./img/set-tg-bot-trigger.png"  alt="设置Telegram Bot触发器配置页面" title="设置Telegram Bot触发器配置页面" style="zoom:50%;" />
 
-到这里，如果我们直接保存，并启用，实际上是可以运行了，只不过这里只是捕获用户的输入没有给用户实际反馈，实际如下：
+到这里，如果我们直接保存，并启用，实际上是可以运行了，只不过这里只是捕获用户的输入没有给用户实际反馈，实际如下。
 
-xxx
+IOLinker工具会自动注册创建的Telgram Bot命令到预设命令列表。
 
-在Telegram机器人输入`/start`指令后，我们可以在工作流列表中看到工作流响应执行的记录。
+<img src="./img/create_tg_nmap_cmd.png" alt="tg nmap cmd list" title="tg nmap预设命令" style="zoom:50%;" />
 
-<img src="./img/tg-bot-execution-list.png" alt="telegram bot执行记录列表" title="telegram bot执行记录列表" style="zoom:50%;" />
+我们人输入`/nmap -h 1.1.1.1`命令并带参数触发工作流运行（不带参数也可以，会使用默认值）。
 
-点击执行记录，可以看到详细的响应数据。
+<img src="./img/tg_nmap_cmd_trigger.png" alt="tg nmap命令触发工作流" title="tg nmap命令触发工作流" style="zoom:50%;" />
 
-<img src="./img/telegram-bot-trigger-detail.png" alt="telegram bot执行详情" title="telegram bot执行详情" style="zoom:50%;" />
+在Telegram机器人输入`/nmap`指令后，我们可以在工作流列表中看到工作流响应执行的记录。
 
-#### (4) 添加Telegram Bot审批交互功能
+<img src="./img/tg-bot-execution-list.png" alt="telegram bot执行记录列表" title="telegram bot执行记录列表"  style="zoom:50%;" />
+
+点击执行记录，可以看到详细的响应数据。前面输入的参数会自动被解析提取出来：
+
+<img src="./img/telegram-bot-trigger-detail.png" alt="telegram bot执行详情" title="telegram bot执行详情"  style="zoom:50%;" />
+
+至此，我们就实现了机器人指令的输入和响应了，后续就可以添加其他的流程逻辑，例如发消息或发送审批交互按钮等。
+
+
+
+### (4) 添加Telegram Bot审批交互功能
 
 点击左侧的【逻辑组件】选择【审批】APP，拖入编辑器并双击配置。
 
@@ -160,13 +168,13 @@ xxx
 
 <img src="./img/set-tg-approval-bot-setting.png" alt="设置Telegram审批的同意、驳回和超时分支" title="设置Telegram审批的同意、驳回和超时分支"  style="zoom:50%;" />
 
-#### (5) 保存并启用
+### (5) 保存并启用
 
 保存后，可以再【流程管理】下的【机器人列表】看到创建的机器人信息，也可以在【工作流列表】看到。
 
 <img src="./img/telegram-bot-list.png" alt="telegram bot列表" title="telegram bot列表" style="zoom:50%;" />
 
-#### (6) 测试机器人
+### (6) 测试机器人
 
 打开创建的机器人，输入`/start`命令，我们会看到机器人给我们发送了审批的交互按钮。
 
@@ -178,4 +186,4 @@ xxx
 
 整个过程熟练的话，可以不到一分钟完成，相比过去写代码速度回高效很多！！
 
-<img src="./img/tg-bot-execution-detail-v2.png" alt="telegram bot执行详情" title="telegram bot执行详情"  style="zoom:50%;" />
+<img src="./img/tg-bot-execution-detail-v2.png" alt="telegram bot执行详情" title="telegram bot执行详情" style="zoom:50%;" />
