@@ -12,9 +12,13 @@ meta:
 
 <img src="./img/telegram-trigger-menu.png" alt="telegram-trigger-menu" title="Telegram机器人触发器" style="zoom:50%;" />
 
-## 演示
-
-<iframe width="800" height="600" src="https://www.youtube.com/embed/cGxT9cmANGw" frameborder="0" allowfullscreen></iframe>
+<iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/3rH2ahw9SYk"  frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 
 
