@@ -57,6 +57,13 @@ module.exports = {
                 ]
               },
               {
+                title: 'Examples',   // 必要的
+                sidebarDepth: 3,    // 可选的, 默认值是 1
+                children: [
+                    ['/blog/how-to-create-telegram-bot-in-one-minute', 'One Minute Implement a Complex Telegram Interactive Bot'],
+                ],
+              },
+              {
                 title: 'Trigger App',   // 必要的
                 // collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 0,    // 可选的, 默认值是 1
