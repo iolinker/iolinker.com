@@ -15,7 +15,7 @@ meta:
 <iframe 
     width="800" 
     height="600" 
-    src="https://www.youtube.com/embed/nCGqKR3TJTs"  frameborder="0" 
+    src="https://www.youtube.com/embed/FzeWsT5-ox4"  frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
 </iframe>
@@ -68,13 +68,17 @@ meta:
 
 
 
-### Inline Keyboard
+### 等待回复
 
-如果需要发送按钮类型的消息，可以在这里添加按钮。创建的按钮也可以关联后续的分支流程，如下图所示。
+发送完消息后，等待用户回复后才继续执行
 
-<img src="./img/send-telegram-msg-inline-keyboard.png" alt="end-telegram-msg-inline-keyboard" title="tg发送inline keyboard消息" style="zoom: 50%;" />
+- 超时
 
+  设置等待回复超时的时间
 
+- 超时回复
+
+  设置等待回复超时时给用户发送的消息
 
 ## 出参
 
@@ -82,6 +86,8 @@ meta:
 
 ```json
 {
+    "isTimeout": true,
+    "reply": "",
     "result": "ok"
 }
 ```

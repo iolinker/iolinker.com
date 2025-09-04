@@ -15,7 +15,7 @@ Supports sending messages in various formats, including text, images, files, and
 <iframe 
     width="800" 
     height="600" 
-    src="https://www.youtube.com/embed/nCGqKR3TJTs"  frameborder="0" 
+    src="https://www.youtube.com/embed/FzeWsT5-ox4"  frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
 </iframe>
@@ -23,8 +23,6 @@ Supports sending messages in various formats, including text, images, files, and
 ## Input
 
 <img src="./img/send-telegram-msg-input-parameter.png" alt="image-20241013162426835" style="zoom:50%;" />
-
-
 
 ### Credential
 
@@ -66,11 +64,17 @@ Currently, the following types are supported:
 
 
 
-### Inline Keyboard
+### Wait For Reply
 
-If you need to send a message with button types, you can add buttons here. The created buttons can also be linked to subsequent branch processes, as shown in the figure below.
+Wait until the message is received before continuing to execute.
 
-<img src="./img/send-telegram-msg-inline-keyboard.png" alt="image-20241013162900166" style="zoom:50%;" />
+- Timeout
+
+  Set the timeout for waiting for a reply message
+
+- Timeout Reply
+
+  Set the prompt message sent when the wait timeout
 
 
 
@@ -80,6 +84,8 @@ If the send is successful, the result will display "ok."
 
 ```json
 {
+    "isTimeout": true,
+    "reply": "",
     "result": "ok"
 }
 ```
