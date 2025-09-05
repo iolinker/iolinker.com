@@ -234,15 +234,12 @@ module.exports = {
             ],
           },
         },
-    // nav: [
-    //    {
-    //       text: '📄 Doc',
-    //       items: [
-    //           {text: 'Chinese', link: '/zh/how-to-run-iolinker'},
-    //           {text: 'English', link: '/how-to-run-iolinker'},
-    //       ]
-    //   },
-    // ],
+    nav: [
+       {
+        text: 'Telegram Channel',
+        link: 'https://t.me/iolinker_com'
+      }
+    ],
     
   }
 }
