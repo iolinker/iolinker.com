@@ -60,4 +60,10 @@ meta:
 
 输出csv文件路径。
 
-<img src="./img/json_to_csv_output.png" alt="json_to_csv_output" title="json转csv输出" style="zoom:50%;" />
+```json
+[
+  {
+    "filepath": "space/alyyd551jg/aa.csv"
+  }
+]
+```

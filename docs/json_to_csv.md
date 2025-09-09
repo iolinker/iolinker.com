@@ -59,4 +59,11 @@ The JSON array text data content to be written.
 
 Output csv file path.
 
-<img src="./img/json_to_csv_output.png" alt="image-20250702095758771" style="zoom:50%;" />
+```json
+[
+  {
+    "filepath": "space/alyyd551jg/aa.json"
+  }
+]
+```
+

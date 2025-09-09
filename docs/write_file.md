@@ -73,7 +73,16 @@ The text data content to be written.
 
 ## Output
 
-Displays the number of bytes written.
+Displays the number of bytes written and filepath.
+
+```json
+[
+  {
+    "filepath": "space/alyyd551jg/aa.txt",
+    "written": 12
+  }
+]
+```
 
 
 

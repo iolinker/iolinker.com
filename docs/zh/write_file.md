@@ -70,5 +70,14 @@ meta:
 
 ## 出参
 
-显示写入的字节个数。
+显示写入的字节个数和文件路径。
+
+```json
+[
+  {
+    "filepath": "space/alyyd551jg/aa.txt",
+    "written": 12
+  }
+]
+```
 
