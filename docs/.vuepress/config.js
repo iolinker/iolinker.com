@@ -132,6 +132,16 @@ module.exports = {
                     ['multi-script.md', 'Multi Script Execution'],
                 ]
               },
+              {
+                title: 'AI',   // 必要的
+                sidebarDepth: 0,    // 可选的, 默认值是 1
+                children: [
+                    ['llm.md', 'LLM'],
+                    // ['/zh/llm_ollama.md', 'Ollama'],
+                    // ['/zh/llm_qwen.md', '通义千问'],
+                    // ['/zh/llm_kimi.md', 'Moonshot'],
+                ]
+              },
             ],
           },
 
@@ -223,12 +233,13 @@ module.exports = {
                 ]
               },
               {
-                title: '大模型',   // 必要的
+                title: 'AI',   // 必要的
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                    ['/zh/llm_ollama.md', 'Ollama'],
-                    ['/zh/llm_qwen.md', '通义千问'],
-                    ['/zh/llm_kimi.md', 'Moonshot'],
+                    ['/zh/llm.md', 'LLM'],
+                    // ['/zh/llm_ollama.md', 'Ollama'],
+                    // ['/zh/llm_qwen.md', '通义千问'],
+                    // ['/zh/llm_kimi.md', 'Moonshot'],
                 ]
               },
             ],
