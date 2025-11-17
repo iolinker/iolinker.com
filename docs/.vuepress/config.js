@@ -74,6 +74,7 @@ module.exports = {
                     ['trigger_async.md','Async API'],
                     ['trigger_sync.md','Sync API'],
                     ['trigger_telegram.md', 'Telegram Bot Trigger'],
+                    ['mcp.md', 'MCP Trigger'],
                     ['trigger_error.md', 'Error Trigger']
                 ]
               },
@@ -137,6 +138,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['llm.md', 'LLM'],
+                    ['iolinker_agent.md', 'IOLinker Agent'],
                     // ['/zh/llm_ollama.md', 'Ollama'],
                     // ['/zh/llm_qwen.md', '通义千问'],
                     // ['/zh/llm_kimi.md', 'Moonshot'],
@@ -172,7 +174,8 @@ module.exports = {
                     ['/zh/trigger_sync.md','同步 API'],
                     // ['/zh/trigger_weixin_wxwork_kefu.md','微信客服触发器'],
                     // ['/zh/trigger_weixin_official_account.md','微信公众号触发器'],
-                    ['/zh/trigger_telegram.md', 'Telegram Bot Trigger'],
+                    ['/zh/trigger_telegram.md', 'Telegram Bot 触发器'],
+                    ['/zh/mcp.md', 'MCP 触发器'],
                     ['/zh/trigger_error.md', '错误触发器']
                 ]
               },
@@ -237,6 +240,7 @@ module.exports = {
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
                     ['/zh/llm.md', 'LLM'],
+                    ['/zh/iolinker_agent.md', 'IOLinker Agent'],
                     // ['/zh/llm_ollama.md', 'Ollama'],
                     // ['/zh/llm_qwen.md', '通义千问'],
                     // ['/zh/llm_kimi.md', 'Moonshot'],
