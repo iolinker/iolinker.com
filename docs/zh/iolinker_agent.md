@@ -37,23 +37,35 @@ meta:
 
 <img src="./img/test_iolinker_agent_demo_3.png" alt="image-20251113191740159" style="zoom:50%;" />
 
+
+
 右键点击可以选择查看对话记录：
 
-<img src="./img/view_iolinker_chat_history_menu.png" alt="image-20251113192115233" style="zoom: 50%;" /><img src="./img/view_iolinker_chat_history.png" alt="image-20251113192152818" style="zoom:50%;" />
+<img src="./img/view_iolinker_chat_history_menu.png" alt="image-20251113192115233" style="zoom: 50%;" />
+
+<img src="./img/view_iolinker_chat_history.png" alt="image-20251113192152818" style="zoom:50%;" />
+
+
 
 ### 工具调用
 
-当我们想要查询天气时，Agent发现有对应的MCP工具，它会自动规划请求的参数并发起调用。
+当我们想要计算时，Agent发现有对应的MCP工具，它会自动规划请求的参数并发起调用。
 
 <img src="./img/iolinker_agent_use_mcp_tool.png" alt="image-20251113200520957" style="zoom:50%;" />
+
+
 
 由于Agent调用了MCP工具，所以这里除了Agent的执行记录，还有一个mcp的执行记录。
 
 <img src="./img/iolinker_agent_call_tool_execution_list.png" alt="image-20251113200600376" style="zoom:50%;" />
 
+
+
 我们可以在执行详情查看到Agent跟用户的完整交互过程，也可以看到它是如何思考和调用工具的。
 
 <img src="./img/iolinker_agent_mcp_execution_detail.png" alt="image-20251113200731660" style="zoom:50%;" />
+
+
 
 ## 输入
 
@@ -93,8 +105,6 @@ ReAct的工作流程是一个典型的循环，可以概括为以下三个步骤
 
 设置Agent基于ReAct框架循环的最大次数，即限制`思考 → 行动 → 观察`循环次数，避免Agent陷入无尽的死循环中。
 
-
-
 <img src="./img/iolinker_agent_input_part2.png" alt="image-20251113193213327" style="zoom:50%;" />
 
 
@@ -116,14 +126,22 @@ ReAct的工作流程是一个典型的循环，可以概括为以下三个步骤
 设置Agent输出的字符串格式。
 
 - Raw(XML)。这个是Agent原生的输出格式，在字符串中会带有一些xml的内容，记录Agent的思考过程以及一些工具调用。
+
 - Markdown。将上面的xml标记转换成markdown格式。
-- 
+
+  
+
+### 逐轮输出
+
+启用后，智能体的思考过程将在每次ReAct迭代中输出。如果启用Telegram触发器，则发送telegram消息。
 
 <img src="./img/iolinker_agent_input_part3.png" alt="image-20251113193643440" style="zoom:50%;" />
 
+
+
 ### MCP 工具
 
-这里可以选择在工作流列表中的MCP 触发器创建的MCP Server工具。勾选后，Agent会在分析时根据任务选择对应的工具调用。
+这里可以选择在工作流列表中的[MCP 触发器](https://iolinker.com/zh/mcp.html)创建的MCP Server工具。勾选后，Agent会在分析时根据任务选择对应的工具调用。
 
 
 

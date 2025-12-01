@@ -149,12 +149,17 @@ The output primarily displays the tool parameters passed by the MCP client. For 
 
 ```json
 [
-  {
-    "arguments": {
-      "city": "New York"
-    },
-    "name": "Temperature query"
-  }
+    {
+        "id": "386244421319917568",
+        "jsonrpc": "2.0",
+        "method": "tools/call",
+        "params": {
+            "arguments": {
+                "city": "New York"
+            },
+            "name": "Temperature query"
+        }
+    }
 ]
 ```
 

@@ -153,10 +153,15 @@ Cherry Studio跟MCP Server建立连接后，会查询工具列表，这里可以
 ```json
 [
   {
+    "id": "386244421319917568",
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "params": {
     "arguments": {
       "city": "BeiJing"
     },
     "name": "天气查询"
+  }
   }
 ]
 ```

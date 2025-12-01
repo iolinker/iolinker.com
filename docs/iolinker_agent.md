@@ -30,6 +30,8 @@ We can open the configured Telegram bot and interact with it directly. For examp
 
 <img src="./img/test_iolinker_agent_demo1.png" alt="image-20251113093422232" style="zoom:50%;" />
 
+
+
 <img src="./img/test_iolinker_agent_demo_2.png" alt="image-20251113191653061" style="zoom:50%;" />
 
 Double-clicking the app will display the current app's output.
@@ -40,7 +42,11 @@ Right-click to view the conversation history:
 
 <img src="./img/view_iolinker_chat_history_menu.png" alt="image-20251113192115233" style="zoom: 50%;" />
 
+
+
 <img src="./img/view_iolinker_chat_history.png" alt="image-20251113203333055" style="zoom:50%;" />
+
+
 
 ### Tool call
 
@@ -48,9 +54,15 @@ When we want to check the weather, the Agent finds a corresponding MCP tool, whi
 
 <img src="./img/iolinker_agent_use_mcp_tool.png" alt="image-20251113200520957" style="zoom:50%;" />
 
+
+
+<img src="/Users/shuwoom/Desktop/iolinker.com/docs/img/iolinker_agent_use_mcp_tool2.png" alt="image-20251201133224900" style="zoom:50%;" />
+
 Since the Agent invoked MCP tools, in addition to the Agent's execution records, there is also an MCP execution record here.
 
 <img src="./img/iolinker_agent_call_tool_execution_list.png" alt="image-20251113200600376" style="zoom:50%;" />
+
+
 
 We can view the complete interaction process between the Agent and the user in the execution details, as well as observe how it reasons and invokes tools.
 
@@ -112,6 +124,8 @@ Set the maximum number of cycles for the Agent based on the ReAct framework, i.e
 
 <img src="./img/iolinker_agent_input_part2.png" alt="image-20251113193213327" style="zoom:50%;" />
 
+
+
 ### System Message
 
 Define the AI Agent's "persona," role, behavioral guidelines, and conversational boundaries.
@@ -133,11 +147,19 @@ Set the string output format for the Agent.
 
 
 
+### Enable per-round output
+
+Once enabled, the Agent's thought process will be output in each ReAct iteration. If it's a Telegram trigger, a Telegram message will be sent.
+
+
+
 <img src="./img/iolinker_agent_input_part3.png" alt="image-20251113193643440" style="zoom:50%;" />
+
+
 
 ### MCP Tools
 
-Here, you can select the MCP Server tools created by the MCP trigger from the workflow list. Once checked, the Agent will analyze the task and choose the corresponding tools to invoke accordingly.
+Here, you can select the MCP Server tools created by the [MCP trigger](https://iolinker.com/mcp.html) from the workflow list. Once checked, the Agent will analyze the task and choose the corresponding tools to invoke accordingly.
 
 
 
