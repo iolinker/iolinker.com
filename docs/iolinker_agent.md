@@ -10,6 +10,16 @@ meta:
 
 ## IOLinker Agent
 
+  <iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/0st8gw2a54s"  
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+
 ### Create LLM Credential
 
 Create an LLM API key credential in [Credential]. Currently supported LLM models include: Deepseek, Doubao, Kimi, OpenAI, Qwen, and the open-source Ollama.

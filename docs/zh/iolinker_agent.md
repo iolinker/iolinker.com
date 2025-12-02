@@ -9,6 +9,15 @@ meta:
 
 ## IOLinker Agent智能体
 
+  <iframe 
+    width="800" 
+    height="600" 
+    src="https://www.youtube.com/embed/0st8gw2a54s"  
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
 ### 创建LLM凭据
 
 在【凭据管理】创建一个LLM API密钥凭据，目前LLM大模型支持包括：Deepseek、豆包、Kimi、OpenAI、千问以及开源的Ollama。
