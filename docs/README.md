@@ -14,23 +14,30 @@ meta:
     content: "AI workflow, no-code development, developer tools, automation scripts, workflow engine, Telegram bot development, AI agent platform"
 
 features:
-- title: 🤖 Dual-Mode Development
-  details: Visual drag-and-drop builder + Python/JS/PHP code extensions for full-spectrum automation - from business teams to engineers.
-- title: ⚡ High Performance
-  details: The API workflow on a single machine can support more than 1,500 QPS
-- title: ⚒️ Developer-Centric
-  details: Native support for event triggers, parallel task orchestration, local file processing, and Python/JS SDK extensions.
+- title: ⚡ Rapid Robot Development
+  details: Zero-Code Telegram Bot Development.
+- title: 🤖 Agentic Workflow
+  details: Supports rapid development of Agents and MCP Servers through visual orchestration..
+- title: ⚒️ Developer Friendly
+  details: Small in size, powerful functionality, supports various programming languages, and can be deployed independently.
 ---
-<iframe 
+  <iframe 
     width="800" 
     height="600" 
-    src="https://www.youtube.com/embed/yeeWO2zKVgA"  frameborder="0" 
+    src="https://www.youtube.com/embed/0st8gw2a54s"  
+    frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
-</iframe>
+  </iframe>
 
+## 🌟 Agentic Workflow Development
+![](/Agentic-Workflow.png)
+
+## 🌟 MCP Server Development
+![](/mcp-server.png)
 
 ## 🌟 Rich Triggers
+
 ![](/rich-trigger.png)
 
 ## 🌟 Rich Logic Components
@@ -42,8 +49,7 @@ features:
 ## 🌟 Variable Expression
 ![](/variable-expression.png)
 
-## 🌟 Retrieval-augmented generation(RAG)
-![](/local-knowledge.png)
+
 
 ## 🗂️ File Management
 ![](/file-management.png)

@@ -14,26 +14,30 @@ meta:
     content: "AI工作流,无代码开发,开发者工具,自动化脚本,工作流引擎,Telegram机器人开发,AI开发,AI Agent开发"
 
 features:
-- title: 🤖 双模开发
-  details: 可视化拖拽编排 + Python/JS/PHP等代码扩展，满足从业务人员到开发者的全场景需求。
-- title: ⚡ 高性能
-  details: 单节点1500+ QPS处理能力。
+- title: ⚡ 快速开发机器人
+  details: 0代码开发Telegram机器人。
+- title: 🤖 智能体工作流
+  details: 支持可视化编排方式快速开发Agent和MCP Server。
 - title: ⚒️ 开发者友好
-  details: 原生支持常用的事件触发方式、并行汇聚等逻辑控制、本地文件数据处理、原生Python/JS编程扩展等。
+  details: 体积小、功能强大、支持各种编程语言、可独立部署。
 ---
-<iframe 
+  <iframe 
     width="800" 
     height="600" 
-    src="https://www.youtube.com/embed/yeeWO2zKVgA"  frameborder="0" 
+    src="https://www.youtube.com/embed/0st8gw2a54s"  
+    frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
-</iframe>
+  </iframe>
 
 
-## 🌟 丰富的触发器
-![](/rich-trigger.png)
+## 🌟 Agentic Workflow Development
+![](/Agentic-Workflow.png)
 
-## 🌟 丰富的逻辑讲组件
+## 🌟 MCP Server Development
+![](/mcp-server.png)
+
+## 🌟 丰富的逻辑组件
 ![](/logic.png)
 
 ## 🌟 工作流管理
@@ -41,9 +45,6 @@ features:
 
 ## 🌟 变量表达式
 ![](/variable-expression.png)
-
-## 🌟 检索增强生成（RAG）
-![](/local-knowledge.png)
 
 ## 🗂️ 文件管理
 ![](/file-management.png)
