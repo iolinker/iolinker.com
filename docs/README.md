@@ -32,12 +32,15 @@ features:
 
 ## 🌟 Agentic Workflow Development
 ![](/Agentic-Workflow.png)
+![](/agent.png)
 
 ## 🌟 MCP Server Development
 ![](/mcp-server.png)
 
-## 🌟 Rich Triggers
+## 🌟 Form Process Automation
+![](/form.png)
 
+## 🌟 Rich Triggers
 ![](/rich-trigger.png)
 
 ## 🌟 Rich Logic Components
@@ -58,13 +61,13 @@ features:
 ![](/data-analysis-worldmap.png)
 
 ## 🌟 Support Multi Platform
-- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-darwin-arm64-v0.9.2.tar.gz)
-- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-darwin-amd64-v0.9.2.tar.gz)
-- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-linux-amd64-v0.9.2.tar.gz)
-- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-linux-amd64-v0.9.2.tar.gz)
-- [Windows X86](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-windows-amd64-v0.9.2.tar.gz)
-- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-linux-armv7-v0.9.2.tar.gz)
-- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v0.9.2/iolinker-standalone-linux-armv7-v0.9.2.tar.gz)
+- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-darwin-arm64-v1.0.0.tar.gz)
+- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-darwin-amd64-v1.0.0.tar.gz)
+- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-linux-amd64-v1.0.0.tar.gz)
+- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-linux-amd64-v1.0.0.tar.gz)
+- [Windows X86](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-windows-amd64-v1.0.0.tar.gz)
+- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-linux-armv7-v1.0.0.tar.gz)
+- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v1.0.0/iolinker-standalone-linux-armv7-v1.0.0.tar.gz)
 - [Docker]
 ```
 docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest
