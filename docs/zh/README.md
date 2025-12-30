@@ -1,25 +1,25 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: IOLinker AI 工作流
-tagline: 功能最强的个人AI工作流工具
+heroText: IOLinker 智能体工作流
+tagline: 专为个人开发者打造的轻量级私有化智能体工作流工具
 actionText: 开始 →
 actionLink: /zh/how-to-run-iolinker
 
 # 新增SEO配置
 meta:
   - name: description
-    content: "IOLinker 是面向开发者的AI工作流工具，支持1500+ QPS的高性能自动化，提供可视化编排与代码扩展双模式，兼容Python/JS/Shell等多语言环境。"
+    content: "IOLinker 是专为个人开发者设计的轻量级智能体工作流工具，结合传统工作流的确定性与Agent智能体的动态决策能力。支持完全私有化部署，数据安全可控，单机即可运行，支持可视化编排与代码扩展。"
   - name: keywords
-    content: "AI工作流,无代码开发,开发者工具,自动化脚本,工作流引擎,Telegram机器人开发,AI开发,AI Agent开发"
+    content: "智能体工作流,Agent工作流,个人开发者工具,私有化AI工作流,轻量级工作流,本地部署工作流,确定性工作流,动态决策,开发者自动化工具,AI Agent开发"
 
 features:
 - title: ⚡ 快速开发机器人
-  details: 0代码开发Telegram机器人。
+  details: 0代码接入Telegram并实现Telegram Agent能力，个人开发者也能轻松上手。
 - title: 🤖 智能体工作流
-  details: 支持可视化编排方式快速开发Agent和MCP Server。
-- title: ⚒️ 开发者友好
-  details: 体积小、功能强大、支持各种编程语言、可独立部署。
+  details: 结合传统工作流的确定性与Agent智能体的动态决策能力，支持可视化编排方式快速开发Agent和MCP Server。
+- title: ⚒️ 轻量级私有化
+  details: 专为个人开发者设计，体积小巧、资源占用低，支持完全私有化部署，数据安全可控。
 ---
   <iframe 
     width="800" 
@@ -32,6 +32,8 @@ features:
 
 
 ## 🌟 Agentic 工作流
+结合传统工作流的确定性与Agent智能体的动态决策能力，让您既能享受工作流的稳定可靠，又能获得AI智能体的灵活应变。
+
 ![](/Agentic-Workflow.png)
 ![](/agent.png)
 

@@ -1,25 +1,25 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: IOLinker AI Workflow
-tagline: The most powerful personal AI workflow tool
+heroText: IOLinker Agentic Workflow
+tagline: Lightweight self-hosted agentic workflow tool built for individual developers
 actionText: Start →
 actionLink: /how-to-run-iolinker
 
 # 新增SEO配置
 meta:
   - name: description
-    content: "IOLinker is an AI workflow platform for developers, delivering 1500+ QPS performance with dual-mode automation (visual orchestration + code extensions) and multi-language support including Python/JS/Shell."
+    content: "IOLinker is a lightweight agentic workflow tool designed for individual developers, combining the determinism of traditional workflows with the dynamic decision-making capabilities of AI agents. Supports fully self-hosted deployment with data security and control. Lightweight architecture runs on a single machine, supports visual orchestration and code extensions."
   - name: keywords
-    content: "AI workflow, no-code development, developer tools, automation scripts, workflow engine, Telegram bot development, AI agent platform"
+    content: "agentic workflow, AI agent workflow, individual developer tools, self-hosted AI workflow, lightweight workflow, local deployment workflow, deterministic workflow, dynamic decision-making, developer automation tools, AI agent development"
 
 features:
-- title: ⚡ Rapid Robot Development
-  details: Zero-Code Telegram Bot Development.
+- title: ⚡ Rapid Bot Development
+  details: Zero-code Telegram integration and Telegram Agent capabilities, easy for individual developers to get started.
 - title: 🤖 Agentic Workflow
-  details: Supports rapid development of Agents and MCP Servers through visual orchestration..
-- title: ⚒️ Developer Friendly
-  details: Small in size, powerful functionality, supports various programming languages, and can be deployed independently.
+  details: Combines the determinism of traditional workflows with the dynamic decision-making capabilities of AI agents, supports rapid development of Agents and MCP Servers through visual orchestration.
+- title: ⚒️ Lightweight & Self-hosted
+  details: Built for individual developers, compact size with low resource consumption, supports fully self-hosted deployment with complete data security and control.
 ---
   <iframe 
     width="800" 
@@ -31,6 +31,8 @@ features:
   </iframe>
 
 ## 🌟 Agentic Workflow Development
+Combining the determinism of traditional workflows with the dynamic decision-making capabilities of AI agents, giving you both the stability and reliability of workflows and the flexibility of AI agents.
+
 ![](/Agentic-Workflow.png)
 ![](/agent.png)
 
