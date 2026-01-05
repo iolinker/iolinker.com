@@ -176,6 +176,7 @@ module.exports = {
                     // ['/zh/trigger_weixin_official_account.md','微信公众号触发器'],
                     ['/zh/trigger_telegram.md', 'Telegram Bot 触发器'],
                     ['/zh/trigger_dingtalk.md', '钉钉机器人触发器'],
+                    ['/zh/trigger_feishu.md', '飞书机器人触发器'],
                     ['/zh/mcp.md', 'MCP 触发器'],
                     ['/zh/trigger_error.md', '错误触发器']
                 ]
