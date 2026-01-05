@@ -173,11 +173,11 @@ meta:
 
 打开后，可以看到【企业 机器人】栏目，这里就可以看到我们创建的应用关联的机器人，点击【添加】并【完成】。
 
-<img src="/Users/shuwoom/Library/Application Support/typora-user-images/image-20260104233240706.png" alt="image-20260104233240706" style="zoom:50%;" />
+<img src="./img/search-dingtalk-bot-1.png" alt="image-20260104233240706" style="zoom:50%;" />
 
 然后点击机器人的头像，点击【发消息】我们就可以跟应用（机器人）进行单聊发消息。
 
-<img src="/Users/shuwoom/Library/Application Support/typora-user-images/image-20260104233347574.png" alt="image-20260104233347574" style="zoom:50%;" />
+<img src="./img/search-dingtalk-bot-2.png" alt="image-20260104233347574" style="zoom:50%;" />
 
 由于我们创建凭据时，启用了内置的指令，这里我们直接输入`/help`，就可以看到系统自带的指令。
 
