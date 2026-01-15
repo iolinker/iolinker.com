@@ -63,13 +63,13 @@ Combining the determinism of traditional workflows with the dynamic decision-mak
 ![](/data-analysis-worldmap.png)
 
 ## 🌟 Support Multi Platform
-- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-darwin-arm64-v1.1.0.tar.gz)
-- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-darwin-amd64-v1.1.0.tar.gz)
-- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-linux-amd64-v1.1.0.tar.gz)
-- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-linux-amd64-v1.1.0.tar.gz)
-- [Windows X86](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-windows-amd64-v1.1.0.tar.gz)
-- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-linux-armv7-v1.1.0.tar.gz)
-- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v1.1.0/iolinker-standalone-linux-armv7-v1.1.0.tar.gz)
+- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-darwin-arm64-v1.1.1.tar.gz)
+- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-darwin-amd64-v1.1.1.tar.gz)
+- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-linux-amd64-v1.1.1.tar.gz)
+- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-linux-amd64-v1.1.1.tar.gz)
+- [Windows X86](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-windows-amd64-v1.1.1.tar.gz)
+- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-linux-armv7-v1.1.1.tar.gz)
+- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v1.1.1/iolinker-standalone-linux-armv7-v1.1.1.tar.gz)
 - [Docker]
 ```
 docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest
