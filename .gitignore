@@ -3,3 +3,4 @@ node_modules/
 dist/
 .github
 docs/dist.tgz
+.vscode
