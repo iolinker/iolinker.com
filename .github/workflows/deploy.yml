@@ -1,0 +1,36 @@
+# Push to main 后自动构建并部署到 GitHub Pages（pages 分支）
+# 自定义域名 iolinker.com 通过 docs/.vuepress/public/CNAME 持久化，无需每次在设置里重填
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run docs:build
+
+      - name: Deploy to pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+          publish_branch: pages
+          cname: iolinker.com
+          force_orphan: true
