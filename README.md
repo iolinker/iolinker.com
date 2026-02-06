@@ -48,12 +48,12 @@
 ![](docs/.vuepress/public/data-analysis-worldmap.png)
 
 ## 🌟 Support Multi Platform
-- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-darwin-arm64-v1.2.3.tar.gz)
-- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-darwin-amd64-v1.2.3.tar.gz)
-- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-linux-amd64-v1.2.3.tar.gz)
-- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-linux-amd64-v1.2.3.tar.gz)
-- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-linux-armv7-v1.2.3.tar.gz)
-- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v1.2.3/iolinker-standalone-linux-armv7-v1.2.3.tar.gz)
+- [Mac Apple](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-darwin-arm64-v1.2.4.tar.gz)
+- [Mac Intel](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-darwin-amd64-v1.2.4.tar.gz)
+- [Linux AMD64](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-linux-amd64-v1.2.4.tar.gz)
+- [Linux ARM64](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-linux-amd64-v1.2.4.tar.gz)
+- [Raspberry PI 4B](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-linux-armv7-v1.2.4.tar.gz)
+- [Synology NAS](https://github.com/iolinker/iolinker.com/releases/download/v1.2.4/iolinker-standalone-linux-armv7-v1.2.4.tar.gz)
 - [Docker]
 ```
 docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest
