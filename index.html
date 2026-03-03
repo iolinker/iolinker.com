@@ -480,12 +480,14 @@
                             <img src="screenshot2.jpg" alt="IOLinker Screenshot 2" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
                             <img src="screenshot3.jpg" alt="IOLinker Screenshot 3" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
                             <img src="screenshot4.jpg" alt="IOLinker Screenshot 4" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                            <img src="screenshot5.jpg" alt="IOLinker Screenshot 5" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
                         </div>
                         <div class="carousel-dots" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;">
                             <span class="carousel-dot active" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.9);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(0)"></span>
                             <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(1)"></span>
                             <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(2)"></span>
                             <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(3)"></span>
+                            <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(4)"></span>
                         </div>
                     </div>
                 </div>
@@ -718,7 +720,7 @@
         });
     }
     setInterval(() => {
-        goToSlide((currentSlide + 1) % 4);
+        goToSlide((currentSlide + 1) % 5);
     }, 4000);
 </script>
 </body>
