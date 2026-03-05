@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOLinker - 开发者的轻量级 AI 工作流工具</title>
+    <meta name="description" content="IOLinker 是面向开发者的轻量级 AI 工作流引擎，安装包不到 100MB，内存占用不到 100MB。支持智能体工作流、多模型接入，可在 Telegram、飞书、钉钉等平台部署 Agent，私有化部署，数据完全自主可控。">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ===== CSS Variables ===== */
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #818CF8;
+            --primary-dark: #3730A3;
+            --accent: #06B6D4;
+            --bg-dark: #0F172A;
+            --bg-section: #F8FAFC;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --border: #E2E8F0;
+            --radius: 16px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
+            --max-width: 1200px;
+        }
+
+        /* ===== Utility ===== */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: rgba(79,70,229,0.08);
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+
+        /* ===== Navigation ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+        .nav.scrolled {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+        .nav-logo img { width: 32px; height: 32px; }
+        .nav-links { display: flex; align-items: center; gap: 32px; }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--primary);
+            color: #fff !important;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(79,70,229,0.4); }
+
+        .lang-switch {
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1.5px solid var(--border);
+            background: #fff;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+        .lang-switch:hover { border-color: var(--primary); color: var(--primary); }
+
+        .mobile-toggle { display: none; cursor: pointer; background: none; border: none; }
+        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--text-primary); margin: 6px 0; transition: 0.3s; }
+
+        /* ===== Hero ===== */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 140%;
+            height: 200%;
+            background: radial-gradient(ellipse at 50% 0%, rgba(79,70,229,0.07) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 50%, rgba(6,182,212,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 100px;
+            background: rgba(79,70,229,0.06);
+            border: 1px solid rgba(79,70,229,0.12);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 32px;
+        }
+        .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(79,70,229,0.3);
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(79,70,229,0.4); }
+        .btn-secondary {
+            background: #fff;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+
+        .hero-visual {
+            margin-top: 72px;
+            position: relative;
+        }
+        .hero-visual-inner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 3px;
+            box-shadow: var(--shadow-lg);
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .hero-screen {
+            background: var(--bg-dark);
+            border-radius: 18px;
+            padding: 20px;
+            min-height: 420px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== Features ===== */
+        .features {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .feature-card {
+            text-align: left;
+            padding: 36px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(79,70,229,0.2);
+        }
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        .feature-card:nth-child(1) .feature-icon { background: rgba(79,70,229,0.1); }
+        .feature-card:nth-child(2) .feature-icon { background: rgba(6,182,212,0.1); }
+        .feature-card:nth-child(3) .feature-icon { background: rgba(5,150,105,0.1); }
+        .feature-card:nth-child(4) .feature-icon { background: rgba(217,119,6,0.1); }
+        .feature-card:nth-child(5) .feature-icon { background: rgba(220,38,38,0.1); }
+        .feature-card:nth-child(6) .feature-icon { background: rgba(124,58,237,0.1); }
+        .feature-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+        .feature-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+
+        /* ===== How It Works ===== */
+        .how-it-works {
+            padding: 120px 0;
+            background: var(--bg-section);
+            text-align: center;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+        .step {
+            position: relative;
+            text-align: center;
+        }
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .step h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .step p { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* ===== Use Cases ===== */
+        .usecases {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .usecase-card {
+            text-align: left;
+            padding: 40px;
+            border-radius: var(--radius);
+            background: var(--bg-section);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .usecase-card:hover { border-color: var(--primary); box-shadow: var(--shadow-sm); }
+        .usecase-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+        .usecase-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 120px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1E293B 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(79,70,229,0.15) 0%, transparent 70%);
+        }
+        .cta .container { position: relative; }
+        .cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; }
+        .cta p { font-size: 1.1rem; color: rgba(255,255,255,0.6); margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta .btn-primary { background: #fff; color: var(--primary); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+        .cta .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+        .download-btn:hover { background: rgba(255,255,255,0.2) !important; border-color: rgba(255,255,255,0.4) !important; transform: translateY(-2px); }
+
+        @media (max-width: 768px) {
+            .download-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-brand { max-width: 300px; }
+        .footer-brand .nav-logo { margin-bottom: 12px; }
+        .footer-brand p { font-size: 0.85rem; color: var(--text-secondary); }
+        .footer-links { display: flex; gap: 64px; }
+        .footer-col h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-col a { display: block; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 24px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+                gap: 16px;
+            }
+            .mobile-toggle { display: block; }
+            .features-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: repeat(2, 1fr); }
+            .usecase-grid { grid-template-columns: 1fr; }
+            .hero { padding: 120px 0 60px; }
+            .hero-visual-inner { margin: 0 -12px; border-radius: 12px; }
+            .hero-screen { min-height: 280px; }
+            .footer-links { gap: 32px; }
+            .footer-inner { flex-direction: column; }
+        }
+
+        /* ===== Animations ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">
+            <img src="logo.png" alt="IOLinker">
+            IOLinker
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#features" data-zh="功能特性" data-en="Features">功能特性</a>
+            <a href="#how-it-works" data-zh="工作原理" data-en="How It Works">工作原理</a>
+            <a href="#usecases" data-zh="应用场景" data-en="Use Cases">应用场景</a>
+            <a href="https://doc.iolinker.com/zh/" target="_blank" id="docLink" data-zh="文档" data-en="Docs">文档</a>
+            <button class="lang-switch" id="langSwitch" onclick="toggleLang()">EN</button>
+            <a href="#cta" class="nav-cta" data-zh="立即下载" data-en="Download">立即下载</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            <span data-zh="私有部署 · 极致轻量 · v1.2.6" data-en="Self-hosted · Ultra Lightweight · v1.2.6">私有部署 · 极致轻量 · v1.2.6</span>
+        </div>
+        <h1 data-zh="开发者的轻量级<br>AI 工作流工具" data-en="Lightweight AI Workflow<br>Tool for Developers" data-html="true">开发者的轻量级<br>AI 工作流工具</h1>
+        <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:8px;" data-zh="Dify 的工作流编排 + OpenClaw 的 Agent 开发，合二为一。" data-en="Dify's workflow orchestration + OpenClaw's Agent development, all in one.">Dify 的工作流编排 + OpenClaw 的 Agent 开发，合二为一。</p>
+        <p data-zh="在你自己的机器上，编排 AI 的一切。" data-en="Orchestrate everything AI, on your own machine.">在你自己的机器上，编排 AI 的一切。</p>
+        <div class="hero-stats" style="display:flex;justify-content:center;gap:40px;margin-bottom:40px;flex-wrap:wrap;">
+            <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="超轻量" data-en="Ultra Light">超轻量</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="安装包 &lt; 100MB" data-en="Package &lt; 100MB" data-html="true">安装包 &lt; 100MB</span></div>
+            <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="超低耗" data-en="Low Memory">超低耗</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="运行内存 &lt; 100MB" data-en="RAM &lt; 100MB" data-html="true">运行内存 &lt; 100MB</span></div>
+            <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="0 依赖" data-en="0 Deps">0 依赖</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="开箱即用" data-en="Ready to Go">开箱即用</span></div>
+            <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="全平台" data-en="All Platforms">全平台</span><br><span style="font-size:0.85rem;color:var(--text-secondary);">Mac / Linux / Win / Docker</span></div>
+        </div>
+        <div class="hero-actions">
+            <a href="#cta" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span data-zh="立即下载" data-en="Download Now">立即下载</span>
+            </a>
+            <a href="#features" class="btn btn-secondary"><span data-zh="了解更多 →" data-en="Learn More →">了解更多 →</span></a>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-visual-inner">
+                <div class="hero-screen" style="padding:0;min-height:auto;overflow:hidden;">
+                    <div class="screen-carousel" id="screenCarousel" style="position:relative;width:100%;overflow:hidden;">
+                        <div class="carousel-track" id="carouselTrack" style="display:flex;transition:transform 0.6s ease;">
+                            <img src="screenshot1.jpg" alt="IOLinker Screenshot 1" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                            <img src="screenshot2.jpg" alt="IOLinker Screenshot 2" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                            <img src="screenshot3.jpg" alt="IOLinker Screenshot 3" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                            <img src="screenshot4.jpg" alt="IOLinker Screenshot 4" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                            <img src="screenshot5.jpg" alt="IOLinker Screenshot 5" style="width:100%;flex-shrink:0;display:block;border-radius:18px;">
+                        </div>
+                        <div class="carousel-dots" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;">
+                            <span class="carousel-dot active" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.9);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(0)"></span>
+                            <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(1)"></span>
+                            <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(2)"></span>
+                            <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(3)"></span>
+                            <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="fade-in">
+            <span class="section-tag" data-zh="核心能力" data-en="Core Features">核心能力</span>
+            <h2 class="section-title" data-zh="小身材，大能量" data-en="Small Size, Big Power">小身材，大能量</h2>
+            <p class="section-desc" data-zh="不到 100MB 的体积，装下你需要的全部 AI 工作流能力。" data-en="Under 100MB, packed with everything you need for AI workflows.">不到 100MB 的体积，装下你需要的全部 AI 工作流能力。</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3 data-zh="极致轻量" data-en="Ultra Lightweight">极致轻量</h3>
+                <p data-zh="安装包不到 100MB，运行内存不到 100MB。单文件部署、无需 Docker 和数据库，笔记本、树莓派、NAS 都能轻松运行。" data-en="Package under 100MB, RAM under 100MB. Single binary deployment, no Docker or database required. Runs on laptops, Raspberry Pi, and NAS with ease.">安装包不到 100MB，运行内存不到 100MB。单文件部署、无需 Docker 和数据库，笔记本、树莓派、NAS 都能轻松运行。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🤖</div>
+                <h3 data-zh="智能体工作流" data-en="Agent Workflow">智能体工作流</h3>
+                <p data-zh="融合传统工作流的确定性与 AI 智能体的动态决策，可视化编排 Agent 推理链路，兼顾稳定与智能。" data-en="Combines the determinism of traditional workflows with the dynamic decision-making of AI agents. Visually orchestrate Agent reasoning chains, balancing stability and intelligence.">融合传统工作流的确定性与 AI 智能体的动态决策，可视化编排 Agent 推理链路，兼顾稳定与智能。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔗</div>
+                <h3 data-zh="多模型接入" data-en="Multi-Model Support">多模型接入</h3>
+                <p data-zh="兼容 OpenAI、Claude、GLM、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。" data-en="Compatible with OpenAI, Claude, GLM, Qwen and other mainstream model services. Also supports local models with flexible switching.">兼容 OpenAI、Claude、GLM、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">💬</div>
+                <h3 data-zh="多平台 Agent 部署" data-en="Multi-Platform Agent">多平台 Agent 部署</h3>
+                <p data-zh="将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。" data-en="Deploy AI Agents to Telegram, Feishu, DingTalk and more with one click. Quickly build AI-powered Bots that individual developers can easily get started with.">将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🧩</div>
+                <h3 data-zh="丰富的组件" data-en="Rich Components">丰富的组件</h3>
+                <p data-zh="内置触发器、逻辑组件、变量表达式、表单自动化、文件管理和数据分析等模块，满足多样化工作流需求。" data-en="Built-in triggers, logic components, variable expressions, form automation, file management and data analysis modules to meet diverse workflow needs.">内置触发器、逻辑组件、变量表达式、表单自动化、文件管理和数据分析等模块，满足多样化工作流需求。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🧠</div>
+                <h3 data-zh="知识库 RAG" data-en="Knowledge Base RAG">知识库 RAG</h3>
+                <p data-zh="内置向量检索增强生成引擎，上传文档即刻构建专属知识库，让 AI Agent 拥有你的领域知识，回答更精准。" data-en="Built-in vector retrieval-augmented generation engine. Upload documents to instantly build your own knowledge base, giving AI Agents domain expertise for more accurate answers.">内置向量检索增强生成引擎，上传文档即刻构建专属知识库，让 AI Agent 拥有你的领域知识，回答更精准。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <div class="fade-in">
+            <span class="section-tag" data-zh="快速上手" data-en="Quick Start">快速上手</span>
+            <h2 class="section-title" data-zh="三步开始使用" data-en="Get Started in 3 Steps">三步开始使用</h2>
+            <p class="section-desc" data-zh="下载、启动、构建——就这么简单。" data-en="Download, launch, build — it's that simple.">下载、启动、构建——就这么简单。</p>
+        </div>
+        <div class="steps" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3 data-zh="下载启动" data-en="Download & Launch">下载启动</h3>
+                <p data-zh="选择你的平台，下载不到 100MB 的安装包，解压即用。也支持 docker run 一键启动。" data-en="Choose your platform, download the sub-100MB package, extract and run. Also supports one-click launch via docker run.">选择你的平台，下载不到 100MB 的安装包，解压即用。也支持 docker run 一键启动。</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3 data-zh="连接模型" data-en="Connect Models">连接模型</h3>
+                <p data-zh="填入 OpenAI、Claude、GLM、Qwen 等 API Key，即刻获得 AI 能力。" data-en="Enter your OpenAI, Claude, GLM, Qwen API keys and instantly unlock AI capabilities.">填入 OpenAI、Claude、GLM、Qwen 等 API Key，即刻获得 AI 能力。</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3 data-zh="编排发布" data-en="Build & Deploy">编排发布</h3>
+                <p data-zh="在可视化画布上拖拽编排工作流，调试完成后发布为 API 或部署到各平台。" data-en="Drag and drop to orchestrate workflows on the visual canvas, then deploy as APIs or to various platforms.">在可视化画布上拖拽编排工作流，调试完成后发布为 API 或部署到各平台。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases -->
+<section class="usecases" id="usecases">
+    <div class="container">
+        <div class="fade-in">
+            <span class="section-tag" data-zh="应用场景" data-en="Use Cases">应用场景</span>
+            <h2 class="section-title" data-zh="开发者这样用 IOLinker" data-en="How Developers Use IOLinker">开发者这样用 IOLinker</h2>
+            <p class="section-desc" data-zh="从多平台 Bot 到智能体工作流，IOLinker 适配多种开发场景。" data-en="From multi-platform Bots to Agent workflows, IOLinker fits various development scenarios.">从多平台 Bot 到智能体工作流，IOLinker 适配多种开发场景。</p>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card fade-in">
+                <h3><span>🤖 </span><span data-zh="多平台 Bot" data-en="Multi-Platform Bot">多平台 Bot</span></h3>
+                <p data-zh="将 Agent 部署到 Telegram、飞书、钉钉等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。" data-en="Deploy Agents to Telegram, Feishu, DingTalk and more. Quickly build AI-powered conversational Bots, ready out of the box.">将 Agent 部署到 Telegram、飞书、钉钉等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。</p>
+            </div>
+            <div class="usecase-card fade-in">
+                <h3><span>🧠 </span><span data-zh="AI Agent 工作流" data-en="AI Agent Workflow">AI Agent 工作流</span></h3>
+                <p data-zh="可视化编排复杂的智能体推理链路，结合工具调用与知识检索，构建自主决策的 AI 应用。" data-en="Visually orchestrate complex Agent reasoning chains, combining tool calls and knowledge retrieval to build autonomous AI applications.">可视化编排复杂的智能体推理链路，结合工具调用与知识检索，构建自主决策的 AI 应用。</p>
+            </div>
+            <div class="usecase-card fade-in">
+                <h3><span>🔧 </span><span data-zh="DevOps 自动化" data-en="DevOps Automation">DevOps 自动化</span></h3>
+                <p data-zh="编排运维工作流，让 Agent 自动巡检服务状态、分析日志、生成报告，甚至触发告警和修复操作。" data-en="Orchestrate DevOps workflows. Let Agents auto-inspect service status, analyze logs, generate reports, and even trigger alerts and remediation.">编排运维工作流，让 Agent 自动巡检服务状态、分析日志、生成报告，甚至触发告警和修复操作。</p>
+            </div>
+            <div class="usecase-card fade-in">
+                <h3><span>📋 </span><span data-zh="表单与流程自动化" data-en="Form & Process Automation">表单与流程自动化</span></h3>
+                <p data-zh="利用触发器和逻辑组件编排业务流程，自动化处理表单数据、文件管理和数据分析任务。" data-en="Use triggers and logic components to orchestrate business processes, automating form data handling, file management and data analysis tasks.">利用触发器和逻辑组件编排业务流程，自动化处理表单数据、文件管理和数据分析任务。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+    <div class="container fade-in">
+        <h2 data-zh="100MB，即刻启动你的 AI 助理" data-en="100MB to Launch Your AI Assistant">100MB，即刻启动你的 AI 助理</h2>
+        <p data-zh="下载 IOLinker，在你自己的机器上运行，数据和模型完全由你掌控。" data-en="Download IOLinker, run it on your own machine. Your data and models, fully under your control.">下载 IOLinker，在你自己的机器上运行，数据和模型完全由你掌控。</p>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:32px;" data-zh="当前版本 v1.2.6 · 全平台支持" data-en="Current version v1.2.6 · All platforms supported">当前版本 v1.2.6 · 全平台支持</p>
+        <div class="download-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:0 auto;">
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-darwin-arm64-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Apple</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-darwin-amd64-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Intel</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-linux-amd64-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux AMD64</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-linux-arm64-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux ARM64</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-windows-amd64-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🪟 Windows X86</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-linux-armv7-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍓 Raspberry Pi</a>
+            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.6/iolinker-standalone-linux-armv7-v1.2.6.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">📦 Synology NAS</a>
+            <a href="javascript:void(0)" onclick="document.getElementById('dockerCmd').style.display=document.getElementById('dockerCmd').style.display==='block'?'none':'block'" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐳 Docker</a>
+        </div>
+        <div id="dockerCmd" style="display:none;margin-top:20px;max-width:720px;margin-left:auto;margin-right:auto;">
+            <code style="display:block;background:rgba(0,0,0,0.4);color:#10B981;padding:16px 20px;border-radius:10px;font-size:0.85rem;text-align:left;word-break:break-all;">docker run --name iolinker -p 80:80 -e Domain=localhost iolinker/iolinker:latest</code>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <img src="logo.png" alt="IOLinker">
+                    IOLinker
+                </a>
+                <p data-zh="开发者的轻量级 AI 工作流工具，私有部署，开箱即用。" data-en="Lightweight AI workflow tool for developers. Self-hosted, ready to go.">开发者的轻量级 AI 工作流工具，私有部署，开箱即用。</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-zh="产品" data-en="Product">产品</h4>
+                    <a href="#features" data-zh="功能特性" data-en="Features">功能特性</a>
+                    <a href="#how-it-works" data-zh="工作原理" data-en="How It Works">工作原理</a>
+                    <a href="#usecases" data-zh="应用场景" data-en="Use Cases">应用场景</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-zh="资源" data-en="Resources">资源</h4>
+                    <a href="https://doc.iolinker.com/zh/" target="_blank" id="footerDocLink" data-zh="文档中心" data-en="Documentation">文档中心</a>
+                    <a href="#" data-zh="API 参考" data-en="API Reference">API 参考</a>
+                    <a href="#" data-zh="更新日志" data-en="Changelog">更新日志</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-zh="社区" data-en="Community">社区</h4>
+                    <a href="https://t.me/iolinker_com" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 IOLinker. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Language state
+    let currentLang = 'zh';
+
+    function toggleLang() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        document.getElementById('langSwitch').textContent = currentLang === 'zh' ? 'EN' : '中文';
+        document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
+        // Update title
+        document.title = currentLang === 'zh'
+            ? 'IOLinker - 开发者的轻量级 AI 工作流工具'
+            : 'IOLinker - Lightweight AI Workflow Tool for Developers';
+
+        // Update all elements with data-zh/data-en attributes
+        document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+            const text = el.getAttribute('data-' + currentLang);
+            if (el.hasAttribute('data-html') || text.includes('<br>') || text.includes('&lt;')) {
+                el.innerHTML = text;
+            } else {
+                el.textContent = text;
+            }
+        });
+
+        // Update doc link based on language
+        const docHref = currentLang === 'zh' 
+            ? 'https://doc.iolinker.com/zh/' 
+            : 'https://doc.iolinker.com/';
+        document.getElementById('docLink').href = docHref;
+        document.getElementById('footerDocLink').href = docHref;
+    }
+
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Screenshot carousel
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    function goToSlide(index) {
+        currentSlide = index;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach((d, i) => {
+            d.style.background = i === index ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)';
+        });
+    }
+    setInterval(() => {
+        goToSlide((currentSlide + 1) % 5);
+    }, 4000);
+</script>
+</body>
+</html>
