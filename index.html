@@ -437,7 +437,7 @@
             <a href="#features" data-zh="功能特性" data-en="Features">功能特性</a>
             <a href="#how-it-works" data-zh="工作原理" data-en="How It Works">工作原理</a>
             <a href="#usecases" data-zh="应用场景" data-en="Use Cases">应用场景</a>
-            <a href="https://doc.iolinker.com" target="_blank" data-zh="文档" data-en="Docs">文档</a>
+            <a href="https://doc.iolinker.com/zh/" target="_blank" id="docLink" data-zh="文档" data-en="Docs">文档</a>
             <button class="lang-switch" id="langSwitch" onclick="toggleLang()">EN</button>
             <a href="#cta" class="nav-cta" data-zh="立即下载" data-en="Download">立即下载</a>
         </div>
@@ -638,7 +638,7 @@
                 </div>
                 <div class="footer-col">
                     <h4 data-zh="资源" data-en="Resources">资源</h4>
-                    <a href="https://doc.iolinker.com" target="_blank" data-zh="文档中心" data-en="Documentation">文档中心</a>
+                    <a href="https://doc.iolinker.com/zh/" target="_blank" id="footerDocLink" data-zh="文档中心" data-en="Documentation">文档中心</a>
                     <a href="#" data-zh="API 参考" data-en="API Reference">API 参考</a>
                     <a href="#" data-zh="更新日志" data-en="Changelog">更新日志</a>
                 </div>
@@ -677,6 +677,13 @@
                 el.textContent = text;
             }
         });
+
+        // Update doc link based on language
+        const docHref = currentLang === 'zh' 
+            ? 'https://doc.iolinker.com/zh/' 
+            : 'https://doc.iolinker.com/';
+        document.getElementById('docLink').href = docHref;
+        document.getElementById('footerDocLink').href = docHref;
     }
 
     // Navbar scroll effect
