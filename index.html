@@ -613,13 +613,13 @@
         <p data-zh="下载 IOLinker，在你自己的机器上运行，数据和模型完全由你掌控。" data-en="Download IOLinker, run it on your own machine. Your data and models, fully under your control.">下载 IOLinker，在你自己的机器上运行，数据和模型完全由你掌控。</p>
         <p style="font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:32px;" data-zh="当前版本 v1.2.7 · 全平台支持" data-en="Current version v1.2.7 · All platforms supported">当前版本 v1.2.7 · 全平台支持</p>
         <div class="download-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:0 auto;">
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-darwin-arm64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Apple</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-darwin-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Intel</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux AMD64</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-arm64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux ARM64</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-windows-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🪟 Windows X86</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-armv7-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍓 Raspberry Pi</a>
-            <a href="https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-armv7-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">📦 Synology NAS</a>
+            <a id="dl-mac-arm" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-darwin-arm64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Apple</a>
+            <a id="dl-mac-intel" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-darwin-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍎 Mac Intel</a>
+            <a id="dl-linux-amd64" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux AMD64</a>
+            <a id="dl-linux-arm64" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-arm64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐧 Linux ARM64</a>
+            <a id="dl-windows" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-windows-amd64-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🪟 Windows X86</a>
+            <a id="dl-rpi" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-armv7-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🍓 Raspberry Pi</a>
+            <a id="dl-nas" href="https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/iolinker-standalone-linux-armv7-v1.2.7.tar.gz" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">📦 Synology NAS</a>
             <a href="javascript:void(0)" onclick="document.getElementById('dockerCmd').style.display=document.getElementById('dockerCmd').style.display==='block'?'none':'block'" class="download-btn" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;">🐳 Docker</a>
         </div>
         <div id="dockerCmd" style="display:none;margin-top:20px;max-width:720px;margin-left:auto;margin-right:auto;">
@@ -689,11 +689,23 @@
         });
 
         // Update doc link based on language
-        const docHref = currentLang === 'zh' 
-            ? 'https://doc.iolinker.com/zh/' 
+        const docHref = currentLang === 'zh'
+            ? 'https://doc.iolinker.com/zh/'
             : 'https://doc.iolinker.com/';
         document.getElementById('docLink').href = docHref;
         document.getElementById('footerDocLink').href = docHref;
+
+        // Update download links based on language
+        const baseUrl = currentLang === 'zh'
+            ? 'https://gitee.com/iolinker/iolinker.com/releases/download/v1.2.7/'
+            : 'https://github.com/iolinker/iolinker.com/releases/download/v1.2.7/';
+        document.getElementById('dl-mac-arm').href = baseUrl + 'iolinker-standalone-darwin-arm64-v1.2.7.tar.gz';
+        document.getElementById('dl-mac-intel').href = baseUrl + 'iolinker-standalone-darwin-amd64-v1.2.7.tar.gz';
+        document.getElementById('dl-linux-amd64').href = baseUrl + 'iolinker-standalone-linux-amd64-v1.2.7.tar.gz';
+        document.getElementById('dl-linux-arm64').href = baseUrl + 'iolinker-standalone-linux-arm64-v1.2.7.tar.gz';
+        document.getElementById('dl-windows').href = baseUrl + 'iolinker-standalone-windows-amd64-v1.2.7.tar.gz';
+        document.getElementById('dl-rpi').href = baseUrl + 'iolinker-standalone-linux-armv7-v1.2.7.tar.gz';
+        document.getElementById('dl-nas').href = baseUrl + 'iolinker-standalone-linux-armv7-v1.2.7.tar.gz';
     }
 
     // Navbar scroll effect
