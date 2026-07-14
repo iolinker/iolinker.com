@@ -273,6 +273,7 @@
         .feature-card:nth-child(4) .feature-icon { background: rgba(217,119,6,0.1); }
         .feature-card:nth-child(5) .feature-icon { background: rgba(220,38,38,0.1); }
         .feature-card:nth-child(6) .feature-icon { background: rgba(124,58,237,0.1); }
+        .feature-card:nth-child(7) .feature-icon { background: rgba(16,185,129,0.1); }
         .feature-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
         .feature-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
 
@@ -465,11 +466,12 @@
             <span data-zh="私有部署 · 极致轻量 · v2.1.1" data-en="Self-hosted · Ultra Lightweight · v2.1.1">私有部署 · 极致轻量 · v2.1.1</span>
         </div>
         <h1 data-zh="开发者的轻量级<br>AI 工作流工具" data-en="Lightweight AI Workflow<br>Tool for Developers" data-html="true">开发者的轻量级<br>AI 工作流工具</h1>
-        <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:8px;" data-zh="Dify 的工作流编排 + OpenClaw 的 Agent 开发，合二为一。" data-en="Dify's workflow orchestration + OpenClaw's Agent development, all in one.">Dify 的工作流编排 + OpenClaw 的 Agent 开发，合二为一。</p>
+        <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:8px;" data-zh="不只是对话——AI 自主调用工具、执行命令、读写文件、联网搜索、构建工作流，用自然语言驱动一切。" data-en="More than chat—AI autonomously calls tools, runs commands, reads &amp; writes files, searches the web, builds workflows. Natural language drives everything.">不只是对话——AI 自主调用工具、执行命令、读写文件、联网搜索、构建工作流，用自然语言驱动一切。</p>
         <p data-zh="在你自己的机器上，编排 AI 的一切。" data-en="Orchestrate everything AI, on your own machine.">在你自己的机器上，编排 AI 的一切。</p>
         <div class="hero-stats" style="display:flex;justify-content:center;gap:40px;margin-bottom:40px;flex-wrap:wrap;">
             <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="超轻量" data-en="Ultra Light">超轻量</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="安装包 &lt; 100MB" data-en="Package &lt; 100MB" data-html="true">安装包 &lt; 100MB</span></div>
             <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="超低耗" data-en="Low Memory">超低耗</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="运行内存 &lt; 100MB" data-en="RAM &lt; 100MB" data-html="true">运行内存 &lt; 100MB</span></div>
+            <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="双引擎" data-en="Dual Engine">双引擎</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="快速 + 标准" data-en="Fast + Standard">快速 + 标准</span></div>
             <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="0 依赖" data-en="0 Deps">0 依赖</span><br><span style="font-size:0.85rem;color:var(--text-secondary);" data-zh="开箱即用" data-en="Ready to Go">开箱即用</span></div>
             <div style="text-align:center;"><span style="font-size:1.8rem;font-weight:800;color:var(--primary);" data-zh="全平台" data-en="All Platforms">全平台</span><br><span style="font-size:0.85rem;color:var(--text-secondary);">Mac / Linux / Win / Docker</span></div>
         </div>
@@ -522,23 +524,23 @@
             </div>
             <div class="feature-card fade-in">
                 <div class="feature-icon">🤖</div>
-                <h3 data-zh="智能体工作流" data-en="Agent Workflow">智能体工作流</h3>
-                <p data-zh="融合传统工作流的确定性与 AI 智能体的动态决策，可视化编排 Agent 推理链路，兼顾稳定与智能。" data-en="Combines the determinism of traditional workflows with the dynamic decision-making of AI agents. Visually orchestrate Agent reasoning chains, balancing stability and intelligence.">融合传统工作流的确定性与 AI 智能体的动态决策，可视化编排 Agent 推理链路，兼顾稳定与智能。</p>
+                <h3 data-zh="AI 工作台" data-en="AI Workspace">AI 工作台</h3>
+                <p data-zh="内置网页 AI 助手，支持流式对话、工具调用、MCP 扩展、知识库检索、技能匹配与定时任务，ReAct 推理链路自主决策，多模态理解图片与文件。" data-en="Built-in web AI assistant with streaming chat, tool calls, MCP extensions, knowledge retrieval, skill matching &amp; scheduled tasks. ReAct reasoning for autonomous decisions, multimodal image &amp; file understanding.">内置网页 AI 助手，支持流式对话、工具调用、MCP 扩展、知识库检索、技能匹配与定时任务，ReAct 推理链路自主决策，多模态理解图片与文件。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3 data-zh="双执行引擎" data-en="Dual Execution Engines">双执行引擎</h3>
+                <p data-zh="快速引擎纯内存执行毫秒级响应（QPS 100+、平均 RT 约 10ms）；标准引擎持久化存储，支持历史回溯与断点续跑。" data-en="Fast engine: in-memory millisecond response (QPS 100+, avg RT ~10ms); Standard engine: persistence for history tracking &amp; checkpoint recovery.">快速引擎纯内存执行毫秒级响应（QPS 100+、平均 RT 约 10ms）；标准引擎持久化存储，支持历史回溯与断点续跑。</p>
             </div>
             <div class="feature-card fade-in">
                 <div class="feature-icon">🔗</div>
                 <h3 data-zh="多模型接入" data-en="Multi-Model Support">多模型接入</h3>
-                <p data-zh="兼容 OpenAI、Claude、GLM、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。" data-en="Compatible with OpenAI, Claude, GLM, Qwen and other mainstream model services. Also supports local models with flexible switching.">兼容 OpenAI、Claude、GLM、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。</p>
+                <p data-zh="兼容 OpenAI、Claude、GLM、DeepSeek、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。" data-en="Compatible with OpenAI, Claude, GLM, DeepSeek, Qwen and other mainstream model services. Also supports local models with flexible switching.">兼容 OpenAI、Claude、GLM、DeepSeek、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。</p>
             </div>
             <div class="feature-card fade-in">
                 <div class="feature-icon">💬</div>
                 <h3 data-zh="多平台 Agent 部署" data-en="Multi-Platform Agent">多平台 Agent 部署</h3>
                 <p data-zh="将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。" data-en="Deploy AI Agents to Telegram, Feishu, DingTalk and more with one click. Quickly build AI-powered Bots that individual developers can easily get started with.">将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🧩</div>
-                <h3 data-zh="丰富的组件" data-en="Rich Components">丰富的组件</h3>
-                <p data-zh="内置触发器、逻辑组件、变量表达式、表单自动化、文件管理和数据分析等模块，满足多样化工作流需求。" data-en="Built-in triggers, logic components, variable expressions, form automation, file management and data analysis modules to meet diverse workflow needs.">内置触发器、逻辑组件、变量表达式、表单自动化、文件管理和数据分析等模块，满足多样化工作流需求。</p>
             </div>
             <div class="feature-card fade-in">
                 <div class="feature-icon">🧠</div>
@@ -566,7 +568,7 @@
             <div class="step fade-in">
                 <div class="step-number">2</div>
                 <h3 data-zh="连接模型" data-en="Connect Models">连接模型</h3>
-                <p data-zh="填入 OpenAI、Claude、GLM、Qwen 等 API Key，即刻获得 AI 能力。" data-en="Enter your OpenAI, Claude, GLM, Qwen API keys and instantly unlock AI capabilities.">填入 OpenAI、Claude、GLM、Qwen 等 API Key，即刻获得 AI 能力。</p>
+                <p data-zh="填入 OpenAI、Claude、GLM、DeepSeek、Qwen 等 API Key，即刻获得 AI 能力。" data-en="Enter your OpenAI, Claude, GLM, DeepSeek, Qwen API keys and instantly unlock AI capabilities.">填入 OpenAI、Claude、GLM、DeepSeek、Qwen 等 API Key，即刻获得 AI 能力。</p>
             </div>
             <div class="step fade-in">
                 <div class="step-number">3</div>
