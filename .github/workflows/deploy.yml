@@ -1,0 +1,26 @@
+# Push to main 后自动部署到 GitHub Pages（pages 分支）
+# 自定义域名 iolinker.com 通过 CNAME 文件持久化
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: pages
+          cname: iolinker.com
+          force_orphan: true
