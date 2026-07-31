@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IOLinker - 开发者的轻量级 AI 工作流工具</title>
-    <meta name="description" content="IOLinker 是面向开发者的轻量级 AI 工作流引擎，安装包不到 100MB，内存占用不到 100MB。支持智能体工作流、多模型接入，可在 Telegram、飞书、钉钉等平台部署 Agent，私有化部署，数据完全自主可控。">
+    <meta name="description" content="IOLinker 是面向开发者的轻量级 AI 工作流引擎，安装包不到 100MB，内存占用不到 100MB。支持智能体工作流、多模型接入，可在 Telegram、飞书、钉钉、企业微信等平台部署 Agent，私有化部署，数据完全自主可控。">
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -539,7 +539,6 @@
                             <div class="screen-carousel" id="screenCarousel" style="position:relative;width:100%;overflow:hidden;aspect-ratio:2/1;">
                                 <div class="carousel-track" id="carouselTrack" style="display:flex;align-items:flex-start;transition:transform 0.6s ease;height:100%;">
                                     <img src="screenshot0.png" alt="IOLinker Screenshot 0" style="width:100%;height:100%;flex-shrink:0;display:block;object-fit:cover;">
-                                    <img src="screenshot1.png" alt="IOLinker Screenshot 1" style="width:100%;height:100%;flex-shrink:0;display:block;object-fit:cover;">
                                     <img src="screenshot2.jpg" alt="IOLinker Screenshot 2" style="width:100%;height:100%;flex-shrink:0;display:block;object-fit:cover;">
                                     <img src="screenshot3.jpg" alt="IOLinker Screenshot 3" style="width:100%;height:100%;flex-shrink:0;display:block;object-fit:cover;">
                                     <img src="screenshot4.jpg" alt="IOLinker Screenshot 4" style="width:100%;height:100%;flex-shrink:0;display:block;object-fit:cover;">
@@ -559,7 +558,6 @@
                                     <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(6)"></span>
                                     <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(7)"></span>
                                     <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(8)"></span>
-                                    <span class="carousel-dot" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;" onclick="goToSlide(9)"></span>
                                 </div>
                             </div>
                         </div>
@@ -591,24 +589,24 @@
                 <p data-zh="内置网页 AI 助手，支持流式对话、工具调用、MCP 扩展、知识库检索、技能匹配与定时任务，ReAct 推理链路自主决策，多模态理解图片与文件。" data-en="Built-in web AI assistant with streaming chat, tool calls, MCP extensions, knowledge retrieval, skill matching &amp; scheduled tasks. ReAct reasoning for autonomous decisions, multimodal image &amp; file understanding.">内置网页 AI 助手，支持流式对话、工具调用、MCP 扩展、知识库检索、技能匹配与定时任务，ReAct 推理链路自主决策，多模态理解图片与文件。</p>
             </div>
             <div class="feature-card fade-in">
-                <div class="feature-icon">⚡</div>
+                <div class="feature-icon">🔄</div>
                 <h3 data-zh="双执行引擎" data-en="Dual Execution Engines">双执行引擎</h3>
                 <p data-zh="快速引擎纯内存执行毫秒级响应（QPS 100+、平均 RT 约 10ms）；标准引擎持久化存储，支持历史回溯与断点续跑。" data-en="Fast engine: in-memory millisecond response (QPS 100+, avg RT ~10ms); Standard engine: persistence for history tracking &amp; checkpoint recovery.">快速引擎纯内存执行毫秒级响应（QPS 100+、平均 RT 约 10ms）；标准引擎持久化存储，支持历史回溯与断点续跑。</p>
             </div>
             <div class="feature-card fade-in">
-                <div class="feature-icon">🔗</div>
-                <h3 data-zh="多模型接入" data-en="Multi-Model Support">多模型接入</h3>
-                <p data-zh="兼容 OpenAI、Claude、GLM、DeepSeek、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。" data-en="Compatible with OpenAI, Claude, GLM, DeepSeek, Qwen and other mainstream model services. Also supports local models with flexible switching.">兼容 OpenAI、Claude、GLM、DeepSeek、Qwen 等主流模型服务，也支持接入本地模型，灵活切换不受限。</p>
+                <div class="feature-icon">📝</div>
+                <h3 data-zh="低代码表单" data-en="Low-Code Forms">低代码表单</h3>
+                <p data-zh="可视化拖拽设计表单，支持文本、数字、日期、文件等丰富字段，一键发布为 API 或嵌入业务流程，让 AI 工作流与人工协作无缝衔接。" data-en="Visually design forms with drag-and-drop. Supports text, number, date, file and more field types. Publish as API or embed into business processes, seamlessly bridging AI workflows and human collaboration.">可视化拖拽设计表单，支持文本、数字、日期、文件等丰富字段，一键发布为 API 或嵌入业务流程，让 AI 工作流与人工协作无缝衔接。</p>
             </div>
             <div class="feature-card fade-in">
                 <div class="feature-icon">💬</div>
                 <h3 data-zh="多平台 Agent 部署" data-en="Multi-Platform Agent">多平台 Agent 部署</h3>
-                <p data-zh="将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。" data-en="Deploy AI Agents to Telegram, Feishu, DingTalk and more with one click. Quickly build AI-powered Bots that individual developers can easily get started with.">将 AI Agent 一键接入 Telegram、飞书、钉钉等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。</p>
+                <p data-zh="将 AI Agent 一键接入 Telegram、飞书、钉钉、企业微信等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。" data-en="Deploy AI Agents to Telegram, Feishu, DingTalk, WeCom and more with one click. Quickly build AI-powered Bots that individual developers can easily get started with.">将 AI Agent 一键接入 Telegram、飞书、钉钉、企业微信等平台，快速搭建具备 AI 能力的 Bot，个人开发者即可轻松上手。</p>
             </div>
             <div class="feature-card fade-in">
-                <div class="feature-icon">🧠</div>
-                <h3 data-zh="知识库 RAG" data-en="Knowledge Base RAG">知识库 RAG</h3>
-                <p data-zh="内置向量检索增强生成引擎，上传文档即刻构建专属知识库，让 AI Agent 拥有你的领域知识，回答更精准。" data-en="Built-in vector retrieval-augmented generation engine. Upload documents to instantly build your own knowledge base, giving AI Agents domain expertise for more accurate answers.">内置向量检索增强生成引擎，上传文档即刻构建专属知识库，让 AI Agent 拥有你的领域知识，回答更精准。</p>
+                <div class="feature-icon">🗄️</div>
+                <h3 data-zh="数据管理" data-en="Data Management">数据管理</h3>
+                <p data-zh="内置数据表、代码片段、本地文件与知识库管理。上传文档构建专属知识库，让 AI Agent 拥有领域知识；数据表与代码片段支持工作流直接读写，实现数据驱动的自动化。" data-en="Built-in data tables, code snippets, local files and knowledge base management. Upload documents to build your own knowledge base for domain expertise; data tables and code snippets can be read/written directly by workflows for data-driven automation.">内置数据表、代码片段、本地文件与知识库管理。上传文档构建专属知识库，让 AI Agent 拥有领域知识；数据表与代码片段支持工作流直接读写，实现数据驱动的自动化。</p>
             </div>
         </div>
     </div>
@@ -653,7 +651,7 @@
         <div class="usecase-grid">
             <div class="usecase-card fade-in">
                 <h3><span>🤖 </span><span data-zh="多平台 Bot" data-en="Multi-Platform Bot">多平台 Bot</span></h3>
-                <p data-zh="将 Agent 部署到 Telegram、飞书、钉钉等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。" data-en="Deploy Agents to Telegram, Feishu, DingTalk and more. Quickly build AI-powered conversational Bots, ready out of the box.">将 Agent 部署到 Telegram、飞书、钉钉等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。</p>
+                <p data-zh="将 Agent 部署到 Telegram、飞书、钉钉、企业微信等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。" data-en="Deploy Agents to Telegram, Feishu, DingTalk, WeCom and more. Quickly build AI-powered conversational Bots, ready out of the box.">将 Agent 部署到 Telegram、飞书、钉钉、企业微信等平台，快速搭建具备 AI 对话能力的 Bot，开箱即用。</p>
             </div>
             <div class="usecase-card fade-in">
                 <h3><span>🧠 </span><span data-zh="AI Agent 工作流" data-en="AI Agent Workflow">AI Agent 工作流</span></h3>
@@ -811,7 +809,7 @@
         });
     }
     setInterval(() => {
-        goToSlide((currentSlide + 1) % 10);
+        goToSlide((currentSlide + 1) % 9);
     }, 4000);
 </script>
 </body>
