@@ -1,10 +1,10 @@
 {
     "download": {
-        "darwin/arm64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-darwin-arm64-v2.4.1.tar.gz",
-        "darwin/amd64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-darwin-amd64-v2.4.1.tar.gz",
-        "linux/arm64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-arm64-v2.4.1.tar.gz",
-        "linux/amd64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-amd64-v2.4.1.tar.gz",
-        "linux/arm": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-armv7-v2.4.1.tar.gz"
+        "darwin/arm64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-darwin-arm64-v2.4.2.tar.gz",
+        "darwin/amd64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-darwin-amd64-v2.4.2.tar.gz",
+        "linux/arm64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-arm64-v2.4.2.tar.gz",
+        "linux/amd64": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-amd64-v2.4.2.tar.gz",
+        "linux/arm": "https://iolinker.oss-cn-shenzhen.aliyuncs.com/iolinker-standalone-linux-armv7-v2.4.2.tar.gz"
     },
-    "latest_version": "v2.4.1"
+    "latest_version": "v2.4.2"
 }
