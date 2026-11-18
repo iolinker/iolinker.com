@@ -43,6 +43,7 @@ for (const match of html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)) {
   if (!local.startsWith(`${root}${path.sep}`) || !existsSync(local)) errors.push(`缺失本地资源 ${value}`);
 }
 if (/\bon\w+=["']/.test(html)) errors.push('存在内联事件处理器');
+if (/screenshot\d*\.(?:png|jpe?g)/i.test(html)) errors.push('官网不得引用产品截图');
 if (!/Content-Security-Policy/.test(html)) errors.push('缺少内容安全策略');
 if (readFileSync(path.join(root, 'CNAME'), 'utf8').trim() !== 'iolinker.com') errors.push('官网域名不一致');
 const workflow = readFileSync(path.join(root, '.github/workflows/deploy.yml'), 'utf8');

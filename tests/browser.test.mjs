@@ -31,7 +31,9 @@ for (const width of [375, 768, 1440]) {
     const session = await context({ viewport: { width, height: 1000 } });
     const page = await session.newPage();
     const failures = [];
+    const screenshotRequests = [];
     page.on('pageerror', error => failures.push(error.message));
+    page.on('request', request => { if (/screenshot/i.test(request.url())) screenshotRequests.push(request.url()); });
     await page.goto(base);
     await page.waitForSelector('#downloadLinks a');
     assert.equal(await page.locator('#downloadLinks a').count(), 6);
@@ -50,11 +52,13 @@ for (const width of [375, 768, 1440]) {
     await page.locator('#tab-agent').focus();
     await page.keyboard.press('ArrowRight');
     assert.equal(await page.getAttribute('#tab-workflow', 'aria-selected'), 'true');
-    await page.locator('#panel-workflow [data-image]').click();
-    assert.ok(await page.locator('#imageDialog').isVisible());
-    await page.keyboard.press('Escape');
-    assert.ok(await page.locator('#imageDialog').isHidden());
-    assert.ok(await page.locator('#panel-workflow [data-image]').evaluate(element => element === document.activeElement));
+    assert.ok(await page.locator('#panel-workflow .showcase-visual').isVisible());
+    assert.equal(await page.locator('#panel-workflow .execution-path li').count(), 3);
+    await page.keyboard.press('ArrowRight');
+    assert.equal(await page.getAttribute('#tab-forms', 'aria-selected'), 'true');
+    assert.ok(await page.locator('#panel-forms .showcase-visual').isVisible());
+    assert.equal(await page.locator('img:not([src="logo.png"])').count(), 0);
+    assert.deepEqual(screenshotRequests, []);
     assert.deepEqual(failures, []);
     await session.close();
   });

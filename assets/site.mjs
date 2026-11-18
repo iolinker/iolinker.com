@@ -7,8 +7,6 @@ let downloadFailed = false;
 const navigation = document.getElementById('navigation');
 const menuToggle = document.getElementById('menuToggle');
 const tabs = [...document.querySelectorAll('[role="tab"]')];
-const dialog = document.getElementById('imageDialog');
-let imageOpener = null;
 
 function renderDownloads() {
   const list = document.getElementById('downloadLinks');
@@ -102,32 +100,6 @@ for (const tab of tabs) {
   });
 }
 selectTab(document.getElementById('tab-workflow'));
-
-for (const link of document.querySelectorAll('[data-image]')) {
-  link.addEventListener('click', event => {
-    if (typeof dialog.showModal !== 'function') return;
-    const url = new URL(link.href);
-    if (url.origin !== location.origin || !/^\/(?:screenshot2\.jpg|screenshot6\.png)$/.test(url.pathname)) return;
-    event.preventDefault();
-    imageOpener = link;
-    const image = document.getElementById('dialogImage');
-    image.src = url.href;
-    image.alt = link.querySelector('img').alt;
-    dialog.showModal();
-    document.getElementById('closeImage').focus();
-  });
-}
-document.getElementById('closeImage').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => {
-  if (event.target === dialog) {
-    const bounds = dialog.getBoundingClientRect();
-    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-  }
-});
-dialog.addEventListener('close', () => {
-  imageOpener?.focus();
-  imageOpener = null;
-});
 
 setLanguage(language);
 try {

@@ -10,8 +10,6 @@ const allowed = new Map([
   ['/version.json', ['version.json', 'application/json; charset=utf-8']],
   ['/logo.png', ['logo.png', 'image/png']],
   ['/favicon.png', ['favicon.png', 'image/png']],
-  ['/screenshot2.jpg', ['screenshot2.jpg', 'image/jpeg']],
-  ['/screenshot6.png', ['screenshot6.png', 'image/png']],
   ['/assets/site.css', ['assets/site.css', 'text/css; charset=utf-8']],
   ['/assets/site.mjs', ['assets/site.mjs', 'text/javascript; charset=utf-8']],
   ['/assets/version.mjs', ['assets/version.mjs', 'text/javascript; charset=utf-8']],
