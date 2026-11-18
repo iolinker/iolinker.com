@@ -98,9 +98,6 @@ h2 { white-space: pre-line; }
 .showcase-copy .mono { color: var(--brand-dark); font-size: 9px; }
 .showcase-copy h3 { font-size: 29px; line-height: 1.45; margin-block: 18px; }
 .showcase-copy p { color: var(--muted); font-size: 14px; line-height: 1.95; margin-bottom: 26px; }
-.demo-link { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 22px; font-size: 12px; }
-.demo-link a { color: var(--brand-dark); font-weight: 600; }
-.demo-link small { margin-left: auto; color: var(--muted); font-size: 10px; }
 .section-tinted { background: #edeee9; border-block: 1px solid #e0e1dc; }
 .usecase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
 .usecase { padding-block: 36px; border-top: 1px solid #d0d2cc; }
@@ -281,7 +278,6 @@ h2 { white-space: pre-line; }
   .showcase-tabs button { padding-block: 13px; font-size: 12px; }
   .showcase-panel { grid-template-columns: 1fr; padding: 24px; gap: 28px; }
   .showcase-copy h3 { font-size: 25px; }
-  .demo-link small { margin-left: 0; width: 100%; }
   .usecase-grid { gap: 0 28px; }
   .usecase h3 { font-size: 23px; }
   .start-steps { grid-template-columns: 1fr; gap: 24px; }
