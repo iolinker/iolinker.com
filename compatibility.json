@@ -1,0 +1,28 @@
+{
+  "anchors": [
+    "video",
+    "features",
+    "how-it-works",
+    "usecases",
+    "cta"
+  ],
+  "assets": [
+    "logo.png",
+    "screenshot0.png",
+    "screenshot2.jpg",
+    "screenshot3.jpg",
+    "screenshot4.jpg",
+    "screenshot5.jpg",
+    "screenshot6.png",
+    "screenshot7.png",
+    "screenshot8.png",
+    "screenshot9.jpg"
+  ],
+  "downloadKeys": [
+    "darwin/arm64",
+    "darwin/amd64",
+    "linux/arm64",
+    "linux/amd64",
+    "linux/arm"
+  ]
+}

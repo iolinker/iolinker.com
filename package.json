@@ -1,0 +1,19 @@
+{
+  "name": "iolinker-public-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/site-check.mjs",
+    "build": "npm run check && npm test && node scripts/prepare-site.mjs",
+    "test": "node --test tests/version.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}
