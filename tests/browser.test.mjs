@@ -57,6 +57,13 @@ for (const width of [375, 768, 1440]) {
     await page.locator('#panel-agent').screenshot({ path: new URL(`../test-results/website-agent-${width}.png`, import.meta.url).pathname });
     await page.locator('#tab-agent').focus();
     await page.keyboard.press('ArrowRight');
+    assert.equal(await page.getAttribute('#tab-goal', 'aria-selected'), 'true');
+    assert.ok(await page.locator('#panel-goal .goal-canvas').isVisible());
+    assert.equal(await page.locator('#panel-goal .goal-node').count(), 6);
+    assert.equal(await page.locator('#panel-goal .goal-agent-roles span').count(), 2);
+    assert.equal(await page.locator('#panel-goal .goal-view-tabs span').count(), 4);
+    await page.locator('#panel-goal').screenshot({ path: new URL(`../test-results/website-goal-${width}.png`, import.meta.url).pathname });
+    await page.keyboard.press('ArrowRight');
     assert.equal(await page.getAttribute('#tab-workflow', 'aria-selected'), 'true');
     assert.ok(await page.locator('#panel-workflow .showcase-visual').isVisible());
     assert.equal(await page.locator('#panel-workflow .flow-node').count(), 5);

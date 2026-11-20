@@ -186,6 +186,36 @@ h2 { white-space: pre-line; }
 .agent-composer > div { display: flex; align-items: center; gap: 5px; margin-top: 9px; }
 .agent-composer small { padding: 3px 6px; border-radius: 4px; background: #f0f2f6; color: #687385; font-size: 7px; }
 .agent-composer b { display: inline-flex; align-items: center; justify-content: center; width: 23px; height: 23px; margin-left: auto; border-radius: 50%; background: var(--brand); color: #fff; }
+.goal-toolbar { display: flex; align-items: center; gap: 12px; min-height: 51px; padding: 9px 12px; border-bottom: 1px solid #e0e4eb; background: #fff; }
+.goal-badge { flex: 0 0 auto; padding: 2px 5px; border-radius: 3px; background: #eef0ff; color: var(--brand-dark); font-size: 7px; white-space: nowrap; }
+.goal-agent-roles { display: flex; gap: 5px; margin-left: auto; }
+.goal-agent-roles span { padding: 3px 5px; border: 1px solid #e0e4eb; border-radius: 4px; color: #687385; font: 7px monospace; white-space: nowrap; }
+.goal-view-tabs { display: flex; gap: 19px; padding: 10px 14px; border-bottom: 1px solid #e5e8ee; background: #fff; color: #7d8796; font-size: 8px; }
+.goal-view-tabs .is-active { color: var(--brand-dark); font-weight: 600; }
+.goal-canvas { position: relative; height: 297px; overflow: hidden; background-color: #f6f7f9; background-image: radial-gradient(#d9dee8 .7px, transparent .7px); background-size: 16px 16px; }
+.goal-links { position: absolute; inset: 0; width: 100%; height: 100%; }
+.goal-links path { fill: none; stroke: #98a4b7; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.goal-node { position: absolute; width: 20%; height: 68px; padding: 7px 7px 5px 10px; overflow: hidden; border: 1px solid #dce1e9; border-radius: 6px; background: #fff; box-shadow: 0 3px 8px rgb(35 45 68 / 5%); }
+.goal-node::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: #8792a4; }
+.goal-node > span, .goal-node > strong, .goal-node > small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.goal-node > span { color: #8b95a5; font-size: 6px; }
+.goal-node > strong { margin-top: 4px; font-size: 9px; }
+.goal-node > small { margin-top: 4px; color: #7d8796; font-size: 7px; }
+.goal-node-origin { left: 3%; top: 36%; }
+.goal-node-origin::before, .goal-node-fact::before { background: #4b9572; }
+.goal-node-decide { left: 27%; top: 12%; }
+.goal-node-decide::before { background: #5365e9; }
+.goal-node-execute { left: 51%; top: 12%; }
+.goal-node-execute::before { background: #b97b45; }
+.goal-node-target { left: 75%; top: 12%; }
+.goal-node-target::before { background: #7c63b8; }
+.goal-node-fact { left: 27%; top: 62%; }
+.goal-node-deliverable { left: 51%; top: 62%; }
+.goal-node-deliverable::before { background: #4b9572; }
+.goal-legend { position: absolute; bottom: 8px; left: 13px; display: flex; gap: 13px; color: #7a8494; font-size: 7px; }
+.goal-legend span:nth-child(1), .goal-legend span:nth-child(3) { color: #4b9572; }
+.goal-legend span:nth-child(2) { color: #b97b45; }
+.goal-legend span:nth-child(4) { color: #7c63b8; }
 .workflow-toolbar, .form-toolbar { display: flex; align-items: center; gap: 12px; min-height: 51px; padding: 9px 12px; border-bottom: 1px solid #e0e4eb; background: #fff; }
 .workflow-actions, .form-actions { display: flex; align-items: center; gap: 7px; margin-left: auto; color: #6f7989; font-size: 8px; white-space: nowrap; }
 .workflow-actions b, .form-actions b { padding: 4px 8px; border-radius: 4px; color: #fff; font-size: 8px; font-weight: 500; }
@@ -309,6 +339,13 @@ h2 { white-space: pre-line; }
   .agent-ui { min-height: 340px; }
   .agent-messages { padding-inline: 12px; }
   .agent-composer { margin-inline: 11px; }
+  .goal-agent-roles { display: none; }
+  .goal-toolbar { padding-inline: 9px; }
+  .goal-view-tabs { gap: 14px; padding-inline: 10px; }
+  .goal-node { padding-left: 7px; }
+  .goal-node > strong { font-size: 8px; }
+  .goal-node > small { font-size: 6px; }
+  .goal-legend { gap: 8px; font-size: 6px; }
   .workflow-actions > span, .form-device-switch { display: none; }
   .workflow-toolbar, .form-toolbar { gap: 7px; padding-inline: 9px; }
   .workflow-editor { height: 290px; }

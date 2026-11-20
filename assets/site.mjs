@@ -44,8 +44,8 @@ function setLanguage(next) {
   });
   document.title = language === 'zh' ? 'IOLinker — Agent 与工作流的自动化工作台' : 'IOLinker — The agent and workflow automation workspace';
   document.querySelector('meta[name="description"]').content = language === 'zh'
-    ? '用 Agent 描述任务，用可视化工作流掌控执行。IOLinker 将对话、工具、定时任务、数据表与人工协作连接在你的自动化工作台中。'
-    : 'Describe tasks with agents and control execution with visual workflows. Connect conversations, tools, schedules, data tables and human collaboration in IOLinker.';
+    ? '用 Agent 描述任务，用 Goal 推进探索，用可视化工作流掌控执行。IOLinker 将对话、工具、定时任务、数据表与人工协作连接在你的自动化工作台中。'
+    : 'Describe tasks with agents, explore with Goal and control execution with visual workflows. Connect conversations, tools, schedules, data tables and human collaboration in IOLinker.';
   const toggle = document.getElementById('languageToggle');
   toggle.textContent = language === 'zh' ? 'EN' : '中文';
   toggle.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
